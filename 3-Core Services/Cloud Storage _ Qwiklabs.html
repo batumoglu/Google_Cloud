@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" class="mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./Cloud Storage _ Qwiklabs_files/caff0d62ed"></script><script src="./Cloud Storage _ Qwiklabs_files/nr-1158.min.js.download"></script><script type="text/javascript" async="" src="./Cloud Storage _ Qwiklabs_files/js"></script><script type="text/javascript" async="" src="./Cloud Storage _ Qwiklabs_files/analytics.js.download"></script><script type="text/javascript" async="" src="./Cloud Storage _ Qwiklabs_files/d58fn3dh7i2n.js.download"></script><script type="text/javascript" async="" src="./Cloud Storage _ Qwiklabs_files/analytics.min.js.download"></script><script type="text/javascript" id="www-widgetapi-script" src="./Cloud Storage _ Qwiklabs_files/www-widgetapi.js.download" async=""></script><script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"caff0d62ed","applicationID":"29451451","transactionName":"IQ1XRUEOVV1dFxlRXAEXSlRATkpZVxI=","queueTime":0,"applicationTime":184,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"caff0d62ed",applicationID:"29451451"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta content="[]" name="active-experiments">
+<meta content="{&quot;userId&quot;:2332914}" name="help-api-product-data">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="llxg+L6LUMQNT1cLxyoQbtzKIUI5l81BkqI+UXPyT32Gc3aeI0fcNePNzWtK8mkkCNtMJwuB95EJQaQ5/AjL8w==">
+<title>Cloud Storage | Qwiklabs</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" name="viewport">
+<meta content="In this lab you create and use Cloud Storage buckets and exercise many of the advanced features including restricting access with Access Lists, implementing version control, loading and managing your own encryption keys, directory synch and more." name="description">
+<meta content="Qwiklabs" name="author">
+<meta content="1rRsY0INj8RvwB5EF5pwdxt2A2P9aDgAlsICaJ0d5w0" name="google-site-verification">
+<meta content="Cloud Storage | Qwiklabs" property="og:title">
+<meta content="website" property="og:type">
+<meta content="/favicon-144.png" property="og:image">
+<meta content="Qwiklabs" property="og:site_name">
+<meta content="In this lab you create and use Cloud Storage buckets and exercise many of the advanced features including restricting access with Access Lists, implementing version control, loading and managing your own encryption keys, directory synch and more." property="og:description">
+<meta content="/qwiklabs_logo_900x887.png" property="og:logo" size="900x887">
+<meta content="/qwiklabs_logo_994x187.png" property="og:logo" size="994x187">
+<meta content="#3681E4" property="msapplication-TileColor">
+<meta content="/favicon-144.png" property="msapplication-TileImage">
+<link href="https://googlecoursera.qwiklabs.com/favicon-32.png" rel="shortcut icon">
+<link color="#3681E4" href="https://googlecoursera.qwiklabs.com/favicon-svg.svg" rel="mask-icon">
+<link href="https://googlecoursera.qwiklabs.com/favicon-180.png" rel="apple-touch-icon-precomposed">
+<link rel="stylesheet" media="screen" href="./Cloud Storage _ Qwiklabs_files/css">
+
+
+<!--[if lt IE 9]>
+<script src='http://html5shim.googlecode.com/svn/trunk/html5.js' type='text/javascript'></script>
+<![endif]-->
+<!--[endif]>  <![endif]-->
+<script>
+//<![CDATA[
+window.gon={};gon.current_user={"firstname":"Ozkan","lastname":"Batumoglu","fullname":"Ozkan Batumoglu","company":"Coursera","email":"batumoglu@hotmail.com","origin":"googlecoursera-run, lti-coursera","subscriptions":0,"id":"54eb7d21170356f2189321bcd774d847","qlCreatedAt":"2019-12-25 11:42:16 UTC","optIn":null};gon.segment="j4Im8pqIko0Lxq4wVVZWMPMM0EroHUvb";gon.deployment="googlecoursera-run";
+//]]>
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "https://www.qwiklabs.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.qwiklabs.com/catalog?keywords={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script id="ze-snippet" src="./Cloud Storage _ Qwiklabs_files/snippet.js.download"></script><script type="text/javascript" src="./Cloud Storage _ Qwiklabs_files/asset_composer.5d2cd6d9613b85125812.js.download" charset="utf-8" async=""></script>
+
+
+
+<link rel="stylesheet" media="all" href="./Cloud Storage _ Qwiklabs_files/application-a53cf05bc9e39a99a1d6fa14f486d7ecec091bb67f0aca5b1257120cbf85ec76.css">
+<script>
+  EVENT_SOURCE_BASE_URL = "https://googlecoursera-run.qwiklabs.com/nchan-sub?id=";
+</script>
+<script src="./Cloud Storage _ Qwiklabs_files/webcomponents-loader.js.download"></script>
+<script src="./Cloud Storage _ Qwiklabs_files/hallofmirrors-f4d8e7baa61f870f42fe13c7adb947f8f436226a8699d6dc2443699a02a10471.js.download"></script><script async="" src="./Cloud Storage _ Qwiklabs_files/lazy.min.js.download"></script>
+<script src="./Cloud Storage _ Qwiklabs_files/iframe_api"></script>
+<script src="./Cloud Storage _ Qwiklabs_files/vendor-45d462772c30000424907184f70c7157e95fb6227698d1671c5051818a6f60d8.js.download"></script>
+<script src="./Cloud Storage _ Qwiklabs_files/application-ebb27cbff944188da04b9e68f7789655da6ebaa697498ca84f00351368bd2507.js.download"></script>
+</head>
+<body class="focuses focuses-show lab-show l-full no-nav" style="">
+<div class="header-container">
+<div class="header">
+<a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect header__button header__button--nav header__nav-panel-button js-nav-toggle" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">menu</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<div class="header__title">
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button header__button--nav" href="https://www.coursera.org/" data-upgraded=",MaterialButton,MaterialRipple"><ql-icon>arrow_back</ql-icon><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+
+<h1 class="headline-5">
+Cloud Storage
+</h1>
+</div>
+<div class="header__actions">
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button header__button--action header__button--search js-header-search-bar-button" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">search</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+
+<ql-help context="lab" productdata="{&quot;userId&quot;:2332914}" data-analytics-action="opened_help" data-analytics-label="lab"></ql-help>
+<a class="header-my-account-button mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-my-account-button" data-upgraded=",MaterialButton,MaterialRipple">
+<img class="avatar " src="./Cloud Storage _ Qwiklabs_files/527aaaf240e6e7ef6a272c7f9743d396.png">
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<div class="header-my-account-menu js-my-account-menu">
+<div class="card elevation-2 no-padding">
+<div class="my-account-menu__top">
+<img class="avatar " src="./Cloud Storage _ Qwiklabs_files/527aaaf240e6e7ef6a272c7f9743d396.png">
+<div class="my-account-menu__info">
+<h4 class="subtitle-headline-1">
+Ozkan Batumoglu
+</h4>
+<p class="body-2 text--gray">
+<span>batumoglu@hotmail.com</span>
+</p>
+<a class="button" href="https://googlecoursera.qwiklabs.com/my_account/profile">My Account</a>
+</div>
+</div>
+<div class="my-account-menu__bottom">
+<a class="text--green subtitle-headline-2" href="https://googlecoursera.qwiklabs.com/my_account/credits">0 Credits
+</a><a data-analytics-action="clicked_sign_out" class="button button--hairline" rel="nofollow" data-method="delete" href="https://googlecoursera.qwiklabs.com/users/sign_out">Sign Out</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="header__search-bar js-header-search-bar">
+<form id="catalog-search-mobile" onsubmit="ql.catalogSearchFilter(); return false;" action="https://googlecoursera.qwiklabs.com/searches/elasticsearch" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="llxg+L6LUMQNT1cLxyoQbtzKIUI5l81BkqI+UXPyT32Gc3aeI0fcNePNzWtK8mkkCNtMJwuB95EJQaQ5/AjL8w==">
+<input type="text" name="keywords" id="keywords" placeholder="Search" maxlength="255">
+</form>
+
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">close</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+</div>
+</div>
+
+<nav class="nav-bar">
+<a class="nav-bar__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/"><ql-icon class="nav-bar__item__icon">
+home
+</ql-icon>
+<span class="nav-bar__item__label">
+Home
+</span>
+</a>
+<a class="nav-bar__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/catalog"><ql-icon class="nav-bar__item__icon">
+school
+</ql-icon>
+<span class="nav-bar__item__label">
+Catalog
+</span>
+</a>
+<a class="nav-bar__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_learning"><ql-icon class="nav-bar__item__icon">
+event_note
+</ql-icon>
+<span class="nav-bar__item__label">
+My Learning
+</span>
+</a>
+</nav>
+
+<nav class="nav-panel js-nav-panel">
+<div class="nav-panel__logo">
+<div class="logo logo--blue"></div>
+</div>
+<a title="Home" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/"><ql-icon class="nav-panel__item__icon">
+home
+</ql-icon>
+<div class="nav-panel__item__label">
+Home
+</div>
+</a>
+<a title="Catalog" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/catalog"><ql-icon class="nav-panel__item__icon">
+school
+</ql-icon>
+<div class="nav-panel__item__label">
+Catalog
+</div>
+</a>
+<a title="My Learning" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_learning"><ql-icon class="nav-panel__item__icon">
+event_note
+</ql-icon>
+<div class="nav-panel__item__label">
+My Learning
+</div>
+</a>
+<div class="nav-panel__spacer"></div>
+<a title="Profile" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_account/profile"><ql-icon class="nav-panel__item__icon">
+account_circle
+</ql-icon>
+<div class="nav-panel__item__label">
+Profile
+</div>
+</a>
+<a title="Credits &amp; Subscriptions" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_account/credits"><ql-icon class="nav-panel__item__icon">
+money
+</ql-icon>
+<div class="nav-panel__item__label">
+Credits &amp; Subscriptions
+</div>
+</a>
+<a title="Security" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_account/security"><ql-icon class="nav-panel__item__icon">
+security
+</ql-icon>
+<div class="nav-panel__item__label">
+Security
+</div>
+</a>
+<div class="nav-panel__spacer"></div>
+<a class="nav-panel__item" tabindex="-1" href="https://googlecoursera.qwiklabs.com/focuses/37225#"><ql-help>
+<div class="nav-panel__help-item">
+<ql-icon class="nav-panel__item__icon">help</ql-icon>
+<div class="nav-panel__item__label">Help</div>
+</div>
+</ql-help>
+</a><div class="nav-panel__small-links">
+<a tabindex="-1" href="https://googlecoursera.qwiklabs.com/privacy_policy">Privacy</a>
+<a tabindex="-1" href="https://googlecoursera.qwiklabs.com/terms_of_service">Terms</a>
+</div>
+</nav>
+<div class="nav-panel__overlay js-nav-toggle"></div>
+
+<main class="js-main">
+<span class="hidden" id="flash-sibling-before"></span>
+
+<div class="l-main-wrapper" id="main-wrapper">
+
+
+
+
+
+
+
+<div class="js-lab-state" data-analytics-payload="{&quot;label&quot;:&quot;Cloud Storage&quot;,&quot;lab_name&quot;:&quot;Cloud Storage&quot;,&quot;classroom_name&quot;:null,&quot;deployment&quot;:&quot;googlecoursera-run&quot;}" data-focus-id="37225" data-lab-billing-limit="0.0" data-lab-duration="5400" data-parent="classroom"></div>
+<ql-lab-control-panel class="js-lab-control-panel l-lab-control-panel" connectiondetails="[]" connectionfiles="[]" labcontrolbutton="{&quot;disabled&quot;:false,&quot;pending&quot;:false,&quot;running&quot;:false}" labtimer="{&quot;ticking&quot;:false,&quot;secondsRemaining&quot;:5400}" studentresources="[]"></ql-lab-control-panel>
+<div class="l-lab-main-body">
+<div class="js-lab-content lab-content">
+<div class="alert alert--fake js-alert alert-success" style="display: none;">
+<p class="alert__message js-alert-message">Thanks for reviewing this lab.</p>
+<a class="alert__close js-alert-close">
+<i class="fa fa-times"></i>
+</a>
+<iframe class="l-ie-iframe-fix" src="./Cloud Storage _ Qwiklabs_files/saved_resource.html"></iframe>
+</div>
+<div class="lab-content__markdown-wrapper">
+<div class="lab-preamble">
+<h1 class="lab-preamble__title">
+Cloud Storage
+</h1>
+<div class="lab-preamble__details subtitle-headline-1">
+<span>1 hour 30 minutes</span>
+<span>Free</span>
+<div class="lab__rating">
+<a href="https://googlecoursera.qwiklabs.com/focuses/37225/reviews?parent=catalog"><div class="rateit" data-rateit-readonly="true" data-rateit-value="3.9763"><div class="rateit-reset" style="display: none;"></div><div class="rateit-range" style="width: 80px; height: 16px;"><div class="rateit-selected" style="height: 16px; width: 63.6208px;"></div><div class="rateit-hover" style="height:16px"></div></div></div>
+
+</a><a data-target="#lab-review-modal" data-toggle="modal">
+Rate Lab
+</a>
+</div>
+</div>
+</div>
+
+<div class="lab-content__inner-wrapper">
+<div class="js-markdown-instructions lab-content__markdown markdown-lab-instructions" id="markdown-lab-instructions">
+
+
+
+<h2 id="step1">Overview</h2>
+<p>Cloud Storage is a fundamental resource in GCP, with many advanced features. In this lab, you exercise many Cloud Storage features that could be useful in your designs. You explore Cloud Storage using both the console and the gsutil tool.</p>
+<h2 id="step2">Objectives</h2>
+<p>In this lab, you learn how to perform the following tasks:</p>
+<ul>
+<li>Create and use buckets</li>
+<li>Set access control lists to restrict access</li>
+<li>Use your own encryption keys</li>
+<li>Implement version controls</li>
+<li>Use directory synchronization</li>
+<li>Share a bucket across projects using IAM</li>
+</ul>
+<h4>Before you click the Start Lab button</h4>
+<p>Read these instructions. Labs are timed and you cannot pause them. The timer, which starts when you click Start Lab, shows how long Cloud resources will be made available to you.</p>
+<p>This Qwiklabs hands-on lab lets you do the lab activities yourself in a real cloud environment, not in a simulation or demo environment. It does so by giving you new, temporary credentials that you use to sign in and access the Google Cloud Platform for the duration of the lab.</p>
+<h4>What you need</h4>
+<p>To complete this lab, you need:</p>
+<ul>
+<li>Access to a standard internet browser (Chrome browser recommended).</li>
+<li>Time to complete the lab.</li>
+</ul>
+<p><strong><em>Note:</em></strong> If you already have your own personal GCP account or project, do not use it for this lab.</p>
+
+<h2 id="step3">Task 1: Preparation</h2>
+<h3>Create a Cloud Storage bucket</h3>
+<ol>
+<li>On the <strong>Navigation menu</strong> ( <img alt="7a91d354499ac9f1.png" src="./Cloud Storage _ Qwiklabs_files/ITyhQn00xPCVZIksELAC4wax+QdPdrH2DNGLazXJKgw=">), click <strong>Storage</strong> &gt; <strong>Browser</strong>.</li>
+</ol>
+<aside class="special"><p>A bucket must have a globally unique name. You could use part of your PROJECT_ID_1 in the name to help make it unique. For example, if the PROJECT_ID_1 is "myproj-154920," your bucket name might be "storecore154920."</p>
+</aside>
+<ol start="2">
+<li>Click <strong>Create bucket</strong>.</li>
+<li>Specify the following, and leave the remaining settings as their defaults:</li>
+</ol>
+<table>
+
+<tbody><tr>
+<th>Property</th>
+<th>Value (type value or select option as specified)</th>
+</tr>
+
+
+<tr>
+<td><strong>Name</strong></td>
+<td>Enter a globally unique name</td>
+</tr>
+<tr>
+<td><strong>Location type</strong></td>
+<td><strong>Multi-region</strong></td>
+</tr>
+<tr>
+<td><strong>Access control</strong></td>
+<td>
+<strong>Fine-grained</strong> (<em>object-level permission in addition to your bucket-level permissions</em>)</td>
+</tr>
+
+</tbody></table>
+<ol start="4">
+<li>Make a note of the bucket name. It will be used later in this lab and referred to as [BUCKET_NAME_1].</li>
+<li>Click <strong>Create</strong>.</li>
+</ol>
+<p>Click <em>Check my progress</em> to verify the objective.
+<ql-activity-tracking step="1" labinstanceid="10899029">
+Create a Cloud Storage bucket
+</ql-activity-tracking></p>
+<h3><strong>Download a sample file using CURL and make two copies</strong></h3>
+<ol>
+<li>
+<p>In the GCP Console, click <strong>Activate Cloud Shell</strong> (<img alt="Cloud Shell" src="./Cloud Storage _ Qwiklabs_files/ep8HmqYGdD_kUncAAYpV47OYoHwC8+g0WK_8sidHquE=" title="Cloud Shell">).</p>
+</li>
+<li>
+<p>If prompted, click <strong>Continue</strong>.</p>
+</li>
+<li>
+<p>Store [BUCKET_NAME_1] in an environment variable:</p>
+</li>
+</ol>
+<pre><code>export BUCKET_NAME_1=&lt;enter bucket name 1 here&gt;
+</code><button class="button button--copy js-copy-button-0" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="4">
+<li>
+<p>Verify it with echo:</p>
+</li>
+</ol>
+<pre><code>echo $BUCKET_NAME_1
+</code><button class="button button--copy js-copy-button-1" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="5">
+<li>
+<p>Run the following command to download a sample file (this sample file is a publicly available Hadoop documentation HTML file):</p>
+</li>
+</ol>
+<pre><code>curl \
+http://hadoop.apache.org/docs/current/\
+hadoop-project-dist/hadoop-common/\
+ClusterSetup.html &gt; setup.html
+</code><button class="button button--copy js-copy-button-2" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="6">
+<li>
+<p>To make copies of the file, run the following commands:</p>
+</li>
+</ol>
+<pre><code>cp setup.html setup2.html
+cp setup.html setup3.html
+</code><button class="button button--copy js-copy-button-3" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<h2 id="step4">Task 2: Access control lists (ACLs)</h2>
+<h3><strong>Copy the file to the bucket and configure the access control list</strong></h3>
+<ol>
+<li>
+<p>Run the following command to copy the first file to the bucket:</p>
+</li>
+</ol>
+<pre><code>gsutil cp setup.html gs://$BUCKET_NAME_1/
+</code><button class="button button--copy js-copy-button-4" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="2">
+<li>
+<p>To get the default access list that's been assigned to setup.html, run the following command:</p>
+</li>
+</ol>
+<pre><code>gsutil acl get gs://$BUCKET_NAME_1/setup.html  &gt; acl.txt
+cat acl.txt
+</code><button class="button button--copy js-copy-button-5" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="3">
+<li>
+<p>To set the access list to private and verify the results, run the following commands:</p>
+</li>
+</ol>
+<pre><code>gsutil acl set private gs://$BUCKET_NAME_1/setup.html
+gsutil acl get gs://$BUCKET_NAME_1/setup.html  &gt; acl2.txt
+cat acl2.txt
+</code><button class="button button--copy js-copy-button-6" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="4">
+<li>
+<p>To update the access list to make the file publicly readable, run the following commands:</p>
+</li>
+</ol>
+<pre><code>gsutil acl ch -u AllUsers:R gs://$BUCKET_NAME_1/setup.html
+gsutil acl get gs://$BUCKET_NAME_1/setup.html  &gt; acl3.txt
+cat acl3.txt
+</code><button class="button button--copy js-copy-button-7" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<p>Click <em>Check my progress</em> to verify the objective.
+<ql-activity-tracking step="2" labinstanceid="10899029">
+Make file publicly readable
+</ql-activity-tracking></p>
+<h3><strong>Examine the file in the GCP Console</strong></h3>
+<ol>
+<li>
+<p>In the GCP Console, on the <strong>Navigation menu</strong> ( <img alt="7a91d354499ac9f1.png" src="./Cloud Storage _ Qwiklabs_files/ITyhQn00xPCVZIksELAC4wax+QdPdrH2DNGLazXJKgw=">), click <strong>Storage</strong> &gt; <strong>Browser</strong>.</p>
+</li>
+<li>
+<p>Click [BUCKET_NAME_1].</p>
+</li>
+<li>
+<p>Verify that for file setup.html, <strong>Public access</strong> has a <strong>Public link</strong> available.</p>
+</li>
+</ol>
+<h3><strong>Delete the local file and copy back from Cloud Storage</strong></h3>
+<ol>
+<li>
+<p>Return to <strong>Cloud Shell</strong>. If necessary, click <strong>Activate Cloud Shell</strong> (<img alt="Cloud Shell" src="./Cloud Storage _ Qwiklabs_files/ep8HmqYGdD_kUncAAYpV47OYoHwC8+g0WK_8sidHquE=" title="Cloud Shell">).</p>
+</li>
+<li>
+<p>Run the following command to delete the setup file:</p>
+</li>
+</ol>
+<pre><code>rm setup.html
+</code><button class="button button--copy js-copy-button-8" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="3">
+<li>
+<p>To verify that the file has been deleted, run the following command:</p>
+</li>
+</ol>
+<pre><code>ls
+</code><button class="button button--copy js-copy-button-9" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="4">
+<li>
+<p>To copy the file from the bucket again, run the following command:</p>
+</li>
+</ol>
+<pre><code>gsutil cp gs://$BUCKET_NAME_1/setup.html setup.html
+</code><button class="button button--copy js-copy-button-10" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<h2 id="step5">Task 3: Customer-supplied encryption keys (CSEK)</h2>
+<h3><strong>Generate a CSEK key</strong></h3>
+<p>For the next step, you need an AES-256 base-64 key.</p>
+<ol>
+<li>
+<p>Run the following command to create a key:</p>
+</li>
+</ol>
+<pre><code>python3 -c 'import base64; import os; print(base64.encodebytes(os.urandom(32)))'
+</code><button class="button button--copy js-copy-button-11" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<p>Result <strong>(do not copy; this is example output)</strong>:</p>
+<pre><code>b'tmxElCaabWvJqR7uXEWQF39DhWTcDvChzuCmpHe6sb0=\n'
+</code><button class="button button--copy js-copy-button-12"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="2">
+<li>
+<p>Copy the value of the generated key excluding <code>b'</code> and <code>\n'</code> from the command output. Key should be in form of <code>tmxElCaabWvJqR7uXEWQF39DhWTcDvChzuCmpHe6sb0=</code>.</p>
+</li>
+</ol>
+<h3><strong>Modify the boto file</strong></h3>
+<p>The encryption controls are contained in a gsutil configuration file named <code>.boto</code>.</p>
+<ol>
+<li>
+<p>To view and open the boto file, run the following commands:</p>
+</li>
+</ol>
+<pre><code>ls -al
+
+nano .boto
+</code><button class="button button--copy js-copy-button-13" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="warning"><p>If the <code>.boto</code> file is empty, close the nano editor with <strong>Ctrl+X</strong> and generate a new <code>.boto</code> file using the <code>gsutil config -n</code> command. Then, try opening the file again with the above commands.</p>
+<p>If the <code>.boto</code> file is still empty, you might have to locate it using the <code>gsutil version -l</code> command.</p>
+</aside>
+<ol start="2">
+<li>Locate the line with "<code>#encryption_key=</code>"</li>
+<li>Uncomment the line by removing the # character, and paste the key you generated earlier at the end.</li>
+</ol>
+<p>Example <strong>(do not copy; this is an example)</strong>:</p>
+<pre><code>Before:
+# encryption_key=
+
+After:
+encryption_key=tmxElCaabWvJqR7uXEWQF39DhWTcDvChzuCmpHe6sb0=
+</code><button class="button button--copy js-copy-button-14"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="4">
+<li>
+<p>Press <strong>Ctrl+O</strong>, <strong>ENTER</strong> to save the boto file, and then press <strong>Ctrl+X</strong> to exit nano.</p>
+</li>
+</ol>
+<h3><strong>Upload the remaining setup files (encrypted) and verify in the GCP Console</strong></h3>
+<ol>
+<li>
+<p>To upload the remaining setup.html files, run the following commands:</p>
+</li>
+</ol>
+<pre><code>gsutil cp setup2.html gs://$BUCKET_NAME_1/
+gsutil cp setup3.html gs://$BUCKET_NAME_1/
+</code><button class="button button--copy js-copy-button-15" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="2">
+<li>Return to the GCP Console.</li>
+<li>Click  [BUCKET_NAME_1]. Both setup2.html and setup3.html files show that they are customer-encrypted.</li>
+</ol>
+<p>Click <em>Check my progress</em> to verify the objective.
+<ql-activity-tracking step="3" labinstanceid="10899029">
+Customer-supplied encryption keys (CSEK)
+</ql-activity-tracking></p>
+<h3><strong>Delete local files, copy new files, and verify encryption</strong></h3>
+<ol>
+<li>
+<p>To delete your local files, run the following command in Cloud Shell:</p>
+</li>
+</ol>
+<pre><code>rm setup*
+</code><button class="button button--copy js-copy-button-16" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="2">
+<li>
+<p>To copy the files from the bucket again, run the following command:</p>
+</li>
+</ol>
+<pre><code>gsutil cp gs://$BUCKET_NAME_1/setup* ./
+</code><button class="button button--copy js-copy-button-17" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="3">
+<li>
+<p>To cat the encrypted files to see whether they made it back, run the following commands:</p>
+</li>
+</ol>
+<pre><code>cat setup.html
+cat setup2.html
+cat setup3.html
+</code><button class="button button--copy js-copy-button-18" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<h2 id="step6">Task 4: Rotate CSEK keys</h2>
+<h3><strong>Move the current CSEK encrypt key to decrypt key</strong></h3>
+<ol>
+<li>
+<p>Run the following command to open the <code>.boto</code> file:</p>
+</li>
+</ol>
+<pre><code>nano .boto
+</code><button class="button button--copy js-copy-button-19" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="2">
+<li>Comment out the current encryption_key line by adding the # character to the beginning of the line.</li>
+<li>Uncomment decryption_key1 by removing the # character, and copy the current key from the encryption_key line to the decryption_key1 line.</li>
+</ol>
+<p>Result <strong>(do not copy; this is example output)</strong>:</p>
+<pre><code>Before:
+encryption_key=2dFWQGnKhjOcz4h0CudPdVHLG2g+OoxP8FQOIKKTzsg=
+
+# decryption_key1=
+
+After:
+# encryption_key=2dFWQGnKhjOcz4h0CudPdVHLG2g+OoxP8FQOIKKTzsg=
+
+decryption_key1=2dFWQGnKhjOcz4h0CudPdVHLG2g+OoxP8FQOIKKTzsg=
+</code><button class="button button--copy js-copy-button-20"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="4">
+<li>Press <strong>Ctrl+O</strong>, <strong>ENTER</strong> to save the boto file, and then press <strong>Ctrl+X</strong> to exit nano.</li>
+</ol>
+<aside class="warning"><p><strong>Note</strong>: In practice, you would delete the old CSEK key from the encryption_key line. </p>
+</aside>
+<h3><strong>Generate another CSEK key and add to the boto file</strong></h3>
+<ol>
+<li>
+<p>Run the following command to generate a new key:</p>
+</li>
+</ol>
+<pre><code>python3 -c 'import base64; import os; print(base64.encodebytes(os.urandom(32)))'
+</code><button class="button button--copy js-copy-button-21" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="2">
+<li>
+<p>Copy the value of the generated key excluding <code>b'</code> and <code>\n'</code> from the command output. Key should be in form of <code>tmxElCaabWvJqR7uXEWQF39DhWTcDvChzuCmpHe6sb0=</code>.</p>
+</li>
+<li>
+<p>To open the boto file, run the following command:</p>
+</li>
+</ol>
+<pre><code>nano .boto
+</code><button class="button button--copy js-copy-button-22"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="4">
+<li>Add a new line with <code>encryption_key=</code> and paste the new key value.</li>
+</ol>
+<p>Result <strong>(do not copy; this is example output)</strong>:</p>
+<pre><code>Before:
+# encryption_key=2dFWQGnKhjOcz4h0CudPdVHLG2g+OoxP8FQOIKKTzsg=
+
+After:
+encryption_key=HbFK4I8CaStcvKKIx6aNpdTse0kTsfZNUjFpM+YUEjY=
+</code><button class="button button--copy js-copy-button-23"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="5">
+<li>
+<p>Press <strong>Ctrl+O</strong>, <strong>ENTER</strong> to save the boto file, and then press <strong>Ctrl+X</strong> to exit nano.</p>
+</li>
+</ol>
+<h3><strong>Rewrite the key for file 1 and comment out the old decrypt key</strong></h3>
+<p>When a file is encrypted, rewriting the file decrypts it using the decryption_key1 that you previously set, and encrypts the file with the new encryption_key.</p>
+<p>You are rewriting the key for setup2.html, but not for setup3.html, so that you can see what happens if you don't rotate the keys properly.</p>
+<ol>
+<li>
+<p>Run the following command:</p>
+</li>
+</ol>
+<pre><code>gsutil rewrite -k gs://$BUCKET_NAME_1/setup2.html
+</code><button class="button button--copy js-copy-button-24" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="2">
+<li>
+<p>To open the boto file, run the following command:</p>
+</li>
+</ol>
+<pre><code>nano .boto
+</code><button class="button button--copy js-copy-button-25"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="3">
+<li>Comment out the current decryption_key1 line by adding the # character back in.</li>
+</ol>
+<p>Result <strong>(do not copy; this is example output)</strong>:</p>
+<pre><code>Before:
+decryption_key1=2dFWQGnKhjOcz4h0CudPdVHLG2g+OoxP8FQOIKKTzsg=
+
+After:
+# decryption_key1=2dFWQGnKhjOcz4h0CudPdVHLG2g+OoxP8FQOIKKTzsg=
+</code><button class="button button--copy js-copy-button-26"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="4">
+<li>Press <strong>Ctrl+O</strong>, <strong>ENTER</strong> to save the boto file, and then press <strong>Ctrl+X</strong> to exit nano.</li>
+</ol>
+<aside class="warning"><p><strong>Note</strong>: In practice, you would delete the old CSEK key from the decryption_key1 line. </p>
+</aside>
+<h3><strong>Download setup 2 and setup3</strong></h3>
+<ol>
+<li>
+<p>To download setup2.html, run the following command:</p>
+</li>
+</ol>
+<pre><code>gsutil cp  gs://$BUCKET_NAME_1/setup2.html recover2.html
+</code><button class="button button--copy js-copy-button-27" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="2">
+<li>
+<p>To download setup3.html, run the following command:</p>
+</li>
+</ol>
+<pre><code>gsutil cp  gs://$BUCKET_NAME_1/setup3.html recover3.html
+</code><button class="button button--copy js-copy-button-28" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="warning"><p>What happened?  setup3.html was not rewritten with the new key, so it can no longer be decrypted, and the copy will fail.</p>
+<p>You have successfully rotated the CSEK keys.</p>
+</aside>
+<h2 id="step7">Task 5: Enable lifecycle management</h2>
+<h3><strong>View the current lifecycle policy for the bucket</strong></h3>
+<ol>
+<li>
+<p>Run the following command to view the current lifecycle policy:</p>
+</li>
+</ol>
+<pre><code>gsutil lifecycle get gs://$BUCKET_NAME_1
+</code><button class="button button--copy js-copy-button-29" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="warning"><p>There is no lifecycle configuration. You create one in the next steps.</p>
+</aside>
+<h3><strong>Create a JSON lifecycle policy file</strong></h3>
+<ol>
+<li>
+<p>To create a file named <em>life.json</em>, run the following command:</p>
+</li>
+</ol>
+<pre><code>nano life.json
+</code><button class="button button--copy js-copy-button-30" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="2">
+<li>
+<p>Paste the following value into the life.json file:</p>
+</li>
+</ol>
+<pre><code>{
+  "rule":
+  [
+    {
+      "action": {"type": "Delete"},
+      "condition": {"age": 31}
+    }
+  ]
+}
+</code><button class="button button--copy js-copy-button-31" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="warning"><p>These instructions tell Cloud Storage to delete the object after 31 days.</p>
+</aside>
+<ol start="3">
+<li>
+<p>Press <strong>Ctrl+O</strong>, <strong>ENTER</strong> to save the file, and then press <strong>Ctrl+X</strong> to exit nano.</p>
+</li>
+</ol>
+<h3><strong>Set the policy and verify</strong></h3>
+<ol>
+<li>
+<p>To set the policy, run the following command:</p>
+</li>
+</ol>
+<pre><code>gsutil lifecycle set life.json gs://$BUCKET_NAME_1
+</code><button class="button button--copy js-copy-button-32" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="2">
+<li>
+<p>To verify the policy, run the following command:</p>
+</li>
+</ol>
+<pre><code>gsutil lifecycle get gs://$BUCKET_NAME_1
+</code><button class="button button--copy js-copy-button-33" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<p>Click <em>Check my progress</em> to verify the objective.
+<ql-activity-tracking step="4" labinstanceid="10899029">
+Enable lifecycle management
+</ql-activity-tracking></p>
+<h2 id="step8">Task 6: Enable versioning</h2>
+<h3><strong>View the versioning status for the bucket and enable versioning</strong></h3>
+<ol>
+<li>
+<p>Run the following command to view the current versioning status for the bucket:</p>
+</li>
+</ol>
+<pre><code>gsutil versioning get gs://$BUCKET_NAME_1
+</code><button class="button button--copy js-copy-button-34" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="warning"><p>The Suspended policy means that it is not enabled.</p>
+</aside>
+<ol start="2">
+<li>
+<p>To enable versioning, run the following command:</p>
+</li>
+</ol>
+<pre><code>gsutil versioning set on gs://$BUCKET_NAME_1
+</code><button class="button button--copy js-copy-button-35" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="3">
+<li>
+<p>To verify that versioning was enabled, run the following command:</p>
+</li>
+</ol>
+<pre><code>gsutil versioning get gs://$BUCKET_NAME_1
+</code><button class="button button--copy js-copy-button-36" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<p>Click <em>Check my progress</em> to verify the objective.
+<ql-activity-tracking step="5" labinstanceid="10899029">
+Enable versioning
+</ql-activity-tracking></p>
+<h3><strong>Create several versions of the sample file in the bucket</strong></h3>
+<ol>
+<li>
+<p>Check the size of the sample file:</p>
+</li>
+</ol>
+<pre><code>ls -al setup.html
+</code><button class="button button--copy js-copy-button-37" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="2">
+<li>
+<p>Open the setup.html file:</p>
+</li>
+</ol>
+<pre><code>nano setup.html
+</code><button class="button button--copy js-copy-button-38" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="3">
+<li>
+<p>Delete any 5 lines from setup.html to change the size of the file.</p>
+</li>
+<li>
+<p>Press <strong>Ctrl+O</strong>, <strong>ENTER</strong> to save the file, and then press <strong>Ctrl+X</strong> to exit nano.</p>
+</li>
+<li>
+<p>Copy the file to the bucket with the -v versioning option:</p>
+</li>
+</ol>
+<pre><code>gsutil cp -v setup.html gs://$BUCKET_NAME_1
+</code><button class="button button--copy js-copy-button-39" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="6">
+<li>
+<p>Open the setup.html file:</p>
+</li>
+</ol>
+<pre><code>nano setup.html
+</code><button class="button button--copy js-copy-button-40" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="7">
+<li>
+<p>Delete another 5 lines from setup.html to change the size of the file.</p>
+</li>
+<li>
+<p>Press <strong>Ctrl+O</strong>, <strong>ENTER</strong> to save the file, and then press <strong>Ctrl+X</strong> to exit nano.</p>
+</li>
+<li>
+<p>Copy the file to the bucket with the -v versioning option:</p>
+</li>
+</ol>
+<pre><code>gsutil cp -v setup.html gs://$BUCKET_NAME_1
+</code><button class="button button--copy js-copy-button-41" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<h3><strong>List all versions of the file</strong></h3>
+<ol>
+<li>
+<p>To list all versions of the file, run the following command:</p>
+</li>
+</ol>
+<pre><code>gsutil ls -a gs://$BUCKET_NAME_1/setup.html
+</code><button class="button button--copy js-copy-button-42" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="2">
+<li>
+<p>Highlight and copy the name of the oldest version of the file (the first listed), referred to as [VERSION_NAME] in the next step.</p>
+</li>
+<li>
+<p>Store the version value in the environment variable [VERSION_NAME].</p>
+</li>
+</ol>
+<pre><code>export VERSION_NAME=&lt;Enter VERSION name here&gt;
+</code><button class="button button--copy js-copy-button-43" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="4">
+<li>
+<p>Verify it with echo:</p>
+</li>
+</ol>
+<pre><code>echo $VERSION_NAME
+</code><button class="button button--copy js-copy-button-44" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<h3><strong>Download the oldest, original version of the file and verify recovery</strong></h3>
+<ol>
+<li>
+<p>Download the original version of the file:</p>
+</li>
+</ol>
+<pre><code>gsutil cp $VERSION_NAME recovered.txt
+</code><button class="button button--copy js-copy-button-45" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="2">
+<li>
+<p>To verify recovery, run the following commands:</p>
+</li>
+</ol>
+<pre><code>ls -al setup.html
+
+ls -al recovered.txt
+</code><button class="button button--copy js-copy-button-46" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="warning"><p>You have recovered the original file from the backup version. Notice that the original is bigger than the current version because you deleted lines.</p>
+</aside>
+<h2 id="step9">Task 7: Synchronize a directory to a bucket</h2>
+<h3>Make a nested directory and sync with a bucket</h3>
+<p>Make a nested directory structure so that you can examine what happens when it is recursively copied to a bucket.</p>
+<ol>
+<li>
+<p>Run the following commands:</p>
+</li>
+</ol>
+<pre><code>mkdir firstlevel
+mkdir ./firstlevel/secondlevel
+cp setup.html firstlevel
+cp setup.html firstlevel/secondlevel
+</code><button class="button button--copy js-copy-button-47" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="2">
+<li>
+<p>To sync the firstlevel directory on the VM with your bucket, run the following command:</p>
+</li>
+</ol>
+<pre><code>gsutil rsync -r ./firstlevel gs://$BUCKET_NAME_1/firstlevel
+</code><button class="button button--copy js-copy-button-48" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<h3><strong>Examine the results</strong></h3>
+<ol>
+<li>
+<p>In the GCP Console, on the <strong>Navigation menu</strong> ( <img alt="7a91d354499ac9f1.png" src="./Cloud Storage _ Qwiklabs_files/ITyhQn00xPCVZIksELAC4wax+QdPdrH2DNGLazXJKgw=">), click <strong>Storage</strong> &gt; <strong>Browser</strong>.</p>
+</li>
+<li>
+<p>Click [BUCKET_NAME_1]. Notice the subfolders in the bucket.</p>
+</li>
+<li>
+<p>Click on <strong>/firstlevel</strong> and then on <strong>/secondlevel</strong>.</p>
+</li>
+<li>
+<p>Compare what you see in the GCP Console with the results of the following command:</p>
+</li>
+</ol>
+<pre><code>gsutil ls -r gs://$BUCKET_NAME_1/firstlevel
+</code><button class="button button--copy js-copy-button-49"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="5">
+<li>
+<p>Exit Cloud Shell:</p>
+</li>
+</ol>
+<pre><code>exit
+</code><button class="button button--copy js-copy-button-50"><i class="fa fa-clipboard"></i></button></pre>
+<h2 id="step10">Task 8: Cross-project sharing</h2>
+<h3><strong>Switch to the second project</strong></h3>
+<ol>
+<li>
+<p>Open a new incognito tab.</p>
+</li>
+<li>
+<p>Navigate to  <a href="http://console.cloud.google.com/">console.cloud.google.com</a>.</p>
+</li>
+<li>
+<p>Click the project selector dropdown in the title bar.</p>
+</li>
+<li>
+<p>Click <strong>All</strong>, and then click the second project provided for you in the Qwiklabs Connection Details dialog. Remember that the Project ID is a unique name across all Google Cloud projects. The second project ID will be referred to as [PROJECT_ID_2].</p>
+</li>
+</ol>
+<h3>Prepare the bucket</h3>
+<ol>
+<li>In the GCP Console, on the <strong>Navigation menu</strong> ( <img alt="7a91d354499ac9f1.png" src="./Cloud Storage _ Qwiklabs_files/ITyhQn00xPCVZIksELAC4wax+QdPdrH2DNGLazXJKgw=">), click <strong>Storage</strong> &gt; <strong>Browser</strong>.</li>
+<li>Click <strong>Create bucket</strong>.</li>
+<li>Specify the following, and leave the remaining settings as their defaults:</li>
+</ol>
+<table>
+
+<tbody><tr>
+<th>Property</th>
+<th>Value (type value or select option as specified)</th>
+</tr>
+
+
+<tr>
+<td><strong>Name</strong></td>
+<td>Enter a globally unique name</td>
+</tr>
+<tr>
+<td><strong>Location type</strong></td>
+<td><strong>Multi-region</strong></td>
+</tr>
+<tr>
+<td><strong>Access control</strong></td>
+<td>
+<strong>Fine-grained</strong> (<em>object-level permission in addition to your bucket-level permissions</em>)</td>
+</tr>
+
+</tbody></table>
+<ol start="4">
+<li>
+<p>Note the bucket name. It will be referred to as [BUCKET_NAME_2] in the following steps.</p>
+</li>
+<li>
+<p>Click <strong>Create</strong>.</p>
+</li>
+</ol>
+<h3><strong>Upload a text file to the bucket</strong></h3>
+<ol>
+<li>
+<p>Upload a file to [BUCKET_NAME_2]. Any small example file or text file will do.</p>
+</li>
+<li>
+<p>Note the file name (referred to as [FILE_NAME]); you will use it later.</p>
+</li>
+</ol>
+<h3><strong>Create an IAM Service Account</strong></h3>
+<ol>
+<li>In the GCP Console, on the <strong>Navigation menu</strong> ( <img alt="7a91d354499ac9f1.png" src="./Cloud Storage _ Qwiklabs_files/ITyhQn00xPCVZIksELAC4wax+QdPdrH2DNGLazXJKgw=">), click <strong>IAM &amp; admin</strong> &gt; <strong>Service accounts</strong>.</li>
+<li>Click <strong>Create service account</strong>.</li>
+<li>On Service account details page, specify the <strong>Service account name</strong> as <strong>cross-project-storage</strong>.</li>
+<li>Click <strong>Create</strong>.</li>
+<li>On the Service account permissions page, specify the role as <strong>Storage &gt; Storage Object Viewer</strong>.</li>
+<li>Click <strong>Continue</strong>.</li>
+<li>Click <strong>Create Key</strong>.</li>
+<li>Select <strong>JSON</strong> as the key type.</li>
+<li>Click <strong>Create</strong>. A JSON key file will be downloaded. You will need to find this key file and upload it in into the VM in a later step.</li>
+<li>Click <strong>Close</strong>.</li>
+<li>Click <strong>Done</strong>.</li>
+<li>On your hard drive, rename the JSON key file to <strong>credentials.json</strong>.</li>
+<li>In the upper pane, switch back to [PROJECT_ID_1].</li>
+</ol>
+<p>Click <em>Check my progress</em> to verify the objective.
+<ql-activity-tracking step="6" labinstanceid="10899029">
+Create the resources in the second project
+</ql-activity-tracking></p>
+<h3><strong>Create a VM</strong></h3>
+<ol>
+<li>On the <strong>Navigation menu</strong> ( <img alt="7a91d354499ac9f1.png" src="./Cloud Storage _ Qwiklabs_files/ITyhQn00xPCVZIksELAC4wax+QdPdrH2DNGLazXJKgw=">), click <strong>Compute Engine</strong> &gt; <strong>VM instances</strong>.</li>
+<li>Click <strong>Create</strong>.</li>
+<li>Specify the following, and leave the remaining settings as their defaults:</li>
+</ol>
+<table>
+
+<tbody><tr>
+<th>Property</th>
+<th>Value (type value or select option as specified)</th>
+</tr>
+
+
+<tr>
+<td><strong>Name</strong></td>
+<td><strong>crossproject</strong></td>
+</tr>
+<tr>
+<td><strong>Region</strong></td>
+<td><strong>europe-west1</strong></td>
+</tr>
+<tr>
+<td><strong>Zone</strong></td>
+<td><strong>europe-west1-d</strong></td>
+</tr>
+<tr>
+<td><strong>Machine type</strong></td>
+<td><strong>f1-micro</strong></td>
+</tr>
+
+</tbody></table>
+<ol start="4">
+<li>
+<p>Click <strong>Create</strong>.</p>
+</li>
+</ol>
+<h3><strong>SSH to the VM</strong></h3>
+<ol>
+<li>
+<p>For <strong>crossproject</strong>, click <strong>SSH</strong> to launch a terminal and connect.</p>
+</li>
+<li>
+<p>Store [BUCKET_NAME_2] in an environment variable:</p>
+</li>
+</ol>
+<pre><code>export BUCKET_NAME_2=&lt;enter bucket name 2 here&gt;
+</code><button class="button button--copy js-copy-button-51" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="3">
+<li>
+<p>Verify it with echo:</p>
+</li>
+</ol>
+<pre><code>echo $BUCKET_NAME_2
+</code><button class="button button--copy js-copy-button-52" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="4">
+<li>
+<p>Store [FILE_NAME] in an environment variable:</p>
+</li>
+</ol>
+<pre><code>export FILE_NAME=&lt;enter FILE_NAME here&gt;
+</code><button class="button button--copy js-copy-button-53" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="5">
+<li>
+<p>Verify it with echo:</p>
+</li>
+</ol>
+<pre><code>echo $FILE_NAME
+</code><button class="button button--copy js-copy-button-54" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="6">
+<li>
+<p>List the files in [PROJECT_ID_2]:</p>
+</li>
+</ol>
+<pre><code>gsutil ls gs://$BUCKET_NAME_2/
+</code><button class="button button--copy js-copy-button-55" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<p>Result <strong>(do not copy; this is example output)</strong>:</p>
+<pre><code>AccessDeniedException: 403 Caller does not have storage.objects.list access to bucket [BUCKET_NAME_2].
+</code><button class="button button--copy js-copy-button-56"><i class="fa fa-clipboard"></i></button></pre>
+<h3><strong>Authorize the VM</strong></h3>
+<ol>
+<li>
+<p>To upload credentials.json through the SSH VM terminal, click on the gear icon ( <img alt="d88f3e00dc8118df.png" src="./Cloud Storage _ Qwiklabs_files/bgBjxa716p+rTqVKYXv8ahXpPRO8E8Kwz3pje5PwBhw=">) in the upper-right corner, and then click <strong>Upload file</strong>.</p>
+</li>
+<li>
+<p>Select credentials.json and upload it.</p>
+</li>
+<li>
+<p>Click <strong>Close</strong> in the File Transfer window.</p>
+</li>
+<li>
+<p>Verify that the JSON file has been uploaded to the VM:</p>
+</li>
+</ol>
+<pre><code>ls
+</code><button class="button button--copy js-copy-button-57"><i class="fa fa-clipboard"></i></button></pre>
+<p>Result <strong>(do not copy; this is example output)</strong>:</p>
+<pre><code>credentials.json
+</code><button class="button button--copy js-copy-button-58"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="5">
+<li>
+<p>Enter the following command in the terminal to authorize the VM to use the Google Cloud API:</p>
+</li>
+</ol>
+<pre><code>gcloud auth activate-service-account --key-file credentials.json
+</code><button class="button button--copy js-copy-button-59" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="special"><p>The image you are using has the Google Cloud SDK pre-installed; therefore, you don't need to initialize the Google Cloud SDK. If you are attempting this lab in a different environment, make sure you have followed these procedures regarding installing the Google Cloud SDK:</p>
+<p><a href="https://cloud.google.com/sdk/downloads" target="_blank">https://cloud.google.com/sdk/downloads</a> </p>
+</aside>
+<h3><strong>Verify access</strong></h3>
+<ol>
+<li>
+<p>Retry this command:</p>
+</li>
+</ol>
+<pre><code>gsutil ls gs://$BUCKET_NAME_2/
+</code><button class="button button--copy js-copy-button-60" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="2">
+<li>
+<p>Retry this command:</p>
+</li>
+</ol>
+<pre><code>gsutil cat gs://$BUCKET_NAME_2/$FILE_NAME
+</code><button class="button button--copy js-copy-button-61" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="3">
+<li>
+<p>Try to copy the credentials file to the bucket:</p>
+</li>
+</ol>
+<pre><code>gsutil cp credentials.json gs://$BUCKET_NAME_2/
+</code><button class="button button--copy js-copy-button-62" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<p>Result <strong>(do not copy; this is example output)</strong>:</p>
+<pre><code>Copying file://credentials.json [Content-Type=application/json]...
+AccessDeniedException: 403 Caller does not have storage.objects.create access to bucket [BUCKET_NAME_2].
+</code><button class="button button--copy js-copy-button-63"><i class="fa fa-clipboard"></i></button></pre>
+<h3><strong>Modify role</strong></h3>
+<ol>
+<li>In the upper pane, switch back to [PROJECT_ID_2].</li>
+<li>In the GCP Console, on the <strong>Navigation menu</strong> ( <img alt="7a91d354499ac9f1.png" src="./Cloud Storage _ Qwiklabs_files/ITyhQn00xPCVZIksELAC4wax+QdPdrH2DNGLazXJKgw=">), click <strong>IAM &amp; admin</strong> &gt; <strong>IAM</strong>.</li>
+<li>Click the pencil icon for the <strong>cross-project-storage</strong> service account (You might have to scroll to the right to see this icon).</li>
+<li>Click on the <strong>Storage Object Viewer</strong> role, and then click <strong>Storage</strong> &gt; <strong>Storage Object Admin</strong>.</li>
+<li>Click <strong>Save</strong>.
+If you don't click <strong>Save</strong>, the change will not be made.</li>
+</ol>
+<p>Click <em>Check my progress</em> to verify the objective.
+<ql-activity-tracking step="7" labinstanceid="10899029">
+Create and verify the resources in the first project
+</ql-activity-tracking></p>
+<h3>Verify changed access</h3>
+<ol>
+<li>
+<p>Return to the SSH terminal for <strong>crossproject</strong>.</p>
+</li>
+<li>
+<p>Copy the credentials file to the bucket:</p>
+</li>
+</ol>
+<pre><code>gsutil cp credentials.json gs://$BUCKET_NAME_2/
+</code><button class="button button--copy js-copy-button-64" title="" data-original-title="Copied"><i class="fa fa-clipboard"></i></button></pre>
+<p>Result <strong>(do not copy; this is example output)</strong>:</p>
+<pre><code>Copying file://credentials.json [Content-Type=application/json]...
+- [1 files][  2.3 KiB/  2.3 KiB]
+Operation completed over 1 objects/2.3 KiB.
+</code><button class="button button--copy js-copy-button-65"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="warning"><p>In this example the VM in PROJECT_ID_1 can now upload files to Cloud Storage in a bucket that was created in another project.</p>
+<p>Note that the project where the bucket was created is the billing project for this activity. That means if the VM uploads a ton of files, it will not be billed to PROJECT_ID_1, but instead to PROJECT_ID_2.</p>
+</aside>
+<h2 id="step11">Task 9: Review</h2>
+<p>In this lab you learned to create and work with buckets and objects, and you learned about the following features for Cloud Storage:</p>
+<ul>
+<li>CSEK: Customer-supplied encryption key</li>
+<li>Use your own encryption keys</li>
+<li>Rotate keys</li>
+<li>ACL: Access control list</li>
+<li>Set an ACL for private, and modify to public</li>
+<li>Lifecycle management</li>
+<li>Set policy to delete objects after 31 days</li>
+<li>Versioning</li>
+<li>Create a version and restore a previous version</li>
+<li>Directory synchronization</li>
+<li>Recursively synchronize a VM directory with a bucket</li>
+<li>Cross-project resource sharing using IAM</li>
+<li>Use IAM to enable access to resources across projects</li>
+</ul>
+<h2 id="step12">End your lab</h2>
+<p>When you have completed your lab, click <strong>End Lab</strong>. Qwiklabs removes the resources you’ve used and cleans the account for you.</p>
+<p>You will be given an opportunity to rate the lab experience. Select the applicable number of stars, type a comment, and then click <strong>Submit</strong>.</p>
+<p>The number of stars indicates the following:</p>
+<ul>
+<li>1 star = Very dissatisfied</li>
+<li>2 stars = Dissatisfied</li>
+<li>3 stars = Neutral</li>
+<li>4 stars = Satisfied</li>
+<li>5 stars = Very satisfied</li>
+</ul>
+<p>You can close the dialog box if you don't want to provide feedback.</p>
+<p>For feedback, suggestions, or corrections, please use the <strong>Support</strong> tab.</p>
+
+<p>Copyright 2019 Google LLC All rights reserved. Google and the Google logo are trademarks of Google LLC. All other company and product names may be trademarks of the respective companies with which they are associated.</p>
+
+
+
+</div>
+<div class="js-lab-content-outline lab-content__outline">
+<a href="https://googlecoursera.qwiklabs.com/focuses/37225#step1" class="">Overview</a><a href="https://googlecoursera.qwiklabs.com/focuses/37225#step2" class="">Objectives</a><a href="https://googlecoursera.qwiklabs.com/focuses/37225#step3" class="">Task 1: Preparation</a><a href="https://googlecoursera.qwiklabs.com/focuses/37225#step4" class="">Task 2: Access control lists (ACLs)</a><a href="https://googlecoursera.qwiklabs.com/focuses/37225#step5" class="">Task 3: Customer-supplied encryption keys (CSEK)</a><a href="https://googlecoursera.qwiklabs.com/focuses/37225#step6" class="">Task 4: Rotate CSEK keys</a><a href="https://googlecoursera.qwiklabs.com/focuses/37225#step7" class="">Task 5: Enable lifecycle management</a><a href="https://googlecoursera.qwiklabs.com/focuses/37225#step8" class="">Task 6: Enable versioning</a><a href="https://googlecoursera.qwiklabs.com/focuses/37225#step9" class="">Task 7: Synchronize a directory to a bucket</a><a href="https://googlecoursera.qwiklabs.com/focuses/37225#step10" class="">Task 8: Cross-project sharing</a><a href="https://googlecoursera.qwiklabs.com/focuses/37225#step11" class="">Task 9: Review</a><a href="https://googlecoursera.qwiklabs.com/focuses/37225#step12" class="">End your lab</a>
+</div>
+</div>
+
+</div>
+
+
+</div>
+</div>
+<div class="lab-assessment__tab js-lab-assessment-tab">
+<h5 class="small-label">
+Score
+</h5>
+<h3 class="js-lab-assessment-total-score">—/35</h3>
+<iframe class="l-ie-iframe-fix" src="./Cloud Storage _ Qwiklabs_files/saved_resource(1).html"></iframe>
+</div>
+<div class="lab-assessment__panel js-lab-assessment-panel">
+<!-- / If lab_instance has is started and assessment is generated, use -->
+<!-- / lab_instance.assessment, otherwise use lab.assessment_manual -->
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title">
+Create a Cloud Storage bucket
+</p>
+<p class="button button--assessment js-show-run-step-button" step_no="1">
+Run Step
+</p>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-1">—</span>
+/ 5
+</p>
+</div>
+
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title">
+Make file publicly readable
+</p>
+<p class="button button--assessment js-show-run-step-button" step_no="2">
+Run Step
+</p>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-2">—</span>
+/ 5
+</p>
+</div>
+
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title">
+Customer-supplied encryption keys (CSEK)
+</p>
+<p class="button button--assessment js-show-run-step-button" step_no="3">
+Run Step
+</p>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-3">—</span>
+/ 5
+</p>
+</div>
+
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title">
+Enable lifecycle management
+</p>
+<p class="button button--assessment js-show-run-step-button" step_no="4">
+Run Step
+</p>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-4">—</span>
+/ 5
+</p>
+</div>
+
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title">
+Enable versioning
+</p>
+<p class="button button--assessment js-show-run-step-button" step_no="5">
+Run Step
+</p>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-5">—</span>
+/ 5
+</p>
+</div>
+
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title">
+Create the resources in the second project
+</p>
+<p class="button button--assessment js-show-run-step-button" step_no="6">
+Run Step
+</p>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-6">—</span>
+/ 5
+</p>
+</div>
+
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title">
+Create and verify the resources in the first project
+</p>
+<p class="button button--assessment js-show-run-step-button" step_no="7">
+Run Step
+</p>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-7">—</span>
+/ 5
+</p>
+</div>
+
+<iframe class="l-ie-iframe-fix" src="./Cloud Storage _ Qwiklabs_files/saved_resource(2).html"></iframe>
+</div>
+<div class="lab-introduction js-lab-introduction is-hidden">
+<div class="lab-introduction__inner">
+<h1 class="headline-1">Welcome to Your First Lab!</h1>
+<ql-icon-button class="js-skip-button">close</ql-icon-button>
+<div class="lab-introduction__video">
+<iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" id="lab-introduction" src="./Cloud Storage _ Qwiklabs_files/yF7EDXKTmoQ.html"></iframe>
+</div>
+<a class="js-skip-button button button--outline">Skip this video</a>
+</div>
+</div>
+
+
+
+</div>
+</main>
+<div class="modal fade" id="lab-details-modal">
+<div class="modal-container">
+<div class="mdl-shadow--24dp modal-content">
+<div class="modal-body">
+<p class="l-mbm">
+In this lab you create and use Cloud Storage buckets and exercise many of the advanced features including restricting access with Access Lists, implementing version control, loading and managing your own encryption keys, directory synch and more.
+</p>
+<p class="small-label l-mbs">
+<strong>
+Duration:
+</strong>
+0m setup
+·
+90m access
+·
+60m completion
+</p>
+<p class="small-label l-mbs">
+<span><strong>Levels: </strong>introductory</span>
+</p>
+<p class="small-label">
+<strong>
+Permalink:
+</strong>
+<a href="https://googlecoursera.qwiklabs.com/catalog_lab/1781">https://googlecoursera.qwiklabs.com/catalog_lab/1781</a>
+</p>
+</div>
+<div class="modal-actions">
+<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" data-dismiss="modal" data-upgraded=",MaterialButton,MaterialRipple">
+Got It
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+</div>
+
+
+</div>
+</div>
+<iframe class="l-ie-iframe-fix" src="./Cloud Storage _ Qwiklabs_files/saved_resource(3).html"></iframe>
+</div>
+<div class="modal fade" id="lab-review-modal" style="display: none;">
+<div class="modal-container">
+<div class="mdl-shadow--24dp modal-content">
+<form class="simple_form js-lab-review-form" id="new_lab_review" action="https://googlecoursera.qwiklabs.com/lab_reviews" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓"><div class="modal-body">
+<p class="label">
+How satisfied are you with this lab?*
+</p>
+<div class="rateit js-rateit" data-rateit-max="5" data-rateit-min="0" data-rateit-resetable="false" data-rateit-step="1" data-rateit-value="0"><div class="rateit-reset" style="display: none;"></div><div class="rateit-range" style="width: 80px; height: 16px;"><div class="rateit-selected" style="height: 16px; width: 80px; display: block;"></div><div class="rateit-hover" style="height: 16px; width: 0px; display: none;"></div></div></div>
+<div class="l-mtm">
+
+<div class="control-group hidden lab_review_user_id"><div class="controls"><input class="hidden" type="hidden" value="2332914" name="lab_review[user_id]" id="lab_review_user_id"></div></div>
+<div class="control-group hidden lab_review_classroom_id"><div class="controls"><input class="hidden" type="hidden" value="4798" name="lab_review[classroom_id]" id="lab_review_classroom_id"></div></div>
+<div class="control-group hidden lab_review_lab_id"><div class="controls"><input class="hidden" type="hidden" value="1781" name="lab_review[lab_id]" id="lab_review_lab_id"></div></div>
+<div class="control-group hidden lab_review_focus_id"><div class="controls"><input class="hidden" type="hidden" value="37225" name="lab_review[focus_id]" id="lab_review_focus_id"></div></div>
+<div class="control-group hidden lab_review_rating"><div class="controls"><input class="hidden js-rating-input" type="hidden" name="lab_review[rating]" id="lab_review_rating" value="2"></div></div>
+<div class="control-group text optional lab_review_comment"><label class="text optional control-label" for="lab_review_comment">Comment</label><div class="controls"><textarea class="text optional" name="lab_review[comment]" id="lab_review_comment"></textarea></div></div>
+</div>
+</div>
+<div class="modal-actions">
+<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" data-dismiss="modal" data-upgraded=",MaterialButton,MaterialRipple">
+Cancel
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<input type="submit" name="commit" value="Submit" class="btn mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="submit" data-disabled="false" data-disable-with="Submit" data-upgraded=",MaterialButton,MaterialRipple"><span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 183.069px; height: 183.069px; transform: translate(-50%, -50%) translate(39px, 24px);"></span></span></input>
+</div>
+</form>
+
+</div>
+</div>
+<iframe class="l-ie-iframe-fix" src="./Cloud Storage _ Qwiklabs_files/saved_resource(4).html"></iframe>
+</div>
+
+<script>
+  $( function() {
+    ql.initMaterialInputs();
+    initChosen();
+    initSearch();
+    initTabs();
+    ql.list.init();
+    ql.favoriting.init();
+    ql.header.myAccount.init();
+    initTooltips();
+    ql.autocomplete.init();
+    ql.modals.init();
+    ql.toggleButtons.init();
+    ql.analytics.init();
+    initLabContent( );
+  ql.labOutline.links.init();
+  ql.labOutline.layout.init();
+  initLabReviewModal();
+  ql.labAssessment.init();
+  ql.labIntroduction.init( true );
+  ql.labData.init();
+  initLabTranslations( {"are_you_sure":"All done? If you end this lab, you will lose all your work. You may not be able to restart the lab if there is a quota limit. Are you sure you want to end this lab?\n","in_progress":"*In Progress*","ending":"*Ending*","starting":"*Starting, please wait*","end_concurrent_labs":"Sorry, you can only run one lab at a time. To start this lab, please confirm that you want all of your existing labs to end.\n","copied":"Copied","no_resource":"Error retrieving resource.","no_support":"No Support","mac_press":"Press ⌘-C to copy","thanks_review":"Thanks for reviewing this lab.","windows_press":"Press Ctrl-C to copy","days":"days"} );
+  ql.labRun.init();
+  ql.initHeader();
+  ql.navigation.init();
+  ql.navPanel.init();
+  ql.navigation.init();
+  
+  });
+</script>
+<style>
+  .mdl-layout__container {
+    position: static
+  }
+</style>
+
+
+<iframe data-product="web_widget" title="No content" tabindex="-1" aria-hidden="true" src="./Cloud Storage _ Qwiklabs_files/saved_resource(5).html" style="width: 0px; height: 0px; border: 0px; position: absolute; top: -9999px;"></iframe><div id="drift-widget-container" style="position: absolute; z-index: 2147483647;"><iframe id="drift-widget" src="./Cloud Storage _ Qwiklabs_files/index.html" title="Drift Messenger" role="complementary" style="border: none; display: block; height: 0px !important; width: 0px !important; position: fixed; top: auto; left: auto; bottom: 0px; right: 0px; visibility: hidden; z-index: 2147483647; max-height: 100vh; max-width: 100vw; transition: none 0s ease 0s; background: none transparent; opacity: 1; pointer-events: auto; touch-action: auto;" class="drift-widget-hidden"></iframe></div><div><iframe title="Opens a widget where you can chat to one of our agents" id="launcher" tabindex="0" class="zEWidget-launcher zEWidget-launcher--active" style="border: none; background: transparent; z-index: 999998; transform: translateZ(0px); position: fixed; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; opacity: 1; height: 50px; max-height: 551px; min-height: 50px; margin: 10px 20px; right: 0px; bottom: 0px; width: 112px;width: 112px;" src="./Cloud Storage _ Qwiklabs_files/saved_resource(6).html"></iframe></div><div><iframe title="Find more information here" id="webWidget" tabindex="-1" class="zEWidget-webWidget " style="border: none; background: transparent; z-index: 999999; transform: translateZ(0px); position: fixed; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; opacity: 0; width: 357px; height: 100%; max-height: 565px; min-height: 150px; margin-left: 8px; margin-right: 8px; top: -9999px; visibility: hidden;" src="./Cloud Storage _ Qwiklabs_files/saved_resource(7).html"></iframe></div></body></html>
