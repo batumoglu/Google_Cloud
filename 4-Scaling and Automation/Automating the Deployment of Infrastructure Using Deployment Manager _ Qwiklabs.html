@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" class="mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/caff0d62ed"></script><script src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/nr-1158.min.js.download"></script><script type="text/javascript" async="" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/js"></script><script type="text/javascript" async="" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/analytics.js.download"></script><script type="text/javascript" async="" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/d58fn3dh7i2n.js.download"></script><script type="text/javascript" async="" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/analytics.min.js.download"></script><script type="text/javascript" id="www-widgetapi-script" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/www-widgetapi.js.download" async=""></script><script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"caff0d62ed","applicationID":"29451451","transactionName":"IQ1XRUEOVV1dFxlRXAEXSlRATkpZVxI=","queueTime":0,"applicationTime":486,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"caff0d62ed",applicationID:"29451451"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta content="[]" name="active-experiments">
+<meta content="{&quot;userId&quot;:2332914}" name="help-api-product-data">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="DwrfzG64P7/SPnmZbn96al8V3Pn29qDThj5e5KRSxagpUeTPa1mxWkC0OezpvKxD8QMbrjOg8qiKmavLzpjF9A==">
+<title>Automating the Deployment of Infrastructure Using Deployment Manager | Qwiklabs</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" name="viewport">
+<meta content="
+In this lab, you create a Deployment Manager configuration with a template to automate the deployment of GCP infrastructure.
+" name="description">
+<meta content="Qwiklabs" name="author">
+<meta content="1rRsY0INj8RvwB5EF5pwdxt2A2P9aDgAlsICaJ0d5w0" name="google-site-verification">
+<meta content="Automating the Deployment of Infrastructure Using Deployment Manager | Qwiklabs" property="og:title">
+<meta content="website" property="og:type">
+<meta content="/favicon-144.png" property="og:image">
+<meta content="Qwiklabs" property="og:site_name">
+<meta content="
+In this lab, you create a Deployment Manager configuration with a template to automate the deployment of GCP infrastructure.
+" property="og:description">
+<meta content="/qwiklabs_logo_900x887.png" property="og:logo" size="900x887">
+<meta content="/qwiklabs_logo_994x187.png" property="og:logo" size="994x187">
+<meta content="#3681E4" property="msapplication-TileColor">
+<meta content="/favicon-144.png" property="msapplication-TileImage">
+<link href="https://googlecoursera.qwiklabs.com/favicon-32.png" rel="shortcut icon">
+<link color="#3681E4" href="https://googlecoursera.qwiklabs.com/favicon-svg.svg" rel="mask-icon">
+<link href="https://googlecoursera.qwiklabs.com/favicon-180.png" rel="apple-touch-icon-precomposed">
+<link rel="stylesheet" media="screen" href="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/css">
+
+
+<!--[if lt IE 9]>
+<script src='http://html5shim.googlecode.com/svn/trunk/html5.js' type='text/javascript'></script>
+<![endif]-->
+<!--[endif]>  <![endif]-->
+<script>
+//<![CDATA[
+window.gon={};gon.current_user={"firstname":"Ozkan","lastname":"Batumoglu","fullname":"Ozkan Batumoglu","company":"Coursera","email":"batumoglu@hotmail.com","origin":"googlecoursera-run, lti-coursera","subscriptions":0,"id":"54eb7d21170356f2189321bcd774d847","qlCreatedAt":"2019-12-25 11:42:16 UTC","optIn":null};gon.segment="j4Im8pqIko0Lxq4wVVZWMPMM0EroHUvb";gon.deployment="googlecoursera-run";
+//]]>
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "https://www.qwiklabs.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.qwiklabs.com/catalog?keywords={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script id="ze-snippet" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/snippet.js.download"></script><script type="text/javascript" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/asset_composer.5d2cd6d9613b85125812.js.download" charset="utf-8" async=""></script>
+
+
+
+<link rel="stylesheet" media="all" href="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/application-a53cf05bc9e39a99a1d6fa14f486d7ecec091bb67f0aca5b1257120cbf85ec76.css">
+<script>
+  EVENT_SOURCE_BASE_URL = "https://googlecoursera-run.qwiklabs.com/nchan-sub?id=";
+</script>
+<script src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/webcomponents-loader.js.download"></script>
+<script src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/hallofmirrors-a87311d98f0c2f8a882727c54543601e005dded946094be4a719d9683b2f9762.js.download"></script><script async="" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/lazy.min.js.download"></script>
+<script src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/iframe_api"></script>
+<script src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/vendor-45d462772c30000424907184f70c7157e95fb6227698d1671c5051818a6f60d8.js.download"></script>
+<script src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/application-ebb27cbff944188da04b9e68f7789655da6ebaa697498ca84f00351368bd2507.js.download"></script>
+</head>
+<body class="focuses focuses-show lab-show l-full no-nav">
+<div class="header-container">
+<div class="header">
+<a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect header__button header__button--nav header__nav-panel-button js-nav-toggle" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">menu</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<div class="header__title">
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button header__button--nav" href="https://www.coursera.org/" data-upgraded=",MaterialButton,MaterialRipple"><ql-icon>arrow_back</ql-icon><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+
+<h1 class="headline-5">
+Automating the Deployment of Infrastructure Using Deployment Manager
+</h1>
+</div>
+<div class="header__actions">
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button header__button--action header__button--search js-header-search-bar-button" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">search</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+
+<ql-help context="lab" productdata="{&quot;userId&quot;:2332914}" data-analytics-action="opened_help" data-analytics-label="lab"></ql-help>
+<a class="header-my-account-button mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-my-account-button" data-upgraded=",MaterialButton,MaterialRipple">
+<img class="avatar " src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/527aaaf240e6e7ef6a272c7f9743d396.png">
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<div class="header-my-account-menu js-my-account-menu">
+<div class="card elevation-2 no-padding">
+<div class="my-account-menu__top">
+<img class="avatar " src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/527aaaf240e6e7ef6a272c7f9743d396.png">
+<div class="my-account-menu__info">
+<h4 class="subtitle-headline-1">
+Ozkan Batumoglu
+</h4>
+<p class="body-2 text--gray">
+<span>batumoglu@hotmail.com</span>
+</p>
+<a class="button" href="https://googlecoursera.qwiklabs.com/my_account/profile">My Account</a>
+</div>
+</div>
+<div class="my-account-menu__bottom">
+<a class="text--green subtitle-headline-2" href="https://googlecoursera.qwiklabs.com/my_account/credits">0 Credits
+</a><a data-analytics-action="clicked_sign_out" class="button button--hairline" rel="nofollow" data-method="delete" href="https://googlecoursera.qwiklabs.com/users/sign_out">Sign Out</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="header__search-bar js-header-search-bar">
+<form id="catalog-search-mobile" onsubmit="ql.catalogSearchFilter(); return false;" action="https://googlecoursera.qwiklabs.com/searches/elasticsearch" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="DwrfzG64P7/SPnmZbn96al8V3Pn29qDThj5e5KRSxagpUeTPa1mxWkC0OezpvKxD8QMbrjOg8qiKmavLzpjF9A==">
+<input type="text" name="keywords" id="keywords" placeholder="Search" maxlength="255">
+</form>
+
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">close</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+</div>
+</div>
+
+<nav class="nav-bar">
+<a class="nav-bar__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/"><ql-icon class="nav-bar__item__icon">
+home
+</ql-icon>
+<span class="nav-bar__item__label">
+Home
+</span>
+</a>
+<a class="nav-bar__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/catalog"><ql-icon class="nav-bar__item__icon">
+school
+</ql-icon>
+<span class="nav-bar__item__label">
+Catalog
+</span>
+</a>
+<a class="nav-bar__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_learning"><ql-icon class="nav-bar__item__icon">
+event_note
+</ql-icon>
+<span class="nav-bar__item__label">
+My Learning
+</span>
+</a>
+</nav>
+
+<nav class="nav-panel js-nav-panel">
+<div class="nav-panel__logo">
+<div class="logo logo--blue"></div>
+</div>
+<a title="Home" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/"><ql-icon class="nav-panel__item__icon">
+home
+</ql-icon>
+<div class="nav-panel__item__label">
+Home
+</div>
+</a>
+<a title="Catalog" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/catalog"><ql-icon class="nav-panel__item__icon">
+school
+</ql-icon>
+<div class="nav-panel__item__label">
+Catalog
+</div>
+</a>
+<a title="My Learning" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_learning"><ql-icon class="nav-panel__item__icon">
+event_note
+</ql-icon>
+<div class="nav-panel__item__label">
+My Learning
+</div>
+</a>
+<div class="nav-panel__spacer"></div>
+<a title="Profile" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_account/profile"><ql-icon class="nav-panel__item__icon">
+account_circle
+</ql-icon>
+<div class="nav-panel__item__label">
+Profile
+</div>
+</a>
+<a title="Credits &amp; Subscriptions" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_account/credits"><ql-icon class="nav-panel__item__icon">
+money
+</ql-icon>
+<div class="nav-panel__item__label">
+Credits &amp; Subscriptions
+</div>
+</a>
+<a title="Security" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_account/security"><ql-icon class="nav-panel__item__icon">
+security
+</ql-icon>
+<div class="nav-panel__item__label">
+Security
+</div>
+</a>
+<div class="nav-panel__spacer"></div>
+<a class="nav-panel__item" tabindex="-1" href="https://googlecoursera.qwiklabs.com/focuses/37342#"><ql-help>
+<div class="nav-panel__help-item">
+<ql-icon class="nav-panel__item__icon">help</ql-icon>
+<div class="nav-panel__item__label">Help</div>
+</div>
+</ql-help>
+</a><div class="nav-panel__small-links">
+<a tabindex="-1" href="https://googlecoursera.qwiklabs.com/privacy_policy">Privacy</a>
+<a tabindex="-1" href="https://googlecoursera.qwiklabs.com/terms_of_service">Terms</a>
+</div>
+</nav>
+<div class="nav-panel__overlay js-nav-toggle"></div>
+
+<main class="js-main">
+<span class="hidden" id="flash-sibling-before"></span>
+
+<div class="l-main-wrapper" id="main-wrapper">
+
+
+
+
+
+
+
+<div class="js-lab-state" data-analytics-payload="{&quot;label&quot;:&quot;Automating the Deployment of Infrastructure Using Deployment Manager&quot;,&quot;lab_name&quot;:&quot;Automating the Deployment of Infrastructure Using Deployment Manager&quot;,&quot;classroom_name&quot;:null,&quot;deployment&quot;:&quot;googlecoursera-run&quot;}" data-focus-id="37342" data-lab-billing-limit="0.0" data-lab-duration="3600" data-parent="classroom"></div>
+<ql-lab-control-panel class="js-lab-control-panel l-lab-control-panel" connectiondetails="[]" connectionfiles="[]" labcontrolbutton="{&quot;disabled&quot;:false,&quot;pending&quot;:false,&quot;running&quot;:false}" labtimer="{&quot;ticking&quot;:false,&quot;secondsRemaining&quot;:3600}" studentresources="[]"></ql-lab-control-panel>
+<div class="l-lab-main-body">
+<div class="js-lab-content lab-content">
+<div class="alert alert--fake js-alert">
+<p class="alert__message js-alert-message"></p>
+<a class="alert__close js-alert-close">
+<i class="fa fa-times"></i>
+</a>
+<iframe class="l-ie-iframe-fix" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/saved_resource.html"></iframe>
+</div>
+<div class="lab-content__markdown-wrapper">
+<div class="lab-preamble">
+<h1 class="lab-preamble__title">
+Automating the Deployment of Infrastructure Using Deployment Manager
+</h1>
+<div class="lab-preamble__details subtitle-headline-1">
+<span>1 hour </span>
+<span>Free</span>
+<div class="lab__rating">
+<a href="https://googlecoursera.qwiklabs.com/focuses/37342/reviews?parent=catalog"><div class="rateit" data-rateit-readonly="true" data-rateit-value="4.172"><div class="rateit-reset" style="display: none;"></div><div class="rateit-range" style="width: 80px; height: 16px;"><div class="rateit-selected" style="height: 16px; width: 66.752px;"></div><div class="rateit-hover" style="height:16px"></div></div></div>
+
+</a><a data-target="#lab-review-modal" data-toggle="modal">
+Rate Lab
+</a>
+</div>
+</div>
+</div>
+
+<div class="lab-content__inner-wrapper">
+<div class="js-markdown-instructions lab-content__markdown markdown-lab-instructions" id="markdown-lab-instructions">
+
+
+
+<h2 id="step1">Overview</h2>
+<p>Deployment Manager is an infrastructure deployment service that automates the creation and management of Google Cloud Platform resources. Write flexible template and configuration files and use them to create deployments that have a variety of Cloud Platform services, such as Cloud Storage, Compute Engine, and Cloud SQL, configured to work together.</p>
+<p>In this lab, you create a Deployment Manager configuration with a template to automate the deployment of GCP infrastructure. Specifically, you deploy one auto mode network with a firewall rule and two VM instances, as shown in this diagram:</p>
+<p><img alt="diagram.png" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/tQ3NS2xpirSs1UXVcklIYVQM7WkUc_8iC7ryGFPSfRs="></p>
+<h3>Objectives</h3>
+<p>In this lab, you learn how to perform the following tasks:</p>
+<ul>
+<li>Create a configuration for an auto mode network</li>
+<li>Create a configuration for a firewall rule</li>
+<li>Create a template for VM instances</li>
+<li>Create and deploy a configuration</li>
+<li>Verify the deployment of a configuration</li>
+</ul>
+<h4>Before you click the Start Lab button</h4>
+<p>Read these instructions. Labs are timed and you cannot pause them. The timer, which starts when you click Start Lab, shows how long Cloud resources will be made available to you.</p>
+<p>This Qwiklabs hands-on lab lets you do the lab activities yourself in a real cloud environment, not in a simulation or demo environment. It does so by giving you new, temporary credentials that you use to sign in and access the Google Cloud Platform for the duration of the lab.</p>
+<h4>What you need</h4>
+<p>To complete this lab, you need:</p>
+<ul>
+<li>Access to a standard internet browser (Chrome browser recommended).</li>
+<li>Time to complete the lab.</li>
+</ul>
+<p><strong><em>Note:</em></strong> If you already have your own personal GCP account or project, do not use it for this lab.</p>
+
+<h2 id="step2">Task 1. Configure the network</h2>
+<p>A configuration describes all the resources you want for a single deployment.</p>
+<h3><strong>Verify that the Deployment Manager API is enabled</strong></h3>
+<ol>
+<li>
+<p>In the GCP Console, on the <strong>Navigation menu</strong> (<img alt="Navigation menu" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/tkgw1TDgj4Q+YKQUW4jUFd0O5OEKlUMBRYbhlCrF0WY=" title="Navigation menu">), click <strong>APIs &amp; services</strong> &gt; <strong>Library</strong>.</p>
+</li>
+<li>
+<p>In the search bar, type <strong>Deployment Manager</strong>, and click the result for <strong>Google Cloud Deployment Manager V2 API</strong>.</p>
+</li>
+<li>
+<p>Verify that the API is enabled.</p>
+</li>
+</ol>
+<h3><strong>Start the Cloud Shell Editor</strong></h3>
+<p>To write the configuration and the template, you use the Cloud Shell Editor.</p>
+<ol>
+<li>
+<p>In the GCP Console, click <strong>Activate Cloud Shell</strong> (<img alt="Cloud Shell" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/ep8HmqYGdD_kUncAAYpV47OYoHwC8+g0WK_8sidHquE=" title="Cloud Shell">).</p>
+</li>
+<li>
+<p>If prompted, click <strong>Continue</strong>.</p>
+</li>
+<li>
+<p>Run the following commands:</p>
+</li>
+</ol>
+<pre><code>mkdir dminfra
+cd dminfra
+</code><button class="button button--copy js-copy-button-0"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="4">
+<li>
+<p>In Cloud Shell, click <strong>Launch code editor</strong> (<img alt="Cloud Shell Editor" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/zxK8nW520maN72Qq6D1Lt9gCeDh7QOMGWCwhny5S8sQ=" title="Cloud Shell Editor">).</p>
+</li>
+<li>
+<p>In the left pane of the code editor, expand the <strong>dminfra</strong> folder.</p>
+</li>
+</ol>
+<h3><strong>Create the auto mode network configuration</strong></h3>
+<p>A configuration is a file written in YAML syntax that lists each of the resources you want to create and their respective resource properties. A configuration must contain a <code>resources:</code> section followed by the list of resources to create. Start the configuration with the <strong>mynetwork</strong> resource.</p>
+<ol>
+<li>
+<p>To create a new file, click <strong>File</strong> &gt; <strong>New File</strong>.</p>
+</li>
+<li>
+<p>Name the new file <strong>config.yaml</strong>, and then open it.</p>
+</li>
+<li>
+<p>Copy the following base code into config.yaml:</p>
+</li>
+</ol>
+<pre><code>resources:
+# Create the auto-mode network
+- name: [RESOURCE_NAME]
+  type: [RESOURCE_TYPE]
+  properties:
+    #RESOURCE properties go here
+</code><button class="button button--copy js-copy-button-1"><i class="fa fa-clipboard"></i></button></pre>
+<p><ql-true-false-probe answer="true" stem="Indentation is important in YAML.">
+</ql-true-false-probe></p>
+<aside class="special"><p>This base configuration is a great starting point for any GCP resource. The <b>name</b> field allows you to name the resource, and the <b>type</b> field allows you to specify the GCP resource that you want to create. You can also define properties, but these are optional for some resources. </p>
+</aside>
+<ol start="4">
+<li>
+<p>In config.yaml, replace <code>[RESOURCE_NAME]</code> with <code>mynetwork</code></p>
+</li>
+<li>
+<p>To get a list of all available network resource types in GCP, run the following command in <strong>Cloud Shell</strong>:</p>
+</li>
+</ol>
+<pre><code>gcloud deployment-manager types list | grep network
+</code><button class="button button--copy js-copy-button-2"><i class="fa fa-clipboard"></i></button></pre>
+<p>The output should look like this (<strong>do not copy; this is example output</strong>):</p>
+<pre><code>compute.beta.subnetwork
+compute.alpha.subnetwork
+compute.v1.subnetwork
+compute.beta.network
+compute.v1.network
+compute.alpha.network
+</code><button class="button button--copy js-copy-button-3"><i class="fa fa-clipboard"></i></button></pre>
+<p><ql-multiple-select-probe answerindices="[2]" optiontitles="[
+&quot;compute.alpha.subnetwork&quot;,
+&quot;compute.beta.subnetwork&quot;,
+&quot;compute.v1.subnetwork&quot;
+]" shuffle="" stem="For a normal Deployment Manager configuration, which subnetwork resource type would you use? (assume these three options are available)">
+</ql-multiple-select-probe></p>
+<aside class="special"><p>Alternatively, you can find the full list of available resource types <a href="https://cloud.google.com/deployment-manager/docs/configuration/supported-resource-types">here</a>.</p>
+</aside>
+<ol start="6">
+<li>
+<p>Locate <code>compute.v1.network</code>, which is the type needed to create a VPC network using Deployment Manager.</p>
+</li>
+<li>
+<p>In config.yaml, replace <code>[RESOURCE_TYPE]</code> with <code>compute.v1.network</code></p>
+</li>
+<li>
+<p>Add the following property to config.yaml:</p>
+</li>
+</ol>
+<pre><code>autoCreateSubnetworks: true
+</code><button class="button button--copy js-copy-button-4"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="special"><p>By definition, an auto mode network automatically creates a subnetwork in each region. Therefore, you are setting <b>autoCreateSubnetworks</b> to <b>true</b>.</p>
+</aside>
+<ol start="9">
+<li>
+<p>Verify that config.yaml looks like this, including the spacing/indentation:</p>
+</li>
+</ol>
+<pre><code>resources:
+# Create the auto-mode network
+- name: mynetwork
+  type: compute.v1.network
+  properties:
+    autoCreateSubnetworks: true
+</code><button class="button button--copy js-copy-button-5"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="10">
+<li>
+<p>To save config.yaml, click <strong>File</strong> &gt; <strong>Save</strong>.</p>
+</li>
+</ol>
+<h2 id="step3">Task 2. Configure the firewall rule</h2>
+<p>In order to allow ingress traffic instances in <strong>mynetwork</strong>, you need to create a firewall rule.</p>
+<h3><strong>Add the firewall rule to the configuration</strong></h3>
+<p>Add a firewall rule that allows HTTP, SSH, RDP, and ICMP traffic on <strong>mynetwork</strong>.</p>
+<ol>
+<li>
+<p>Copy the following base code into config.yaml (below the <strong>mynetwork</strong> resource):</p>
+</li>
+</ol>
+<pre><code># Create the firewall rule
+- name: mynetwork-allow-http-ssh-rdp-icmp
+  type: [RESOURCE_TYPE]
+  properties:
+    #RESOURCE properties go here
+</code><button class="button button--copy js-copy-button-6"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="2">
+<li>
+<p>To get a list of all available firewall rule resource types in GCP, run the following command in <strong>Cloud Shell</strong>:</p>
+</li>
+</ol>
+<pre><code>gcloud deployment-manager types list | grep firewall
+</code><button class="button button--copy js-copy-button-7"><i class="fa fa-clipboard"></i></button></pre>
+<p>The output should look like this (<strong>do not copy; this is example output</strong>):</p>
+<pre><code>compute.v1.firewall
+compute.alpha.firewall
+compute.beta.firewall
+</code><button class="button button--copy js-copy-button-8"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="3">
+<li>
+<p>Locate <code>compute.v1.firewall</code>, which is the type needed to create a firewall rule using Deployment Manager.</p>
+</li>
+<li>
+<p>In config.yaml, replace <code>[RESOURCE_TYPE]</code> with <code>compute.v1.firewall</code></p>
+</li>
+<li>
+<p>In config.yaml, add the following properties for the firewall rule:</p>
+</li>
+</ol>
+<pre><code>  network: $(ref.mynetwork.selfLink)
+  sourceRanges: ["0.0.0.0/0"]
+  allowed:
+  - IPProtocol: TCP
+    ports: [22, 80, 3389]
+  - IPProtocol: ICMP
+</code><button class="button button--copy js-copy-button-9"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="special"><p> These properties define:</p>
+<ul>
+<li>
+<b>network:</b> Network that the firewall rule applies to </li>
+<li>
+<b>sourceRange:</b> Source IP ranges that traffic is allowed from </li>
+<li>
+<b>IPProtocol:</b> Specific protocol that the rule applies to </li>
+<li>
+<b>ports:</b> Specific ports of that protocol</li>
+</ul>
+
+<p>Because firewall rules depend on their network, you are using the <b>$(ref.mynetwork.selfLink)</b> reference to instruct Deployment Manager to resolve these resources in a dependent order. Specifically, the network is created before the firewall rule. By default, Deployment Manager creates all resources in parallel, so there is no guarantee that dependent resources are created in the correct order unless you use references.</p>
+</aside>
+<ol start="6">
+<li>
+<p>Verify that config.yaml looks like this, including the spacing/indentation:</p>
+</li>
+</ol>
+<pre><code>resources:
+# Create the auto-mode network
+- name: mynetwork
+  type: compute.v1.network
+  properties:
+    autoCreateSubnetworks: true
+
+# Create the firewall rule
+- name: mynetwork-allow-http-ssh-rdp-icmp
+  type: compute.v1.firewall
+  properties:
+    network: $(ref.mynetwork.selfLink)
+    sourceRanges: ["0.0.0.0/0"]
+    allowed:
+    - IPProtocol: TCP
+      ports: [22, 80, 3389]
+    - IPProtocol: ICMP
+</code><button class="button button--copy js-copy-button-10"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="7">
+<li>
+<p>To save config.yaml, click <strong>File</strong> &gt; <strong>Save</strong>.</p>
+</li>
+</ol>
+<h2 id="step4">Task 3. Create a template for VM instances</h2>
+<p>Deployment Manager allows you to use Python or Jinja2 templates to parameterize your configuration. This allows you to reuse common deployment paradigms such as networks, firewall rules, and VM instances.</p>
+<h3><strong>Create the VM instance template</strong></h3>
+<p>Because you will be creating two similar VM instances, create a VM instance template.</p>
+<ol>
+<li>
+<p>To create a new file, click <strong>File</strong> &gt; <strong>New File</strong>.</p>
+</li>
+<li>
+<p>Name the new file <strong>instance-template.jinja</strong>, and then open it.</p>
+</li>
+<li>
+<p>Copy the following base code into instance-template.jinja:</p>
+</li>
+</ol>
+<pre><code>resources:
+- name: [RESOURCE_NAME]
+  type: [RESOURCE_TYPE]
+  properties:
+    #RESOURCE properties go here
+</code><button class="button button--copy js-copy-button-11"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="4">
+<li>
+<p>In instance-template.jinja, replace <code>[RESOURCE_NAME]</code> with <code>{{ env["name"] }}</code>. Make sure to include the double brackets <code>{{}}</code>.</p>
+<p>This is an environment variable that will be provided by the configuration so that you can reuse the template for multiple instances.</p>
+</li>
+<li>
+<p>To get a list of all available instance resource types in GCP, run the following command in <strong>Cloud Shell</strong>:</p>
+</li>
+</ol>
+<pre><code>gcloud deployment-manager types list | grep instance
+</code><button class="button button--copy js-copy-button-12"><i class="fa fa-clipboard"></i></button></pre>
+<p>The output should look like this (<strong>do not copy; this is example output</strong>):</p>
+<pre><code>...
+compute.v1.instance
+compute.alpha.instance
+</code><button class="button button--copy js-copy-button-13"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="6">
+<li>
+<p>Locate <code>compute.v1.instance</code>, which is the type needed to create a VM instance using Deployment Manager.</p>
+</li>
+<li>
+<p>In instance-template.jinja, replace <code>[RESOURCE_TYPE]</code> with <code>compute.v1.instance</code></p>
+</li>
+</ol>
+<h3><strong>Specify the VM instance properties</strong></h3>
+<p>To create a VM instance in the correct zone and network, you need to define these as properties.</p>
+<ol>
+<li>
+<p>In instance-template.jinja, add the following properties for the VM instance:</p>
+</li>
+</ol>
+<pre><code>     machineType: zones/{{ properties["zone"] }}/machineTypes/{{ properties["machineType"] }}
+     zone: {{ properties["zone"] }}
+     networkInterfaces:
+      - network: {{ properties["network"] }}
+        subnetwork: {{ properties["subnetwork"] }}
+        accessConfigs:
+        - name: External NAT
+          type: ONE_TO_ONE_NAT
+     disks:
+      - deviceName: {{ env["name"] }}
+        type: PERSISTENT
+        boot: true
+        autoDelete: true
+        initializeParams:
+          sourceImage: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/family/debian-9
+</code><button class="button button--copy js-copy-button-14"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="special"><p> These properties define:</p>
+<ul>
+<li>
+<b>machineType:</b> Machine type and zone  </li>
+<li>
+<b>zone:</b> Instance zone </li>
+<li>
+<b>networkInterfaces:</b> Network and subnetwork that VM is attached to </li>
+<li>
+<b>accessConfigs:</b> Required to give the instance a public IP address </li>
+<li>
+<b>disks:</b> The boot disk, its name and image</li>
+</ul>
+<p>Most properties are defined as template properties, which you will provide values for from the top-level configuration (config.yaml). </p>
+</aside>
+<ol start="2">
+<li>
+<p>Verify that instance-template.jinja looks like this, including the spacing/indentation:</p>
+</li>
+</ol>
+<pre><code>resources:
+- name: {{ env["name"] }}
+  type: compute.v1.instance  
+  properties:
+     machineType: zones/{{ properties["zone"] }}/machineTypes/{{ properties["machineType"] }}
+     zone: {{ properties["zone"] }}
+     networkInterfaces:
+      - network: {{ properties["network"] }}
+        subnetwork: {{ properties["subnetwork"] }}
+        accessConfigs:
+        - name: External NAT
+          type: ONE_TO_ONE_NAT
+     disks:
+      - deviceName: {{ env["name"] }}
+        type: PERSISTENT
+        boot: true
+        autoDelete: true
+        initializeParams:
+          sourceImage: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/family/debian-9
+</code><button class="button button--copy js-copy-button-15"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="3">
+<li>
+<p>To save instance-template.jinja, click <strong>File</strong> &gt; <strong>Save</strong>.</p>
+</li>
+</ol>
+<h2 id="step5">Task 4. Deploy the configuration</h2>
+<p>Configure the instances and deploy the configuration.</p>
+<h3><strong>Import the template</strong></h3>
+<p>Templates are included in the <code>*.yaml</code> configuration using <code>import:</code>.</p>
+<ol>
+<li>
+<p>Copy the following into config.yaml (before <code>resources</code>):</p>
+</li>
+</ol>
+<pre><code>imports:
+- path: instance-template.jinja
+</code><button class="button button--copy js-copy-button-16"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="special"><p> The <b>import</b> statement defines the template that you want to use in your configuration. You can import multiple templates in one configuration. For example, you could create templates for the firewall rule and networks if you want to reuse those.</p>
+</aside>
+<h3><strong>Configure VM instances in each network</strong></h3>
+<p>Create the <strong>mynet-us-vm</strong> and <strong>mynet-eu-vm</strong> instances.</p>
+<ol>
+<li>
+<p>Add the mynet-us-vm instance to config.yaml (within the <code>resources</code> block):</p>
+</li>
+</ol>
+<pre><code># Create the mynet-us-vm instance
+- name: mynet-us-vm
+  type: instance-template.jinja
+  properties:
+    zone: us-central1-a
+    machineType: n1-standard-1
+    network: $(ref.mynetwork.selfLink)
+    subnetwork: regions/us-central1/subnetworks/mynetwork
+</code><button class="button button--copy js-copy-button-17"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="2">
+<li>
+<p>Add the mynet-eu-vm instance to config.yaml (within the <code>resources</code> block):</p>
+</li>
+</ol>
+<pre><code># Create the mynet-eu-vm instance
+- name: mynet-eu-vm
+  type: instance-template.jinja
+  properties:
+    zone: europe-west1-d
+    machineType: n1-standard-1
+    network: $(ref.mynetwork.selfLink)  
+    subnetwork: regions/europe-west1/subnetworks/mynetwork
+</code><button class="button button--copy js-copy-button-18"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="special"><p>The <b>zone</b>, <b>machineType</b>, and <b>subnetwork</b> are passed from this configuration to the template. This allows you to create only one template for multiple VM instances. Also, references to the network are used for the VM instances. This ensures that the network is created before the VM that is attached to that network.</p>
+</aside>
+<ol start="3">
+<li>To save config.yaml, click <strong>File</strong> &gt; <strong>Save</strong>.</li>
+</ol>
+<p><ql-multiple-select-probe answerindices="[1]" optiontitles="[
+&quot;machineType&quot;,
+&quot;sourceImage&quot;,
+&quot;deviceName&quot;,
+&quot;type&quot;
+]" shuffle="" stem="If you want to use a different operating system or different operating system version, which property of the instance resource should you change?">
+</ql-multiple-select-probe></p>
+<h3><strong>Deploy the configuration</strong></h3>
+<p>It's time to deploy your configuration from Cloud Shell.</p>
+<ol>
+<li>
+<p>In Cloud Shell, run the following command:</p>
+</li>
+</ol>
+<pre><code>gcloud deployment-manager deployments create dminfra --config=config.yaml --preview
+</code><button class="button button--copy js-copy-button-19"><i class="fa fa-clipboard"></i></button></pre>
+<p>The output should look like this (<strong>do not copy; this is example output</strong>):</p>
+<pre><code>NAME                               TYPE                 STATE      
+mynet-eu-vm                        compute.v1.instance  IN_PREVIEW 
+mynet-us-vm                        compute.v1.instance  IN_PREVIEW
+mynetwork                          compute.v1.network   IN_PREVIEW
+mynetwork-allow-http-ssh-rdp-icmp  compute.v1.firewall  IN_PREVIEW
+</code><button class="button button--copy js-copy-button-20"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="special"><p>The <b>--preview</b> flag gives you a preview of how your configuration is applied before creating it. Previewing a configuration causes Deployment Manager to start creating your deployment but then stop before actually creating any resources. The <b>--preview</b> flag is especially useful when you <a href="https://cloud.google.com/deployment-manager/docs/step-by-step-guide/updating-a-deployment#previewing_an_update">update a deployment</a>.</p>
+</aside>
+<ol start="2">
+<li>
+<p>Run the following command to create the deployment:</p>
+</li>
+</ol>
+<pre><code>gcloud deployment-manager deployments update dminfra
+</code><button class="button button--copy js-copy-button-21"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="special"><p>The <b>update</b> command commits the preview. If you don't preview a configuration, you can directly run the following command:</p>
+
+<p>gcloud deployment-manager deployments create dminfra --config=config.yaml</p>
+</aside>
+<ol start="3">
+<li>
+<p>Wait for the resources to be created and listed in Cloud Shell.</p>
+<p>The output should look like this (<strong>do not copy; this is example output</strong>):</p>
+</li>
+</ol>
+<pre><code>NAME                               TYPE                 STATE      ERRORS  INTENT
+mynet-eu-vm                        compute.v1.instance  COMPLETED  []
+mynet-us-vm                        compute.v1.instance  COMPLETED  []
+mynetwork                          compute.v1.network   COMPLETED  []
+mynetwork-allow-http-ssh-rdp-icmp  compute.v1.firewall  COMPLETED  []
+</code><button class="button button--copy js-copy-button-22"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="warning"><p>If something goes wrong with the preview or creation of the deployment, try to use the error messages to troubleshoot the source of the issue. You must delete the Deployment Manager configuration before you can try deploying it again. This can be achieved with this command in Cloud Shell:</p>
+
+<p>gcloud deployment-manager deployments delete dminfra</p>
+</aside>
+<aside class="special"><p>If you cannot troubleshoot the issue of your deployment, take a look at this finished configuration (<a href="https://storage.googleapis.com/cloud-training/archinfra/dminfra/config.yaml">config.yaml</a>) and template (<a href="https://storage.googleapis.com/cloud-training/archinfra/dminfra/instance-template.jinja">instance-template.jinja</a>).</p>
+</aside>
+<p><ql-true-false-probe answer="false" stem="When Deployment Manager creates the resources, they are always created sequentually, one at a time.">
+</ql-true-false-probe></p>
+<p>Click Check my progress to verify the objective.</p>
+<ql-activity-tracking step="1">
+      Create network, firewall rules and VM instances
+  </ql-activity-tracking>
+<h2 id="step6">Task 5. Verify your deployment</h2>
+<h3><strong>Verify your network in the GCP Console</strong></h3>
+<ol>
+<li>
+<p>In the GCP Console, on the <strong>Navigation menu</strong> (<img alt="Navigation menu" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/tkgw1TDgj4Q+YKQUW4jUFd0O5OEKlUMBRYbhlCrF0WY=" title="Navigation menu">), click <strong>VPC network</strong> &gt; <strong>VPC networks</strong>.</p>
+</li>
+<li>
+<p>View the <strong>mynetwork</strong> VPC network with a subnetwork in every region.</p>
+</li>
+<li>
+<p>On the <strong>Navigation menu</strong>, click <strong>VPC network</strong> &gt; <strong>Firewall Rules</strong>.</p>
+</li>
+<li>
+<p>Sort the firewall rules by <strong>Network</strong>.</p>
+</li>
+<li>
+<p>View the <strong>mynetwork-allow-http-ssh-rdp-icmp</strong> firewall rule for <strong>mynetwork</strong>.</p>
+</li>
+</ol>
+<h3><strong>Verify your VM instances in the GCP Console</strong></h3>
+<ol>
+<li>
+<p>On the <strong>Navigation menu</strong> (<img alt="Navigation menu" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/tkgw1TDgj4Q+YKQUW4jUFd0O5OEKlUMBRYbhlCrF0WY=" title="Navigation menu">), click <strong>Compute Engine</strong> &gt; <strong>VM instances</strong>.</p>
+</li>
+<li>
+<p>View the <strong>mynet-us-vm</strong> and <strong>mynet-eu-vm</strong> instances.</p>
+</li>
+<li>
+<p>Note the internal IP address for <strong>mynet-eu-vm</strong>.</p>
+</li>
+<li>
+<p>For <strong>mynet-us-vm</strong>, click <strong>SSH</strong> to launch a terminal and connect.</p>
+</li>
+<li>
+<p>To test connectivity to <strong>mynet-eu-vm</strong>'s internal IP address, run the following command in the SSH terminal (replacing mynet-eu-vm's internal IP address with the value noted earlier):</p>
+</li>
+</ol>
+<pre><code>ping -c 3 &lt;Enter mynet-eu-vm's internal IP here&gt;
+</code><button class="button button--copy js-copy-button-23"><i class="fa fa-clipboard"></i></button></pre>
+<aside>
+<p>This should work because both VM instances are on the same network and the firewall rule allows ICMP traffic!</p>
+</aside>
+<h2 id="step7">Task 6. Review</h2>
+<p>In this lab, you created a Deployment Manager configuration and template to automate the deployment of GCP infrastructure. Templates can be very flexible because of their environment and template variables. Therefore, the benefit of creating templates is that they can be reused across many configurations.</p>
+<p>Template variables are abstract properties that allow you to declare the value to be passed to the template in the <code>*.yaml</code> configuration file. You can change the value for each deployment in the <code>*.yaml</code> file without having to make changes to the underlying templates.</p>
+<p>Environment variables allow you to reuse templates in different projects and deployments. Instead of representing properties of resources, they represent more global properties such as a Project ID or the name of the deployment. You can use the template that you created as a starting point for future deployments.</p>
+<h2 id="step8">End your lab</h2>
+<p>When you have completed your lab, click <strong>End Lab</strong>. Qwiklabs removes the resources you’ve used and cleans the account for you.</p>
+<p>You will be given an opportunity to rate the lab experience. Select the applicable number of stars, type a comment, and then click <strong>Submit</strong>.</p>
+<p>The number of stars indicates the following:</p>
+<ul>
+<li>1 star = Very dissatisfied</li>
+<li>2 stars = Dissatisfied</li>
+<li>3 stars = Neutral</li>
+<li>4 stars = Satisfied</li>
+<li>5 stars = Very satisfied</li>
+</ul>
+<p>You can close the dialog box if you don't want to provide feedback.</p>
+<p>For feedback, suggestions, or corrections, please use the <strong>Support</strong> tab.</p>
+
+<p>Copyright 2019 Google LLC All rights reserved. Google and the Google logo are trademarks of Google LLC. All other company and product names may be trademarks of the respective companies with which they are associated.</p>
+
+
+
+</div>
+<div class="js-lab-content-outline lab-content__outline">
+<a href="https://googlecoursera.qwiklabs.com/focuses/37342#step1">Overview</a><a href="https://googlecoursera.qwiklabs.com/focuses/37342#step2">Task 1. Configure the network</a><a href="https://googlecoursera.qwiklabs.com/focuses/37342#step3">Task 2. Configure the firewall rule</a><a href="https://googlecoursera.qwiklabs.com/focuses/37342#step4">Task 3. Create a template for VM instances</a><a href="https://googlecoursera.qwiklabs.com/focuses/37342#step5">Task 4. Deploy the configuration</a><a href="https://googlecoursera.qwiklabs.com/focuses/37342#step6">Task 5. Verify your deployment</a><a href="https://googlecoursera.qwiklabs.com/focuses/37342#step7">Task 6. Review</a><a href="https://googlecoursera.qwiklabs.com/focuses/37342#step8">End your lab</a>
+</div>
+</div>
+
+</div>
+
+
+</div>
+</div>
+<div class="lab-assessment__tab js-lab-assessment-tab">
+<h5 class="small-label">
+Score
+</h5>
+<h3 class="js-lab-assessment-total-score">
+—/40
+</h3>
+<iframe class="l-ie-iframe-fix" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/saved_resource(1).html"></iframe>
+</div>
+<div class="lab-assessment__panel js-lab-assessment-panel">
+<!-- / If lab_instance has is started and assessment is generated, use -->
+<!-- / lab_instance.assessment, otherwise use lab.assessment_manual -->
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title">
+Create network, firewall rules and VM instances
+</p>
+<p class="button button--assessment js-show-run-step-button" step_no="1">
+Run Step
+</p>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-1">
+</span>
+/ 40
+</p>
+</div>
+
+<iframe class="l-ie-iframe-fix" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/saved_resource(2).html"></iframe>
+</div>
+<div class="lab-introduction js-lab-introduction is-hidden">
+<div class="lab-introduction__inner">
+<h1 class="headline-1">Welcome to Your First Lab!</h1>
+<ql-icon-button class="js-skip-button">close</ql-icon-button>
+<div class="lab-introduction__video">
+<iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" id="lab-introduction" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/yF7EDXKTmoQ.html"></iframe>
+</div>
+<a class="js-skip-button button button--outline">Skip this video</a>
+</div>
+</div>
+
+
+
+</div>
+</main>
+<div class="modal fade" id="lab-details-modal">
+<div class="modal-container">
+<div class="mdl-shadow--24dp modal-content">
+<div class="modal-body">
+<p class="l-mbm">
+
+In this lab, you create a Deployment Manager configuration with a template to automate the deployment of GCP infrastructure.
+
+</p>
+<p class="small-label l-mbs">
+<strong>
+Duration:
+</strong>
+0m setup
+·
+60m access
+·
+30m completion
+</p>
+<p class="small-label l-mbs">
+<span><strong>Levels: </strong>introductory</span>
+</p>
+<p class="small-label">
+<strong>
+Permalink:
+</strong>
+<a href="https://googlecoursera.qwiklabs.com/catalog_lab/2045">https://googlecoursera.qwiklabs.com/catalog_lab/2045</a>
+</p>
+</div>
+<div class="modal-actions">
+<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" data-dismiss="modal" data-upgraded=",MaterialButton,MaterialRipple">
+Got It
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+</div>
+
+
+</div>
+</div>
+<iframe class="l-ie-iframe-fix" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/saved_resource(3).html"></iframe>
+</div>
+<div class="modal fade" id="lab-review-modal">
+<div class="modal-container">
+<div class="mdl-shadow--24dp modal-content">
+<form class="simple_form js-lab-review-form" id="new_lab_review" action="https://googlecoursera.qwiklabs.com/lab_reviews" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓"><div class="modal-body">
+<p class="label">
+How satisfied are you with this lab?*
+</p>
+<div class="rateit js-rateit" data-rateit-max="5" data-rateit-min="0" data-rateit-resetable="false" data-rateit-step="1" data-rateit-value="0"><div class="rateit-reset" style="display: none;"></div><div class="rateit-range" style="width: 80px; height: 16px;"><div class="rateit-selected" style="height: 16px; width: 0px;"></div><div class="rateit-hover" style="height:16px"></div></div></div>
+<div class="l-mtm">
+
+<div class="control-group hidden lab_review_user_id"><div class="controls"><input class="hidden" type="hidden" value="2332914" name="lab_review[user_id]" id="lab_review_user_id"></div></div>
+<div class="control-group hidden lab_review_classroom_id"><div class="controls"><input class="hidden" type="hidden" value="4828" name="lab_review[classroom_id]" id="lab_review_classroom_id"></div></div>
+<div class="control-group hidden lab_review_lab_id"><div class="controls"><input class="hidden" type="hidden" value="2045" name="lab_review[lab_id]" id="lab_review_lab_id"></div></div>
+<div class="control-group hidden lab_review_focus_id"><div class="controls"><input class="hidden" type="hidden" value="37342" name="lab_review[focus_id]" id="lab_review_focus_id"></div></div>
+<div class="control-group hidden lab_review_rating"><div class="controls"><input class="hidden js-rating-input" type="hidden" name="lab_review[rating]" id="lab_review_rating"></div></div>
+<div class="control-group text optional lab_review_comment"><label class="text optional control-label" for="lab_review_comment">Comment</label><div class="controls"><textarea class="text optional" name="lab_review[comment]" id="lab_review_comment"></textarea></div></div>
+</div>
+</div>
+<div class="modal-actions">
+<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" data-dismiss="modal" data-upgraded=",MaterialButton,MaterialRipple">
+Cancel
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<input type="submit" name="commit" value="Submit" disabled="disabled" class="btn mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="submit" data-disabled="false" data-disable-with="Submit" data-upgraded=",MaterialButton,MaterialRipple"><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></input>
+</div>
+</form>
+
+</div>
+</div>
+<iframe class="l-ie-iframe-fix" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/saved_resource(4).html"></iframe>
+</div>
+
+<script>
+  $( function() {
+    ql.initMaterialInputs();
+    initChosen();
+    initSearch();
+    initTabs();
+    ql.list.init();
+    ql.favoriting.init();
+    ql.header.myAccount.init();
+    initTooltips();
+    ql.autocomplete.init();
+    ql.modals.init();
+    ql.toggleButtons.init();
+    ql.analytics.init();
+    initLabContent( );
+  ql.labOutline.links.init();
+  ql.labOutline.layout.init();
+  initLabReviewModal();
+  ql.labAssessment.init();
+  ql.labIntroduction.init( true );
+  ql.labData.init();
+  initLabTranslations( {"are_you_sure":"All done? If you end this lab, you will lose all your work. You may not be able to restart the lab if there is a quota limit. Are you sure you want to end this lab?\n","in_progress":"*In Progress*","ending":"*Ending*","starting":"*Starting, please wait*","end_concurrent_labs":"Sorry, you can only run one lab at a time. To start this lab, please confirm that you want all of your existing labs to end.\n","copied":"Copied","no_resource":"Error retrieving resource.","no_support":"No Support","mac_press":"Press ⌘-C to copy","thanks_review":"Thanks for reviewing this lab.","windows_press":"Press Ctrl-C to copy","days":"days"} );
+  ql.labRun.init();
+  ql.initHeader();
+  ql.navigation.init();
+  ql.navPanel.init();
+  ql.navigation.init();
+  
+  });
+</script>
+<style>
+  .mdl-layout__container {
+    position: static
+  }
+</style>
+
+
+<div id="drift-widget-container" style="position: absolute; z-index: 2147483647;"><iframe id="drift-widget" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/index.html" title="Drift Messenger" role="complementary" class="drift-widget-hidden" style="border: none; display: block; height: 0px !important; width: 0px !important; position: fixed; top: auto; left: auto; bottom: 0px; right: 0px; visibility: hidden; z-index: 2147483647; max-height: 100vh; max-width: 100vw; transition: none 0s ease 0s; background: none transparent; opacity: 1; pointer-events: auto; touch-action: auto;"></iframe></div><iframe data-product="web_widget" title="No content" tabindex="-1" aria-hidden="true" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/saved_resource(5).html" style="width: 0px; height: 0px; border: 0px; position: absolute; top: -9999px;"></iframe><div><iframe title="Opens a widget where you can chat to one of our agents" id="launcher" tabindex="0" class="zEWidget-launcher zEWidget-launcher--active" style="border: none; background: transparent; z-index: 999998; transform: translateZ(0px); position: fixed; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; opacity: 1; height: 50px; max-height: 551px; min-height: 50px; margin: 10px 20px; right: 0px; bottom: 0px; width: 112px;width: 112px;" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/saved_resource(6).html"></iframe></div><div><iframe title="Find more information here" id="webWidget" tabindex="-1" class="zEWidget-webWidget " style="border: none; background: transparent; z-index: 999999; transform: translateZ(0px); position: fixed; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; opacity: 0; width: 357px; height: 100%; max-height: 565px; min-height: 150px; margin-left: 8px; margin-right: 8px; top: -9999px; visibility: hidden;" src="./Automating the Deployment of Infrastructure Using Deployment Manager _ Qwiklabs_files/saved_resource(7).html"></iframe></div></body></html>
