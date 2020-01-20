@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" class="mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/caff0d62ed"></script><script src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/nr-1158.min.js.download"></script><script type="text/javascript" async="" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/js"></script><script type="text/javascript" async="" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/analytics.js.download"></script><script type="text/javascript" async="" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/d58fn3dh7i2n.js.download"></script><script type="text/javascript" async="" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/analytics.min.js.download"></script><script type="text/javascript" id="www-widgetapi-script" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/www-widgetapi.js.download" async=""></script><script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"caff0d62ed","applicationID":"29451451","transactionName":"IQ1XRUEOVV1dFxlRXAEXSlRATkpZVxI=","queueTime":0,"applicationTime":121,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"caff0d62ed",applicationID:"29451451"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta content="[]" name="active-experiments">
+<meta content="{&quot;userId&quot;:2332914}" name="help-api-product-data">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="8hJ56L3Lu0JTYnuW1T/kDlG1wmwMZawXx6R91vOrUC5OY38moHU8rJh+EYfib8FHeeXbspMF9SLj35tLWls+Tg==">
+<title>Configuring an HTTP Load Balancer with Autoscaling | Qwiklabs</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" name="viewport">
+<meta content="In this lab, you configure an HTTP Load Balancer. Then, you stress test the Load Balancer to demonstrate global load balancing and autoscaling." name="description">
+<meta content="Qwiklabs" name="author">
+<meta content="1rRsY0INj8RvwB5EF5pwdxt2A2P9aDgAlsICaJ0d5w0" name="google-site-verification">
+<meta content="Configuring an HTTP Load Balancer with Autoscaling | Qwiklabs" property="og:title">
+<meta content="website" property="og:type">
+<meta content="/favicon-144.png" property="og:image">
+<meta content="Qwiklabs" property="og:site_name">
+<meta content="In this lab, you configure an HTTP Load Balancer. Then, you stress test the Load Balancer to demonstrate global load balancing and autoscaling." property="og:description">
+<meta content="/qwiklabs_logo_900x887.png" property="og:logo" size="900x887">
+<meta content="/qwiklabs_logo_994x187.png" property="og:logo" size="994x187">
+<meta content="#3681E4" property="msapplication-TileColor">
+<meta content="/favicon-144.png" property="msapplication-TileImage">
+<link href="https://googlecoursera.qwiklabs.com/favicon-32.png" rel="shortcut icon">
+<link color="#3681E4" href="https://googlecoursera.qwiklabs.com/favicon-svg.svg" rel="mask-icon">
+<link href="https://googlecoursera.qwiklabs.com/favicon-180.png" rel="apple-touch-icon-precomposed">
+<link rel="stylesheet" media="screen" href="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/css">
+
+
+<!--[if lt IE 9]>
+<script src='http://html5shim.googlecode.com/svn/trunk/html5.js' type='text/javascript'></script>
+<![endif]-->
+<!--[endif]>  <![endif]-->
+<script>
+//<![CDATA[
+window.gon={};gon.current_user={"firstname":"Ozkan","lastname":"Batumoglu","fullname":"Ozkan Batumoglu","company":"Coursera","email":"batumoglu@hotmail.com","origin":"googlecoursera-run, lti-coursera","subscriptions":0,"id":"54eb7d21170356f2189321bcd774d847","qlCreatedAt":"2019-12-25 11:42:16 UTC","optIn":null};gon.segment="j4Im8pqIko0Lxq4wVVZWMPMM0EroHUvb";gon.deployment="googlecoursera-run";
+//]]>
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "https://www.qwiklabs.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.qwiklabs.com/catalog?keywords={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script id="ze-snippet" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/snippet.js.download"></script><script type="text/javascript" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/asset_composer.5d2cd6d9613b85125812.js.download" charset="utf-8" async=""></script>
+
+
+
+<link rel="stylesheet" media="all" href="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/application-a53cf05bc9e39a99a1d6fa14f486d7ecec091bb67f0aca5b1257120cbf85ec76.css">
+<script>
+  EVENT_SOURCE_BASE_URL = "https://googlecoursera-run.qwiklabs.com/nchan-sub?id=";
+</script>
+<script src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/webcomponents-loader.js.download"></script>
+<script src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/hallofmirrors-a87311d98f0c2f8a882727c54543601e005dded946094be4a719d9683b2f9762.js.download"></script><script async="" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/lazy.min.js.download"></script>
+<script src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/iframe_api"></script>
+<script src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/vendor-45d462772c30000424907184f70c7157e95fb6227698d1671c5051818a6f60d8.js.download"></script>
+<script src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/application-ebb27cbff944188da04b9e68f7789655da6ebaa697498ca84f00351368bd2507.js.download"></script>
+</head>
+<body class="focuses focuses-show lab-show l-full no-nav">
+<div class="header-container">
+<div class="header">
+<a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect header__button header__button--nav header__nav-panel-button js-nav-toggle" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">menu</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<div class="header__title">
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button header__button--nav" href="https://www.coursera.org/" data-upgraded=",MaterialButton,MaterialRipple"><ql-icon>arrow_back</ql-icon><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+
+<h1 class="headline-5">
+Configuring an HTTP Load Balancer with Autoscaling
+</h1>
+</div>
+<div class="header__actions">
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button header__button--action header__button--search js-header-search-bar-button" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">search</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+
+<ql-help context="lab" productdata="{&quot;userId&quot;:2332914}" data-analytics-action="opened_help" data-analytics-label="lab"></ql-help>
+<a class="header-my-account-button mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-my-account-button" data-upgraded=",MaterialButton,MaterialRipple">
+<img class="avatar " src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/527aaaf240e6e7ef6a272c7f9743d396.png">
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<div class="header-my-account-menu js-my-account-menu">
+<div class="card elevation-2 no-padding">
+<div class="my-account-menu__top">
+<img class="avatar " src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/527aaaf240e6e7ef6a272c7f9743d396.png">
+<div class="my-account-menu__info">
+<h4 class="subtitle-headline-1">
+Ozkan Batumoglu
+</h4>
+<p class="body-2 text--gray">
+<span>batumoglu@hotmail.com</span>
+</p>
+<a class="button" href="https://googlecoursera.qwiklabs.com/my_account/profile">My Account</a>
+</div>
+</div>
+<div class="my-account-menu__bottom">
+<a class="text--green subtitle-headline-2" href="https://googlecoursera.qwiklabs.com/my_account/credits">0 Credits
+</a><a data-analytics-action="clicked_sign_out" class="button button--hairline" rel="nofollow" data-method="delete" href="https://googlecoursera.qwiklabs.com/users/sign_out">Sign Out</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="header__search-bar js-header-search-bar">
+<form id="catalog-search-mobile" onsubmit="ql.catalogSearchFilter(); return false;" action="https://googlecoursera.qwiklabs.com/searches/elasticsearch" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="8hJ56L3Lu0JTYnuW1T/kDlG1wmwMZawXx6R91vOrUC5OY38moHU8rJh+EYfib8FHeeXbspMF9SLj35tLWls+Tg==">
+<input type="text" name="keywords" id="keywords" placeholder="Search" maxlength="255">
+</form>
+
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">close</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+</div>
+</div>
+
+<nav class="nav-bar">
+<a class="nav-bar__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/"><ql-icon class="nav-bar__item__icon">
+home
+</ql-icon>
+<span class="nav-bar__item__label">
+Home
+</span>
+</a>
+<a class="nav-bar__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/catalog"><ql-icon class="nav-bar__item__icon">
+school
+</ql-icon>
+<span class="nav-bar__item__label">
+Catalog
+</span>
+</a>
+<a class="nav-bar__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_learning"><ql-icon class="nav-bar__item__icon">
+event_note
+</ql-icon>
+<span class="nav-bar__item__label">
+My Learning
+</span>
+</a>
+</nav>
+
+<nav class="nav-panel js-nav-panel">
+<div class="nav-panel__logo">
+<div class="logo logo--blue"></div>
+</div>
+<a title="Home" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/"><ql-icon class="nav-panel__item__icon">
+home
+</ql-icon>
+<div class="nav-panel__item__label">
+Home
+</div>
+</a>
+<a title="Catalog" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/catalog"><ql-icon class="nav-panel__item__icon">
+school
+</ql-icon>
+<div class="nav-panel__item__label">
+Catalog
+</div>
+</a>
+<a title="My Learning" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_learning"><ql-icon class="nav-panel__item__icon">
+event_note
+</ql-icon>
+<div class="nav-panel__item__label">
+My Learning
+</div>
+</a>
+<div class="nav-panel__spacer"></div>
+<a title="Profile" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_account/profile"><ql-icon class="nav-panel__item__icon">
+account_circle
+</ql-icon>
+<div class="nav-panel__item__label">
+Profile
+</div>
+</a>
+<a title="Credits &amp; Subscriptions" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_account/credits"><ql-icon class="nav-panel__item__icon">
+money
+</ql-icon>
+<div class="nav-panel__item__label">
+Credits &amp; Subscriptions
+</div>
+</a>
+<a title="Security" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_account/security"><ql-icon class="nav-panel__item__icon">
+security
+</ql-icon>
+<div class="nav-panel__item__label">
+Security
+</div>
+</a>
+<div class="nav-panel__spacer"></div>
+<a class="nav-panel__item" tabindex="-1" href="https://googlecoursera.qwiklabs.com/focuses/37338#"><ql-help>
+<div class="nav-panel__help-item">
+<ql-icon class="nav-panel__item__icon">help</ql-icon>
+<div class="nav-panel__item__label">Help</div>
+</div>
+</ql-help>
+</a><div class="nav-panel__small-links">
+<a tabindex="-1" href="https://googlecoursera.qwiklabs.com/privacy_policy">Privacy</a>
+<a tabindex="-1" href="https://googlecoursera.qwiklabs.com/terms_of_service">Terms</a>
+</div>
+</nav>
+<div class="nav-panel__overlay js-nav-toggle"></div>
+
+<main class="js-main">
+<span class="hidden" id="flash-sibling-before"></span>
+
+<div class="l-main-wrapper" id="main-wrapper">
+
+
+
+
+
+
+
+<div class="js-lab-state" data-analytics-payload="{&quot;label&quot;:&quot;Configuring an HTTP Load Balancer with Autoscaling&quot;,&quot;lab_name&quot;:&quot;Configuring an HTTP Load Balancer with Autoscaling&quot;,&quot;classroom_name&quot;:null,&quot;deployment&quot;:&quot;googlecoursera-run&quot;}" data-focus-id="37338" data-lab-billing-limit="0.0" data-lab-duration="7200" data-parent="classroom"></div>
+<ql-lab-control-panel class="js-lab-control-panel l-lab-control-panel" connectiondetails="[]" connectionfiles="[]" labcontrolbutton="{&quot;disabled&quot;:false,&quot;pending&quot;:false,&quot;running&quot;:false}" labtimer="{&quot;ticking&quot;:false,&quot;secondsRemaining&quot;:7200}" studentresources="[]"></ql-lab-control-panel>
+<div class="l-lab-main-body">
+<div class="js-lab-content lab-content">
+<div class="alert alert--fake js-alert">
+<p class="alert__message js-alert-message"></p>
+<a class="alert__close js-alert-close">
+<i class="fa fa-times"></i>
+</a>
+<iframe class="l-ie-iframe-fix" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/saved_resource.html"></iframe>
+</div>
+<div class="lab-content__markdown-wrapper">
+<div class="lab-preamble">
+<h1 class="lab-preamble__title">
+Configuring an HTTP Load Balancer with Autoscaling
+</h1>
+<div class="lab-preamble__details subtitle-headline-1">
+<span>2 hours </span>
+<span>Free</span>
+<div class="lab__rating">
+<a href="https://googlecoursera.qwiklabs.com/focuses/37338/reviews?parent=catalog"><div class="rateit" data-rateit-readonly="true" data-rateit-value="4.2761"><div class="rateit-reset" style="display: none;"></div><div class="rateit-range" style="width: 80px; height: 16px;"><div class="rateit-selected" style="height: 16px; width: 68.4176px;"></div><div class="rateit-hover" style="height:16px"></div></div></div>
+
+</a><a data-target="#lab-review-modal" data-toggle="modal">
+Rate Lab
+</a>
+</div>
+</div>
+</div>
+
+<div class="lab-content__inner-wrapper">
+<div class="js-markdown-instructions lab-content__markdown markdown-lab-instructions" id="markdown-lab-instructions">
+
+
+
+<h2 id="step1">Overview</h2>
+<p>GCP HTTP(S) load balancing is implemented at the edge of Google's network in Google's points of presence (POP) around the world. User traffic directed to an HTTP(S) load balancer enters the POP closest to the user and is then load-balanced over Google's global network to the closest backend that has sufficient available capacity.</p>
+<p>In this lab, you configure an HTTP load balancer as shown in the diagram below. Then, you stress test the load balancer to demonstrate global load balancing and autoscaling.</p>
+<p><img alt="network_diagram.png" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/ByFMJpAyU9Uxc4dL8LmHWdITVL+MvDA0eqOm1W63BSA="></p>
+<h3>Objectives</h3>
+<p>In this lab, you learn how to perform the following tasks:</p>
+<ul>
+<li>Create HTTP and health check firewall rules</li>
+<li>Create a custom image for a web server</li>
+<li>Create an instance template based on the custom image</li>
+<li>Create two managed instance groups</li>
+<li>Configure an HTTP load balancer with IPv4 and IPv6</li>
+<li>Stress test an HTTP load balancer</li>
+</ul>
+<h4>What you'll need</h4>
+<p>To complete this lab, you’ll need:</p>
+<ul>
+<li>
+<p>Access to a standard internet browser (Chrome browser recommended).</p>
+</li>
+<li>
+<p>Time. Note the lab’s <strong>Completion</strong> time in Qwiklabs. This is an estimate of the time it should take to complete all steps.  Plan your schedule so you have time to complete the lab. Once you start the lab, you will not be able to pause and return later (you begin at step 1 every time you start a lab).</p>
+</li>
+<li>
+<p>The lab's <strong>Access</strong> time is how long your lab resources will be available. If you finish your lab with access time still available, you will be able to explore the Google Cloud Platform or work on any section of the lab that was marked "if you have time". Once the Access time runs out, your lab will end and all resources will terminate.</p>
+</li>
+<li>
+<p>You <strong>DO NOT</strong> need a Google Cloud Platform account or project. An account, project and associated resources are provided to you as part of this lab.</p>
+</li>
+<li>
+<p>If you already have your own GCP account, make sure you do not use it for this lab.</p>
+</li>
+<li>
+<p>If your lab prompts you to log into the console, <strong>use only the student account provided to you by the lab</strong>. This prevents you from incurring charges for lab activities in your personal GCP account.</p>
+</li>
+</ul>
+<h4>Start your lab</h4>
+<p>When you are ready, click <strong>Start Lab</strong>. You can track your lab’s progress with the status bar at the top of your screen.</p>
+<aside>
+<strong>Important</strong> What is happening during this time?
+  Your lab is spinning up GCP resources for you behind the scenes, including an account, a project, resources within the project, and permission for you to control the resources needed to run the lab. This means that instead of spending time manually setting up a project and building resources from scratch as part of your lab, you can begin learning more quickly.
+
+</aside>
+<h4>Find Your Lab’s GCP Username and Password</h4>
+<p>To access the resources and console for this lab, locate the Connection Details panel in Qwiklabs.  Here you will find the account ID and password for the account you will use to log in to the Google Cloud Platform:</p>
+<p><img alt="Open Google Console" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/0d78dhX6IVMVWmixCPPSBbmi5O2GPokCXf1Ps1AkTgI="></p>
+<p>If your lab provides other resource identifiers or connection-related information, it will appear on this panel as well.</p>
+
+<h2 id="step2">Task 1. Configure HTTP and health check firewall rules</h2>
+<p>Configure firewall rules to allow HTTP traffic to the backends and TCP traffic from the GCP health checker.</p>
+<h3><strong>Create the HTTP firewall rule</strong></h3>
+<p>Create a firewall rule to allow HTTP traffic to the backends.</p>
+<ol>
+<li>
+<p>In the GCP Console, on the  <strong>Navigation menu</strong> (<img alt="Navigation menu" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/tkgw1TDgj4Q+YKQUW4jUFd0O5OEKlUMBRYbhlCrF0WY=" title="Navigation menu">), click <strong>VPC network</strong> &gt; <strong>Firewall rules</strong>.
+Notice the existing <strong>ICMP</strong>, <strong>internal</strong>, <strong>RDP</strong>, and <strong>SSH</strong> firewall rules.</p>
+<p>Each GCP project starts with the <strong>default</strong> network and these firewall rules.</p>
+</li>
+<li>
+<p>Click <strong>Create Firewall Rule</strong>.</p>
+</li>
+<li>
+<p>Specify the following, and leave the remaining settings as their defaults:</p>
+<table>
+
+<tbody><tr>
+<th>Property</th>
+<th>Value (type value or select option as specified)</th>
+</tr>
+
+
+<tr>
+<td>Name</td>
+<td>default-allow-http</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>default</td>
+</tr>
+<tr>
+<td>Targets</td>
+<td>Specified target tags</td>
+</tr>
+<tr>
+<td>Target tags</td>
+<td>http-server</td>
+</tr>
+<tr>
+<td>Source filter</td>
+<td>IP Ranges</td>
+</tr>
+<tr>
+<td>Source IP ranges</td>
+<td>0.0.0.0/0</td>
+</tr>
+<tr>
+<td>Protocols and ports</td>
+<td>Specified protocols and ports</td>
+</tr>
+
+</tbody></table>
+</li>
+</ol>
+<aside class="special"><p>Make sure to include the <strong>/0</strong> in the <strong>Source IP ranges</strong> to specify all networks.</p>
+</aside>
+<ol start="4">
+<li>
+<p>For <strong>tcp</strong>, specify port <strong>80</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Create</strong>.</p>
+</li>
+</ol>
+<h3><strong>Create the health check firewall rules</strong></h3>
+<p>Health checks determine which instances of a load balancer can receive new connections. For HTTP load balancing, the health check probes to your load-balanced instances come from addresses in the ranges 130.211.0.0/22 and 35.191.0.0/16. Your firewall rules must allow these connections.</p>
+<ol>
+<li>
+<p>Return to the <strong>Firewall rules</strong> page.</p>
+</li>
+<li>
+<p>Click <strong>Create Firewall Rule</strong>.</p>
+</li>
+<li>
+<p>Specify the following, and leave the remaining settings as their defaults:</p>
+<table>
+
+<tbody><tr>
+<th>Property</th>
+<th>Value (type value or select option as specified)</th>
+</tr>
+
+
+<tr>
+<td>Name</td>
+<td>default-allow-health-check</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>default</td>
+</tr>
+<tr>
+<td>Targets</td>
+<td>Specified target tags</td>
+</tr>
+<tr>
+<td>Target tags</td>
+<td>http-server</td>
+</tr>
+<tr>
+<td>Source filter</td>
+<td>IP Ranges</td>
+</tr>
+<tr>
+<td>Source IP ranges</td>
+<td>130.211.0.0/22 35.191.0.0/16</td>
+</tr>
+<tr>
+<td>Protocols and ports</td>
+<td>Specified protocols and ports</td>
+</tr>
+
+</tbody></table>
+</li>
+</ol>
+<aside class="special"><p>Make sure to enter the two <b>Source IP ranges</b> individually and press SPACE between them.</p>
+</aside>
+<ol start="4">
+<li>Check <strong>tcp</strong>, which specifies all ports.</li>
+<li>Click <strong>Create</strong>.</li>
+</ol>
+<p>Click <em>Check my progress</em> to verify the objective.
+<ql-activity-tracking step="1">
+Configure HTTP and health check firewall rules
+</ql-activity-tracking></p>
+<h2 id="step3">Task 2: Create a custom image for a web server</h2>
+<p>Create a custom web server image for the backend of the load balancer.</p>
+<h3>Create a VM</h3>
+<ol>
+<li>
+<p>In the GCP Console, on the <strong>Navigation menu</strong> (<img alt="Navigation menu" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/tkgw1TDgj4Q+YKQUW4jUFd0O5OEKlUMBRYbhlCrF0WY=" title="Navigation menu">), click <strong>Compute Engine</strong> &gt; <strong>VM instances</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Create</strong>.</p>
+</li>
+<li>
+<p>Specify the following, and leave the remaining settings as their defaults:</p>
+<table>
+
+<tbody><tr>
+<th>Property</th>
+<th>Value (type value or select option as specified)</th>
+</tr>
+
+
+<tr>
+<td>Name</td>
+<td>webserver</td>
+</tr>
+<tr>
+<td>Region</td>
+<td>us-central1</td>
+</tr>
+<tr>
+<td>Zone</td>
+<td>us-central1-a</td>
+</tr>
+
+</tbody></table>
+</li>
+<li>
+<p>Click <strong>Management, security, disks, networking, sole tenancy</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Disks</strong>, and clear <strong>Delete boot disk when instance is deleted</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Networking</strong>.</p>
+</li>
+<li>
+<p>Specify the following, and leave the remaining settings as their defaults:</p>
+<table>
+
+<tbody><tr>
+<th>Property</th>
+<th>Value (type value or select option as specified)</th>
+</tr>
+
+
+<tr>
+<td>Network tags</td>
+<td>http-server</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>default</td>
+</tr>
+
+</tbody></table>
+</li>
+</ol>
+<aside class="special"><p>The network tag <b>http-server</b> ensures that the <b>HTTP</b> and <b>Health Check</b> firewall rules apply to this instance.</p>
+</aside>
+<ol start="8">
+<li>
+<p>Click <strong>Create</strong>.</p>
+</li>
+</ol>
+<h3>Customize the VM</h3>
+<ol>
+<li>
+<p>For <strong>webserver</strong>, click <strong>SSH</strong> to launch a terminal and connect.</p>
+</li>
+<li>
+<p>To install Apache2, run the following commands:</p>
+</li>
+</ol>
+<pre><code>sudo apt-get update
+sudo apt-get install -y apache2
+</code><button class="button button--copy js-copy-button-0"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="3">
+<li>
+<p>To start the Apache server, run the following command:</p>
+</li>
+</ol>
+<pre><code>sudo service apache2 start
+</code><button class="button button--copy js-copy-button-1"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="4">
+<li>
+<p>In the GCP Console, for <strong>webserver,</strong> click the <strong>External IP</strong> address.</p>
+<p>The default page for the Apache2 server should be displayed.</p>
+</li>
+</ol>
+<h3>Set the Apache service to start at boot</h3>
+<p>The software installation was successful. However, when a new VM is created using this image, the freshly booted VM does not have the Apache web server running. Use the following command to set the Apache service to automatically start on boot. Then test it to make sure it works.</p>
+<ol>
+<li>
+<p>In the webserver SSH terminal, set the service to start on boot:</p>
+</li>
+</ol>
+<pre><code>sudo update-rc.d apache2 enable
+</code><button class="button button--copy js-copy-button-2"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="2">
+<li>In the GCP Console, select <strong>webserver</strong>, and then click <strong>Reset.</strong>
+</li>
+<li>In the confirmation dialog, click <strong>Reset</strong>.</li>
+</ol>
+<aside class="special"><p>Reset will stop and reboot the machine. It keeps the same IPs and the same persistent boot disk, but memory is wiped. Therefore, if the Apache service is available after the reset, the <b>update-rc</b> command was successful.</p>
+</aside>
+<ol start="4">
+<li>
+<p>For <strong>webserver</strong>, click the <strong>External IP</strong> address of the instance to verify that the Apache service is available.
+You should see the default page.</p>
+</li>
+<li>
+<p>You can also check the server by connecting via SSH to the VM and entering the following command:</p>
+</li>
+</ol>
+<pre><code>sudo service apache2 status
+</code><button class="button button--copy js-copy-button-3"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="6">
+<li>
+<p>The result should show <strong>Started The Apache HTTP Server</strong>.</p>
+</li>
+</ol>
+<h3>Prepare the disk to create a custom image</h3>
+<p>Verify that the boot disk will not be deleted when the instance is deleted.</p>
+<ol>
+<li>
+<p>On the VM instances page, click <strong>webserver</strong> to view the VM instance details.</p>
+</li>
+<li>
+<p>Under <strong>Boot disk</strong>, verify that <strong>When deleting instance</strong> is set to <strong>Keep disk</strong>.</p>
+</li>
+<li>
+<p>Return to the VM instances page, click <strong>webserver</strong>, and click <strong>Delete.</strong></p>
+</li>
+<li>
+<p>In the confirmation dialog, click <strong>Delete</strong>.</p>
+</li>
+<li>
+<p>In the left pane, click <strong>Disks</strong> and verify that the <strong>webserver</strong> disk exists.</p>
+</li>
+</ol>
+<h3>Create the custom image</h3>
+<ol>
+<li>
+<p>In the left pane, click <strong>Images</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Create image</strong>.</p>
+</li>
+<li>
+<p>Specify the following, and leave the remaining settings as their defaults:</p>
+<table>
+
+<tbody><tr>
+<th>Property</th>
+<th>Value (type value or select option as specified)</th>
+</tr>
+
+
+<tr>
+<td>Name</td>
+<td>mywebserver</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>Disk</td>
+</tr>
+<tr>
+<td>Source disk</td>
+<td>webserver</td>
+</tr>
+
+</tbody></table>
+</li>
+<li>
+<p>Click <strong>Create</strong>.</p>
+</li>
+</ol>
+<aside class="special"><p>You have created a custom image that multiple identical webservers can be started from. At this point, you could delete the <b>webserver</b> disk.</p>
+</aside>
+<p>The next step is to use that image to define an instance template that can be used in the managed instance groups.</p>
+<p>Click <em>Check my progress</em> to verify the objective.
+<ql-activity-tracking step="2">
+Create a custom image for a web server
+</ql-activity-tracking></p>
+<h2 id="step4">Task 3. Configure an instance template and create instance groups</h2>
+<p>A managed instance group uses an instance template to create a group of identical instances. Use these to create the backends of the HTTP load balancer.</p>
+<h3><strong>Configure the instance template</strong></h3>
+<p>An instance template is an API resource that you can use to create VM instances and managed instance groups. Instance templates define the machine type, boot disk image, subnet, labels, and other instance properties.</p>
+<ol>
+<li>
+<p>In the GCP Console, on the <strong>Navigation menu</strong> (<img alt="Navigation menu" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/tkgw1TDgj4Q+YKQUW4jUFd0O5OEKlUMBRYbhlCrF0WY=" title="Navigation menu">), click <strong>Compute Engine</strong> &gt; <strong>Instance templates</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Create instance template</strong>.</p>
+</li>
+<li>
+<p>For <strong>Name</strong>, type <strong>mywebserver-template</strong>.</p>
+</li>
+<li>
+<p>For <strong>Machine type</strong>, select <strong>f1-micro (1 vCPU)</strong>.</p>
+</li>
+<li>
+<p>For <strong>Boot disk</strong>, click <strong>Change</strong>.</p>
+</li>
+<li>
+<p>Click  <strong>Custom images</strong>.</p>
+</li>
+<li>
+<p>Select <strong>mywebserver</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Select</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Management, security, disks, networking, sole tenancy</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Networking</strong>.</p>
+</li>
+<li>
+<p>Specify the following, and leave the remaining settings as their defaults:</p>
+<table>
+
+<tbody><tr>
+<th>Property</th>
+<th>Value (type value or select option as specified)</th>
+</tr>
+
+
+<tr>
+<td>Network</td>
+<td>default</td>
+</tr>
+<tr>
+<td>Network tags</td>
+<td>http-server</td>
+</tr>
+
+</tbody></table>
+</li>
+<li>
+<p>Click <strong>Create</strong>.</p>
+</li>
+</ol>
+<h3><strong>Create the managed instance groups</strong></h3>
+<p>Create a managed instance group in <strong>us-central1</strong> and one in <strong>europe-west1</strong>.</p>
+<ol>
+<li>
+<p>On the <strong>Navigation menu</strong>, click <strong>Compute Engine</strong> &gt; <strong>Instance groups</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Create Instance group</strong>.</p>
+</li>
+<li>
+<p>Specify the following, and leave the remaining settings as their defaults:</p>
+<table>
+
+<tbody><tr>
+<th>Property</th>
+<th>Value (type value or select option as specified)</th>
+</tr>
+
+
+<tr>
+<td>Name</td>
+<td>us-central1-mig</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Multiple zones</td>
+</tr>
+<tr>
+<td>Region</td>
+<td>us-central1</td>
+</tr>
+<tr>
+<td>Instance template</td>
+<td>mywebserver-template</td>
+</tr>
+<tr>
+<td>Autoscaling policy</td>
+<td>HTTP load balancing utilization</td>
+</tr>
+<tr>
+<td>Target HTTP load balancing utilization</td>
+<td>80</td>
+</tr>
+<tr>
+<td>Minimum number of instances</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Maximum number of instances</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Cool-down period</td>
+<td>60</td>
+</tr>
+
+</tbody></table>
+</li>
+</ol>
+<aside class="special"><p>Managed instance groups offer <b>autoscaling</b> capabilities that allow you to automatically add or remove instances from a managed instance group based on increases or decreases in load. Autoscaling helps your applications gracefully handle increases in traffic and reduces cost when the need for resources is lower. You just define the autoscaling policy, and the autoscaler performs automatic scaling based on the measured load.</p>
+</aside>
+<ol start="4">
+<li>
+<p>For <strong>Health check</strong>, select <strong>Create a health check</strong>.</p>
+</li>
+<li>
+<p>Specify the following, and leave the remaining settings as their defaults:</p>
+<table>
+
+<tbody><tr>
+<th>Property</th>
+<th>Value (select option as specified)</th>
+</tr>
+
+
+<tr>
+<td>Name</td>
+<td>http-health-check</td>
+</tr>
+<tr>
+<td>Protocol</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>Port</td>
+<td>80</td>
+</tr>
+
+</tbody></table>
+</li>
+</ol>
+<aside class="special"><p>Health checks determine which instances can receive new connections. This HTTP health check polls instances every 5 seconds and waits up to 5 seconds for a response. The health check treats 2 successful attempts as healthy and 2 failed attempts as unhealthy.</p>
+</aside>
+<ol start="6">
+<li>
+<p>Click <strong>Save and continue</strong>.</p>
+</li>
+<li>
+<p>For <strong>Initial delay</strong>, type <strong>60</strong>.
+This is how long the Instance Group waits after initializing the boot-up of a VM before it tries a health check. You don't want to wait 5 minutes for this during the lab, so you set it to 1 minute.</p>
+</li>
+<li>
+<p>Click <strong>Create</strong>.</p>
+</li>
+</ol>
+<ql-warningbox><strong>NOTE:</strong> If a warning window will appear stating that <strong>There is no backend service attached to the instance group</strong>. Ignore this; you will configure the load balancer with a backend service in the next section of the lab.</ql-warningbox>
+<ol start="9">
+<li>Click <strong>OK</strong>.</li>
+</ol>
+<p>Repeat the same procedure for <strong>europe-west1-mig</strong> in <strong>europe-west1</strong>:</p>
+<ol start="10">
+<li>
+<p>Click <strong>Create Instance group</strong>.</p>
+</li>
+<li>
+<p>Specify the following, and leave the remaining settings as their defaults:</p>
+<table>
+
+<tbody><tr>
+<th>Property</th>
+<th>Value (type value or select option as specified)</th>
+</tr>
+
+
+<tr>
+<td>Name</td>
+<td>europe-west1-mig</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Multiple zones</td>
+</tr>
+<tr>
+<td>Region</td>
+<td>europe-west1</td>
+</tr>
+<tr>
+<td>Instance template</td>
+<td>mywebserver-template</td>
+</tr>
+<tr>
+<td>Autoscaling policy</td>
+<td>HTTP load balancing utilization</td>
+</tr>
+<tr>
+<td>Target HTTP load balancing utilization</td>
+<td>80</td>
+</tr>
+<tr>
+<td>Minimum number of instances</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Maximum number of instances</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Cool-down period</td>
+<td>60</td>
+</tr>
+
+</tbody></table>
+</li>
+<li>
+<p>For <strong>Health check</strong>, select <strong>http-health-check (TCP)</strong>.</p>
+</li>
+<li>
+<p>For <strong>Initial delay</strong>, type <strong>60</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Create</strong>.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong> in the dialog window.</p>
+</li>
+</ol>
+<p>Click <em>Check my progress</em> to verify the objective.
+<ql-activity-tracking step="3">
+Configure an instance template and create instance groups
+</ql-activity-tracking></p>
+<h3><strong>Verify the backends</strong></h3>
+<p>Verify that VM instances are being created in both regions, and access their HTTP sites.</p>
+<ol>
+<li>
+<p>On the <strong>Navigation menu</strong>, click <strong>Compute Engine</strong> &gt; <strong>VM instances</strong>.
+Notice the instances that start with <i>us-central1-mig</i> and <i>europe-west1-mig</i>. These instances are part of the managed instance groups.</p>
+</li>
+<li>
+<p>Click on the <strong>External IP</strong> of an instance of <i>us-central1-mig</i>.</p>
+<p>The default page for the Apache2 server should be displayed.</p>
+</li>
+<li>
+<p>Click on the <strong>External IP</strong> of an instance of <i>europe-west1-mig</i>.</p>
+<p>The default page for the Apache2 server should be displayed.</p>
+</li>
+</ol>
+<h2 id="step5">Task 4. Configure the HTTP load balancer</h2>
+<p>Configure the HTTP load balancer to balance traffic between the two backends (<strong>us-central1-mig</strong> in us-central1 and <strong>europe-west1-mig</strong> in europe-west1) as illustrated in the network diagram:</p>
+<p><img alt="network_diagram.png" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/ByFMJpAyU9Uxc4dL8LmHWdITVL+MvDA0eqOm1W63BSA="></p>
+<h3><strong>Start the configuration</strong></h3>
+<ol>
+<li>
+<p>On the <strong>Navigation menu</strong>, click <strong>Network Services</strong> &gt; <strong>Load balancing</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Create load balancer</strong>.</p>
+</li>
+<li>
+<p>Under <strong>HTTP(S) Load Balancing</strong>, click <strong>Start configuration</strong>.</p>
+</li>
+<li>
+<p>Select <strong>From Internet to my VMs</strong>, then click <strong>Continue</strong>.</p>
+</li>
+<li>
+<p>For <strong>Name</strong>, type <strong>http-lb</strong>.</p>
+</li>
+</ol>
+<h3><strong>Configure the backend</strong></h3>
+<p>Backend services direct incoming traffic to one or more attached backends. Each backend is composed of an instance group and additional serving capacity metadata.</p>
+<ol>
+<li>
+<p>Click <strong>Backend configuration</strong>.</p>
+</li>
+<li>
+<p>For <strong>Backend services &amp; backend buckets</strong>, click <strong>Create or select backend services &amp; backend buckets</strong> &gt; <strong>Backend services</strong> &gt; <strong>Create a backend service</strong>.</p>
+</li>
+<li>
+<p>Specify the following, and leave the remaining settings as their defaults:</p>
+<table>
+
+<tbody><tr>
+<th>Property</th>
+<th>Value (select option as specified)</th>
+</tr>
+
+
+<tr>
+<td>Name</td>
+<td>http-backend</td>
+</tr>
+<tr>
+<td>Backend type</td>
+<td>Instance groups</td>
+</tr>
+<tr>
+<td>Instance group</td>
+<td>us-central1-mig</td>
+</tr>
+<tr>
+<td>Port numbers</td>
+<td>80</td>
+</tr>
+<tr>
+<td>Balancing mode</td>
+<td>Rate</td>
+</tr>
+<tr>
+<td>Maximum RPS</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Capacity</td>
+<td>100</td>
+</tr>
+
+</tbody></table>
+</li>
+</ol>
+<aside class="special"><p>This configuration means that the load balancer attempts to keep each instance of <b>us-central1-mig</b> at or below 50 requests per second (RPS).</p>
+</aside>
+<ol start="4">
+<li>
+<p>Click <strong>Done</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Add backend</strong>.</p>
+</li>
+<li>
+<p>Specify the following, and leave the remaining settings as their defaults:</p>
+<table>
+
+<tbody><tr>
+<th>Property</th>
+<th>Value (select option as specified)</th>
+</tr>
+
+
+<tr>
+<td>Instance group</td>
+<td>europe-west1-mig</td>
+</tr>
+<tr>
+<td>Port numbers</td>
+<td>80</td>
+</tr>
+<tr>
+<td>Balancing mode</td>
+<td>Utilization</td>
+</tr>
+<tr>
+<td>Maximum CPU utilization</td>
+<td>80</td>
+</tr>
+<tr>
+<td>Capacity</td>
+<td>100</td>
+</tr>
+
+</tbody></table>
+</li>
+</ol>
+<aside class="special"><p>This configuration means that the load balancer attempts to keep each instance of <b>europe-west1-mig</b> at or below 80% CPU utilization.</p>
+</aside>
+<ol start="7">
+<li>
+<p>Click <strong>Done</strong>.</p>
+</li>
+<li>
+<p>For <strong>Health Check</strong>, select <strong>http-health-check (TCP)</strong>.</p>
+</li>
+<li>
+<p>Expand <strong>Advanced configurations (Session affinity, connection draining timeout, security policies)</strong> option and check the <strong>Enable logging</strong> checkbox.</p>
+</li>
+<li>
+<p>Specify <strong>Sample rate</strong> as <strong>1</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Create</strong>.</p>
+</li>
+</ol>
+<h3><strong>Configure the frontend</strong></h3>
+<p>The host and path rules determine how your traffic will be directed. For example, you could direct video traffic to one backend and direct static traffic to another backend. However, you are not configuring the host and path rules in this lab.</p>
+<ol>
+<li>
+<p>Click <strong>Frontend configuration</strong>.</p>
+</li>
+<li>
+<p>Specify the following, and leave the remaining settings as their defaults:</p>
+<table>
+
+<tbody><tr>
+<th>Property</th>
+<th>Value (type value or select option as specified)</th>
+</tr>
+
+
+<tr>
+<td>Protocol</td>
+<td>HTTP</td>
+</tr>
+<tr>
+<td>IP version</td>
+<td>IPv4</td>
+</tr>
+<tr>
+<td>IP address</td>
+<td>Ephemeral</td>
+</tr>
+<tr>
+<td>Port</td>
+<td>80</td>
+</tr>
+
+</tbody></table>
+</li>
+<li>
+<p>Click <strong>Done</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Add Frontend IP and port</strong>.</p>
+</li>
+<li>
+<p>Specify the following, and leave the remaining settings as their defaults:</p>
+<table>
+
+<tbody><tr>
+<th>Property</th>
+<th>Value (type value or select option as specified)</th>
+</tr>
+
+
+<tr>
+<td>Protocol</td>
+<td>HTTP</td>
+</tr>
+<tr>
+<td>IP version</td>
+<td>IPv6</td>
+</tr>
+<tr>
+<td>IP address</td>
+<td>Ephemeral</td>
+</tr>
+<tr>
+<td>Port</td>
+<td>80</td>
+</tr>
+
+</tbody></table>
+</li>
+<li>
+<p>Click <strong>Done</strong>.</p>
+</li>
+</ol>
+<aside class="special"><p>HTTP(S) load balancing supports both IPv4 and IPv6 addresses for client traffic. Client IPv6 requests are terminated at the global load balancing layer and then proxied over IPv4 to your backends.</p>
+</aside>
+<h3><strong>Review and create the HTTP load balancer</strong></h3>
+<ol>
+<li>Click <strong>Review and finalize</strong>.</li>
+<li>Review the <strong>Backend services</strong> and <strong>Frontend</strong>.</li>
+<li>Click <strong>Create</strong>.
+Wait for the load balancer to be created.</li>
+<li>Click on the name of the load balancer (<strong>http-lb</strong>).</li>
+<li>Note the IPv4 and IPv6 addresses of the load balancer for the next task. They will be referred to as <code>[LB_IP_v4]</code> and <code>[LB_IP_v6]</code>, respectively.</li>
+</ol>
+<aside class="special"><p>The IPv6 address is the one in hexadecimal format.</p>
+</aside>
+<p>Click <em>Check my progress</em> to verify the objective.
+<ql-activity-tracking step="4">
+Configure the HTTP load balancer
+</ql-activity-tracking></p>
+<h2 id="step6">Task 5. Stress test the HTTP load balancer</h2>
+<p>Now that you have created the HTTP load balancer for your backends, it is time to verify that traffic is forwarded to the backend service.</p>
+<p><ql-true-false-probe answer="true" stem="The HTTP load balancer should forward traffic to the region that is closest to you.">
+</ql-true-false-probe></p>
+<h3><strong>Access the HTTP load balancer</strong></h3>
+<ol>
+<li>Open a new tab in your browser and navigate to <code>http://[LB_IP_v4]</code>. Make sure to replace <code>[LB_IP_v4]</code> with the IPv4 address of the load balancer.</li>
+</ol>
+<aside class="warning"><p>Accessing the HTTP load balancer might take a couple of minutes. In the meantime, you might get a 404 or 502 error. Keep trying until you see the page of one of the backends.</p>
+<p>
+</p></aside>
+<h3><strong>Stress test the HTTP load balancer</strong></h3>
+<p>Create a new VM to simulate a load on the HTTP load balancer. Then determine whether traffic is balanced across both backends when the load is high.</p>
+<ol>
+<li>
+<p>In the GCP Console, on the <strong>Navigation menu</strong> (<img alt="Navigation menu" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/tkgw1TDgj4Q+YKQUW4jUFd0O5OEKlUMBRYbhlCrF0WY=" title="Navigation menu">), click <strong>Compute Engine</strong> &gt; <strong>VM instances</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Create instance</strong>.</p>
+</li>
+<li>
+<p>Specify the following, and leave the remaining settings as their defaults:</p>
+<table>
+
+<tbody><tr>
+<th>Property</th>
+<th>Value (type value or select option as specified)</th>
+</tr>
+
+
+<tr>
+<td>Name</td>
+<td>stress-test</td>
+</tr>
+<tr>
+<td>Region</td>
+<td>us-west1</td>
+</tr>
+<tr>
+<td>Zone</td>
+<td>us-west1-c</td>
+</tr>
+<tr>
+<td>Machine type</td>
+<td>f1-micro (1 vCPU)</td>
+</tr>
+
+</tbody></table>
+</li>
+</ol>
+<aside class="special"><p>Because <b>us-west1</b> is closer to <b>us-central1</b> than to <b>europe-west1</b>, traffic should be forwarded only to <b>us-central1-mig</b> (unless the load is too high).</p>
+<p>
+</p></aside>
+<ol start="4">
+<li>
+<p>For <strong>Boot Disk</strong>, click <strong>Change</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Custom images</strong>.</p>
+</li>
+<li>
+<p>Select <strong>mywebserver</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Select</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Create</strong>.
+Wait for the <strong>stress-test</strong> instance to be created.</p>
+</li>
+<li>
+<p>For <strong>stress-test</strong>, click <strong>SSH</strong> to launch a terminal and connect.</p>
+</li>
+<li>
+<p>To create an environment variable for your load balancer IP address, run the following command:</p>
+</li>
+</ol>
+<pre><code>export LB_IP=&lt;Enter [YOUR_LB_IP] here&gt;
+</code><button class="button button--copy js-copy-button-4"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="11">
+<li>
+<p>Verify it with echo:</p>
+</li>
+</ol>
+<pre><code>echo $LB_IP
+</code><button class="button button--copy js-copy-button-5"><i class="fa fa-clipboard"></i></button></pre>
+<ol start="12">
+<li>
+<p>To place a load on the load balancer, run the following command:</p>
+</li>
+</ol>
+<pre><code>ab -n 500000 -c 1000 http://$LB_IP/
+</code><button class="button button--copy js-copy-button-6"><i class="fa fa-clipboard"></i></button></pre>
+<p>Click <em>Check my progress</em> to verify the objective.
+<ql-activity-tracking step="5">
+Stress test the HTTP load balancer
+</ql-activity-tracking></p>
+<ol start="13">
+<li>In the GCP Console, on the <strong>Navigation menu</strong> (<img alt="Navigation menu" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/tkgw1TDgj4Q+YKQUW4jUFd0O5OEKlUMBRYbhlCrF0WY=" title="Navigation menu">), click <strong>Network Services</strong> &gt; <strong>Load balancing</strong>.</li>
+<li>Click <strong>Backends</strong>.</li>
+<li>Click <strong>http-backend</strong>.</li>
+<li>Monitor the <strong>Frontend Location (Total inbound traffic)</strong> between North America and the two backends for a couple of minutes.</li>
+</ol>
+<aside class="special"><p>At first, traffic should just be directed to <b>us-central1-mig</b>, but as the RPS increases, traffic is also directed to <b>europe-west1-mig</b>. This demonstrates that by default traffic is forwarded to the closest backend, but if the load is very high, traffic can be distributed across the backends.</p>
+</aside>
+<ol start="17">
+<li>In the GCP Console, on the <strong>Navigation menu</strong> (<img alt="Navigation menu" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/tkgw1TDgj4Q+YKQUW4jUFd0O5OEKlUMBRYbhlCrF0WY=" title="Navigation menu">), click <strong>Compute Engine</strong> &gt; <strong>Instance groups</strong>.</li>
+<li>Click on <strong>us-central1-mig</strong> to open the instance group page.</li>
+<li>Click <strong>Monitoring</strong> to monitor the number of instances and LB capacity.</li>
+<li>Repeat the same for the <strong>europe-west1-mig</strong> instance group.</li>
+</ol>
+<aside class="special"><p>Depending on the load, you might see the backends scale to accommodate the load.</p>
+</aside>
+<h2 id="step7">Task 6. Review</h2>
+<p>In this lab, you configured an HTTP load balancer with backends in us-central1 and europe-west1. Then you stress-tested the load balancer with a VM to demonstrate global load balancing and autoscaling.</p>
+<h2 id="step8">End your lab</h2>
+<p>When you have completed your lab, click <strong>End Lab</strong>. Qwiklabs removes the resources you’ve used and cleans the account for you.</p>
+<p>You will be given an opportunity to rate the lab experience. Select the applicable number of stars, type a comment, and then click <strong>Submit</strong>.</p>
+<p>The number of stars indicates the following:</p>
+<ul>
+<li>1 star = Very dissatisfied</li>
+<li>2 stars = Dissatisfied</li>
+<li>3 stars = Neutral</li>
+<li>4 stars = Satisfied</li>
+<li>5 stars = Very satisfied</li>
+</ul>
+<p>You can close the dialog box if you don't want to provide feedback.</p>
+<p>For feedback, suggestions, or corrections, please use the <strong>Support</strong> tab.</p>
+
+<p>©2019 Google LLC All rights reserved. Google and the Google logo are trademarks of Google LLC. All other company and product names may be trademarks of the respective companies with which they are associated.</p>
+
+
+
+</div>
+<div class="js-lab-content-outline lab-content__outline">
+<a href="https://googlecoursera.qwiklabs.com/focuses/37338#step1">Overview</a><a href="https://googlecoursera.qwiklabs.com/focuses/37338#step2">Task 1. Configure HTTP and health check firewall rules</a><a href="https://googlecoursera.qwiklabs.com/focuses/37338#step3">Task 2: Create a custom image for a web server</a><a href="https://googlecoursera.qwiklabs.com/focuses/37338#step4">Task 3. Configure an instance template and create instance groups</a><a href="https://googlecoursera.qwiklabs.com/focuses/37338#step5">Task 4. Configure the HTTP load balancer</a><a href="https://googlecoursera.qwiklabs.com/focuses/37338#step6">Task 5. Stress test the HTTP load balancer</a><a href="https://googlecoursera.qwiklabs.com/focuses/37338#step7">Task 6. Review</a><a href="https://googlecoursera.qwiklabs.com/focuses/37338#step8">End your lab</a>
+</div>
+</div>
+
+</div>
+
+
+</div>
+</div>
+<div class="lab-assessment__tab js-lab-assessment-tab">
+<h5 class="small-label">
+Score
+</h5>
+<h3 class="js-lab-assessment-total-score">
+—/25
+</h3>
+<iframe class="l-ie-iframe-fix" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/saved_resource(1).html"></iframe>
+</div>
+<div class="lab-assessment__panel js-lab-assessment-panel">
+<!-- / If lab_instance has is started and assessment is generated, use -->
+<!-- / lab_instance.assessment, otherwise use lab.assessment_manual -->
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title">
+Configure HTTP and health check firewall rules
+</p>
+<p class="button button--assessment js-show-run-step-button" step_no="1">
+Run Step
+</p>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-1">
+</span>
+/ 5
+</p>
+</div>
+
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title">
+Create a custom image for a web server
+</p>
+<p class="button button--assessment js-show-run-step-button" step_no="2">
+Run Step
+</p>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-2">
+</span>
+/ 5
+</p>
+</div>
+
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title">
+Configure an instance template and create instance groups
+</p>
+<p class="button button--assessment js-show-run-step-button" step_no="3">
+Run Step
+</p>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-3">
+</span>
+/ 5
+</p>
+</div>
+
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title">
+Configure the HTTP load balancer
+</p>
+<p class="button button--assessment js-show-run-step-button" step_no="4">
+Run Step
+</p>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-4">
+</span>
+/ 5
+</p>
+</div>
+
+<div class="lab-assessment__step">
+<p class="lab-assessment__step__title">
+Stress test the HTTP load balancer
+</p>
+<p class="button button--assessment js-show-run-step-button" step_no="5">
+Run Step
+</p>
+<p class="lab-assessment__step__score">
+<span class="js-assessment-step-score-5">
+</span>
+/ 5
+</p>
+</div>
+
+<iframe class="l-ie-iframe-fix" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/saved_resource(2).html"></iframe>
+</div>
+<div class="lab-introduction js-lab-introduction is-hidden">
+<div class="lab-introduction__inner">
+<h1 class="headline-1">Welcome to Your First Lab!</h1>
+<ql-icon-button class="js-skip-button">close</ql-icon-button>
+<div class="lab-introduction__video">
+<iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" id="lab-introduction" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/yF7EDXKTmoQ.html"></iframe>
+</div>
+<a class="js-skip-button button button--outline">Skip this video</a>
+</div>
+</div>
+
+
+
+</div>
+</main>
+<div class="modal fade" id="lab-details-modal">
+<div class="modal-container">
+<div class="mdl-shadow--24dp modal-content">
+<div class="modal-body">
+<p class="l-mbm">
+In this lab, you configure an HTTP Load Balancer. Then, you stress test the Load Balancer to demonstrate global load balancing and autoscaling.
+</p>
+<p class="small-label l-mbs">
+<strong>
+Duration:
+</strong>
+0m setup
+·
+120m access
+·
+60m completion
+</p>
+<p class="small-label l-mbs">
+<span><strong>Levels: </strong>introductory</span>
+</p>
+<p class="small-label">
+<strong>
+Permalink:
+</strong>
+<a href="https://googlecoursera.qwiklabs.com/catalog_lab/2044">https://googlecoursera.qwiklabs.com/catalog_lab/2044</a>
+</p>
+</div>
+<div class="modal-actions">
+<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" data-dismiss="modal" data-upgraded=",MaterialButton,MaterialRipple">
+Got It
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+</div>
+
+
+</div>
+</div>
+<iframe class="l-ie-iframe-fix" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/saved_resource(3).html"></iframe>
+</div>
+<div class="modal fade" id="lab-review-modal">
+<div class="modal-container">
+<div class="mdl-shadow--24dp modal-content">
+<form class="simple_form js-lab-review-form" id="new_lab_review" action="https://googlecoursera.qwiklabs.com/lab_reviews" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓"><div class="modal-body">
+<p class="label">
+How satisfied are you with this lab?*
+</p>
+<div class="rateit js-rateit" data-rateit-max="5" data-rateit-min="0" data-rateit-resetable="false" data-rateit-step="1" data-rateit-value="0"><div class="rateit-reset" style="display: none;"></div><div class="rateit-range" style="width: 80px; height: 16px;"><div class="rateit-selected" style="height: 16px; width: 0px;"></div><div class="rateit-hover" style="height:16px"></div></div></div>
+<div class="l-mtm">
+
+<div class="control-group hidden lab_review_user_id"><div class="controls"><input class="hidden" type="hidden" value="2332914" name="lab_review[user_id]" id="lab_review_user_id"></div></div>
+<div class="control-group hidden lab_review_classroom_id"><div class="controls"><input class="hidden" type="hidden" value="4824" name="lab_review[classroom_id]" id="lab_review_classroom_id"></div></div>
+<div class="control-group hidden lab_review_lab_id"><div class="controls"><input class="hidden" type="hidden" value="2044" name="lab_review[lab_id]" id="lab_review_lab_id"></div></div>
+<div class="control-group hidden lab_review_focus_id"><div class="controls"><input class="hidden" type="hidden" value="37338" name="lab_review[focus_id]" id="lab_review_focus_id"></div></div>
+<div class="control-group hidden lab_review_rating"><div class="controls"><input class="hidden js-rating-input" type="hidden" name="lab_review[rating]" id="lab_review_rating"></div></div>
+<div class="control-group text optional lab_review_comment"><label class="text optional control-label" for="lab_review_comment">Comment</label><div class="controls"><textarea class="text optional" name="lab_review[comment]" id="lab_review_comment"></textarea></div></div>
+</div>
+</div>
+<div class="modal-actions">
+<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" data-dismiss="modal" data-upgraded=",MaterialButton,MaterialRipple">
+Cancel
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<input type="submit" name="commit" value="Submit" disabled="disabled" class="btn mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="submit" data-disabled="false" data-disable-with="Submit" data-upgraded=",MaterialButton,MaterialRipple"><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></input>
+</div>
+</form>
+
+</div>
+</div>
+<iframe class="l-ie-iframe-fix" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/saved_resource(4).html"></iframe>
+</div>
+
+<script>
+  $( function() {
+    ql.initMaterialInputs();
+    initChosen();
+    initSearch();
+    initTabs();
+    ql.list.init();
+    ql.favoriting.init();
+    ql.header.myAccount.init();
+    initTooltips();
+    ql.autocomplete.init();
+    ql.modals.init();
+    ql.toggleButtons.init();
+    ql.analytics.init();
+    initLabContent( );
+  ql.labOutline.links.init();
+  ql.labOutline.layout.init();
+  initLabReviewModal();
+  ql.labAssessment.init();
+  ql.labIntroduction.init( true );
+  ql.labData.init();
+  initLabTranslations( {"are_you_sure":"All done? If you end this lab, you will lose all your work. You may not be able to restart the lab if there is a quota limit. Are you sure you want to end this lab?\n","in_progress":"*In Progress*","ending":"*Ending*","starting":"*Starting, please wait*","end_concurrent_labs":"Sorry, you can only run one lab at a time. To start this lab, please confirm that you want all of your existing labs to end.\n","copied":"Copied","no_resource":"Error retrieving resource.","no_support":"No Support","mac_press":"Press ⌘-C to copy","thanks_review":"Thanks for reviewing this lab.","windows_press":"Press Ctrl-C to copy","days":"days"} );
+  ql.labRun.init();
+  ql.initHeader();
+  ql.navigation.init();
+  ql.navPanel.init();
+  ql.navigation.init();
+  
+  });
+</script>
+<style>
+  .mdl-layout__container {
+    position: static
+  }
+</style>
+
+
+<iframe data-product="web_widget" title="No content" tabindex="-1" aria-hidden="true" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/saved_resource(5).html" style="width: 0px; height: 0px; border: 0px; position: absolute; top: -9999px;"></iframe><div id="drift-widget-container" style="position: absolute; z-index: 2147483647;"><iframe id="drift-widget" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/index.html" title="Drift Messenger" role="complementary" style="border: none; display: block; height: 0px !important; width: 0px !important; position: fixed; top: auto; left: auto; bottom: 0px; right: 0px; visibility: hidden; z-index: 2147483647; max-height: 100vh; max-width: 100vw; transition: none 0s ease 0s; background: none transparent; opacity: 1; pointer-events: auto; touch-action: auto;" class="drift-widget-hidden"></iframe></div><div><iframe title="Opens a widget where you can chat to one of our agents" id="launcher" tabindex="0" class="zEWidget-launcher zEWidget-launcher--active" style="border: none; background: transparent; z-index: 999998; transform: translateZ(0px); position: fixed; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; opacity: 1; height: 50px; max-height: 551px; min-height: 50px; margin: 10px 20px; right: 0px; bottom: 0px; width: 112px;width: 112px;" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/saved_resource(6).html"></iframe></div><div><iframe title="Find more information here" id="webWidget" tabindex="-1" class="zEWidget-webWidget " style="border: none; background: transparent; z-index: 999999; transform: translateZ(0px); position: fixed; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; opacity: 0; width: 357px; height: 100%; max-height: 565px; min-height: 150px; margin-left: 8px; margin-right: 8px; top: -9999px; visibility: hidden;" src="./Configuring an HTTP Load Balancer with Autoscaling _ Qwiklabs_files/saved_resource(7).html"></iframe></div></body></html>
