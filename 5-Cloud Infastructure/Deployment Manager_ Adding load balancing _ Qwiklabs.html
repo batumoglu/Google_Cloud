@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" class="mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/caff0d62ed"></script><script src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/nr-1158.min.js.download"></script><script type="text/javascript" async="" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/js"></script><script type="text/javascript" async="" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/analytics.js.download"></script><script type="text/javascript" async="" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/d58fn3dh7i2n.js.download"></script><script type="text/javascript" async="" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/analytics.min.js.download"></script><script type="text/javascript" id="www-widgetapi-script" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/www-widgetapi.js.download" async=""></script><script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"caff0d62ed","applicationID":"29451451","transactionName":"IQ1XRUEOVV1dFxlRXAEXSlRATkpZVxI=","queueTime":0,"applicationTime":109,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"caff0d62ed",applicationID:"29451451"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta content="[]" name="active-experiments">
+<meta content="{&quot;userId&quot;:2332914}" name="help-api-product-data">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="zgcgbup3Nah+C5IJX34qmy96+OTx4yIGPIqThaUiAKGSvBGfJHIM/eNXuxqHfKfFpPBQ+euivWULj73Y7AXxCw==">
+<title>Deployment Manager: Adding load balancing | Qwiklabs</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" name="viewport">
+<meta content="In this lab you will develop a more advanced load balancing and autoscaling version of the Echo service. You will create many more resources that work together to provide a sophisticated scalable and resilient service." name="description">
+<meta content="Qwiklabs" name="author">
+<meta content="1rRsY0INj8RvwB5EF5pwdxt2A2P9aDgAlsICaJ0d5w0" name="google-site-verification">
+<meta content="Deployment Manager: Adding load balancing | Qwiklabs" property="og:title">
+<meta content="website" property="og:type">
+<meta content="/favicon-144.png" property="og:image">
+<meta content="Qwiklabs" property="og:site_name">
+<meta content="In this lab you will develop a more advanced load balancing and autoscaling version of the Echo service. You will create many more resources that work together to provide a sophisticated scalable and resilient service." property="og:description">
+<meta content="/qwiklabs_logo_900x887.png" property="og:logo" size="900x887">
+<meta content="/qwiklabs_logo_994x187.png" property="og:logo" size="994x187">
+<meta content="#3681E4" property="msapplication-TileColor">
+<meta content="/favicon-144.png" property="msapplication-TileImage">
+<link href="https://googlecoursera.qwiklabs.com/favicon-32.png" rel="shortcut icon">
+<link color="#3681E4" href="https://googlecoursera.qwiklabs.com/favicon-svg.svg" rel="mask-icon">
+<link href="https://googlecoursera.qwiklabs.com/favicon-180.png" rel="apple-touch-icon-precomposed">
+<link rel="stylesheet" media="screen" href="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/css">
+
+
+<!--[if lt IE 9]>
+<script src='http://html5shim.googlecode.com/svn/trunk/html5.js' type='text/javascript'></script>
+<![endif]-->
+<!--[endif]>  <![endif]-->
+<script>
+//<![CDATA[
+window.gon={};gon.current_user={"firstname":"Ozkan","lastname":"Batumoglu","fullname":"Ozkan Batumoglu","company":"Coursera","email":"batumoglu@hotmail.com","origin":"googlecoursera-run, lti-coursera","subscriptions":0,"id":"54eb7d21170356f2189321bcd774d847","qlCreatedAt":"2019-12-25 11:42:16 UTC","optIn":null};gon.segment="j4Im8pqIko0Lxq4wVVZWMPMM0EroHUvb";gon.deployment="googlecoursera-run";
+//]]>
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "https://www.qwiklabs.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.qwiklabs.com/catalog?keywords={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script id="ze-snippet" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/snippet.js.download"></script><script type="text/javascript" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/asset_composer.5d2cd6d9613b85125812.js.download" charset="utf-8" async=""></script>
+
+
+
+<link rel="stylesheet" media="all" href="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/application-a53cf05bc9e39a99a1d6fa14f486d7ecec091bb67f0aca5b1257120cbf85ec76.css">
+<script>
+  EVENT_SOURCE_BASE_URL = "https://googlecoursera-run.qwiklabs.com/nchan-sub?id=";
+</script>
+<script src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/webcomponents-loader.js.download"></script>
+<script src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/hallofmirrors-a87311d98f0c2f8a882727c54543601e005dded946094be4a719d9683b2f9762.js.download"></script><script async="" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/lazy.min.js.download"></script>
+<script src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/iframe_api"></script>
+<script src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/vendor-45d462772c30000424907184f70c7157e95fb6227698d1671c5051818a6f60d8.js.download"></script>
+<script src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/application-f4e49afad3828ebf1962f98490d8377a89247353044ebf5a7f447c3cc62c1dcd.js.download"></script>
+</head>
+<body class="focuses focuses-show lab-show l-full no-nav">
+<div class="header-container">
+<div class="header">
+<a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect header__button header__button--nav header__nav-panel-button js-nav-toggle" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">menu</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<div class="header__title">
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button header__button--nav" href="https://www.coursera.org/" data-upgraded=",MaterialButton,MaterialRipple"><ql-icon>arrow_back</ql-icon><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+
+<h1 class="headline-5">
+Deployment Manager: Adding load balancing
+</h1>
+</div>
+<div class="header__actions">
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button header__button--action header__button--search js-header-search-bar-button" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">search</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+
+<ql-help context="lab" productdata="{&quot;userId&quot;:2332914}" data-analytics-action="opened_help" data-analytics-label="lab"></ql-help>
+<a class="header-my-account-button mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-my-account-button" data-upgraded=",MaterialButton,MaterialRipple">
+<img class="avatar " src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/527aaaf240e6e7ef6a272c7f9743d396.png">
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<div class="header-my-account-menu js-my-account-menu">
+<div class="card elevation-2 no-padding">
+<div class="my-account-menu__top">
+<img class="avatar " src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/527aaaf240e6e7ef6a272c7f9743d396.png">
+<div class="my-account-menu__info">
+<h4 class="subtitle-headline-1">
+Ozkan Batumoglu
+</h4>
+<p class="body-2 text--gray">
+<span>batumoglu@hotmail.com</span>
+</p>
+<a class="button" href="https://googlecoursera.qwiklabs.com/my_account/profile">My Account</a>
+</div>
+</div>
+<div class="my-account-menu__bottom">
+<a class="text--green subtitle-headline-2" href="https://googlecoursera.qwiklabs.com/my_account/credits">0 Credits
+</a><a data-analytics-action="clicked_sign_out" class="button button--hairline" rel="nofollow" data-method="delete" href="https://googlecoursera.qwiklabs.com/users/sign_out">Sign Out</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="header__search-bar js-header-search-bar">
+<form id="catalog-search-mobile" onsubmit="ql.catalogSearchFilter(); return false;" action="https://googlecoursera.qwiklabs.com/searches/elasticsearch" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="zgcgbup3Nah+C5IJX34qmy96+OTx4yIGPIqThaUiAKGSvBGfJHIM/eNXuxqHfKfFpPBQ+euivWULj73Y7AXxCw==">
+<input type="text" name="keywords" id="keywords" placeholder="Search" maxlength="255">
+</form>
+
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">close</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+</div>
+</div>
+
+<nav class="nav-bar">
+<a class="nav-bar__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/"><ql-icon class="nav-bar__item__icon">
+home
+</ql-icon>
+<span class="nav-bar__item__label">
+Home
+</span>
+</a>
+<a class="nav-bar__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/catalog"><ql-icon class="nav-bar__item__icon">
+school
+</ql-icon>
+<span class="nav-bar__item__label">
+Catalog
+</span>
+</a>
+<a class="nav-bar__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_learning"><ql-icon class="nav-bar__item__icon">
+event_note
+</ql-icon>
+<span class="nav-bar__item__label">
+My Learning
+</span>
+</a>
+</nav>
+
+<nav class="nav-panel js-nav-panel">
+<div class="nav-panel__logo">
+<div class="logo logo--blue"></div>
+</div>
+<a title="Home" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/"><ql-icon class="nav-panel__item__icon">
+home
+</ql-icon>
+<div class="nav-panel__item__label">
+Home
+</div>
+</a>
+<a title="Catalog" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/catalog"><ql-icon class="nav-panel__item__icon">
+school
+</ql-icon>
+<div class="nav-panel__item__label">
+Catalog
+</div>
+</a>
+<a title="My Learning" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_learning"><ql-icon class="nav-panel__item__icon">
+event_note
+</ql-icon>
+<div class="nav-panel__item__label">
+My Learning
+</div>
+</a>
+<div class="nav-panel__spacer"></div>
+<a title="Profile" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_account/profile"><ql-icon class="nav-panel__item__icon">
+account_circle
+</ql-icon>
+<div class="nav-panel__item__label">
+Profile
+</div>
+</a>
+<a title="Credits &amp; Subscriptions" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_account/credits"><ql-icon class="nav-panel__item__icon">
+money
+</ql-icon>
+<div class="nav-panel__item__label">
+Credits &amp; Subscriptions
+</div>
+</a>
+<a title="Security" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_account/security"><ql-icon class="nav-panel__item__icon">
+security
+</ql-icon>
+<div class="nav-panel__item__label">
+Security
+</div>
+</a>
+<div class="nav-panel__spacer"></div>
+<a class="nav-panel__item" tabindex="-1" href="https://googlecoursera.qwiklabs.com/focuses/16468#"><ql-help>
+<div class="nav-panel__help-item">
+<ql-icon class="nav-panel__item__icon">help</ql-icon>
+<div class="nav-panel__item__label">Help</div>
+</div>
+</ql-help>
+</a><div class="nav-panel__small-links">
+<a tabindex="-1" href="https://googlecoursera.qwiklabs.com/privacy_policy">Privacy</a>
+<a tabindex="-1" href="https://googlecoursera.qwiklabs.com/terms_of_service">Terms</a>
+</div>
+</nav>
+<div class="nav-panel__overlay js-nav-toggle"></div>
+
+<main class="js-main">
+<span class="hidden" id="flash-sibling-before"></span>
+
+<div class="l-main-wrapper" id="main-wrapper">
+
+
+
+
+
+
+
+<div class="js-lab-state" data-analytics-payload="{&quot;label&quot;:&quot;Deployment Manager: Adding load balancing&quot;,&quot;lab_name&quot;:&quot;Deployment Manager: Adding load balancing&quot;,&quot;classroom_name&quot;:null,&quot;deployment&quot;:&quot;googlecoursera-run&quot;}" data-focus-id="16468" data-lab-billing-limit="0.0" data-lab-duration="5400" data-parent="classroom"></div>
+<ql-lab-control-panel class="js-lab-control-panel l-lab-control-panel" connectiondetails="[]" connectionfiles="[]" labcontrolbutton="{&quot;disabled&quot;:false,&quot;pending&quot;:false,&quot;running&quot;:false}" labtimer="{&quot;ticking&quot;:false,&quot;secondsRemaining&quot;:5400}" studentresources="[]"></ql-lab-control-panel>
+<div class="l-lab-main-body">
+<div class="js-lab-content lab-content">
+<div class="alert alert--fake js-alert">
+<p class="alert__message js-alert-message"></p>
+<a class="alert__close js-alert-close">
+<i class="fa fa-times"></i>
+</a>
+<iframe class="l-ie-iframe-fix" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/saved_resource.html"></iframe>
+</div>
+<div class="lab-content__markdown-wrapper">
+<div class="lab-preamble">
+<h1 class="lab-preamble__title">
+Deployment Manager: Adding load balancing
+</h1>
+<div class="lab-preamble__details subtitle-headline-1">
+<span>1 hour 30 minutes</span>
+<span>1 Credit</span>
+<div class="lab__rating">
+<a href="https://googlecoursera.qwiklabs.com/focuses/16468/reviews?parent=catalog"><div class="rateit" data-rateit-readonly="true" data-rateit-value="4.3056"><div class="rateit-reset" style="display: none;"></div><div class="rateit-range" style="width: 80px; height: 16px;"><div class="rateit-selected" style="height: 16px; width: 68.8896px;"></div><div class="rateit-hover" style="height:16px"></div></div></div>
+
+</a><a data-target="#lab-review-modal" data-toggle="modal">
+Rate Lab
+</a>
+</div>
+</div>
+</div>
+
+<div class="lab-content__inner-wrapper">
+<div class="js-markdown-instructions lab-content__markdown markdown-lab-instructions" id="markdown-lab-instructions">
+
+
+
+<h2 id="step1">Overview</h2>
+<p>In this lab, you will...</p>
+<ol>
+<li>
+<p>Use a pre-written Python application called "Echo" and existing Deployment Manager templates written in Jinja2.</p>
+</li>
+<li>
+<p>Create a deployment package suitable for Deployment Manager using the python package manager, pip.</p>
+</li>
+<li>
+<p>Stage your package in a Cloud Storage bucket.</p>
+</li>
+<li>
+<p>Manually test the application to ensure that it is working properly.</p>
+</li>
+<li>
+<p>Use Deployment Manager to deploy the Echo LB service.</p>
+</li>
+<li>
+<p>Test the new service.</p>
+</li>
+</ol>
+<h2 id="step2">Objectives</h2>
+<p>In this lab, you will learn how to perform the following tasks:</p>
+<ul>
+<li>
+<p>Develop and deploy a service.</p>
+</li>
+<li>
+<p>Configure a Deployment Manager template.</p>
+</li>
+<li>
+<p>Create a deployable package using pip.</p>
+</li>
+<li>
+<p>Follow best practices for testing an application manually prior to deploying it.</p>
+</li>
+<li>
+<p>Investigate and gather information necessary to configure health checks.</p>
+</li>
+<li>
+<p>Enable and verify that health check are functioning.</p>
+</li>
+</ul>
+<h2 id="step3">The story so far...</h2>
+<p>The application development team is working on the Photo application, however they are behind schedule. Even a test version is not yet available. This is putting pressure on you as the time you were supposed to have available to create and implement the architecture is shrinking.</p>
+<p>You decide to decouple development and implementation of the system architecture from the application development schedule. There is no good reason for you to wait for the application team to deliver the program before you create and test the architecture.</p>
+<p>So you will construct an autoscaling load balanced infrastructure for the Photo application.</p>
+<p>You will host the Echo application in the infrastructure so that you can test the design and validate that it works.</p>
+<p>You plan to replace the Echo application with the Photo application as soon as it is delivered by the application development team. Doing this work in advance means that you have reduced the risk of the overall project slipping past its delivery date.</p>
+<aside class="special"><p>Here are the new files you will be adding to the templates you have already created.</p>
+<p>http-lb-service.jinja</p>
+<p>http-lb-service.jinja.schema</p>
+<p>http-lb.yaml</p>
+<p>install-ab.sh</p>
+</aside>
+<h2 id="step4">Download and unarchive the lab code</h2>
+<p>The lab code is in a .tar file with gzip compression hosted in the cloud-training bucket.</p>
+<p>Open Cloudshell</p>
+<p><img alt="6d5d6f01c3d7a80.png" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/cK0lEnuiLY7l+02W0tn1_5l_GbnsoWlRU7+CAAFpw0w="></p>
+<p>Open the Cloud Shell Code Editor. You will be using it to create and edit the files, and the other tab to interrogate the environment for values you'll need to specify in the files.</p>
+<p>The controls you need to open the editor may be off screen to the right. You will need to close the Navigation menu to see the controls.</p>
+<p><img alt="c2dd578bf4751e56.png" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/e6oEeQ_LnP0xm+CUCiRn2qMLgK2c3pD7m1FD4_rmuMc="></p>
+<p>The control looks like a pencil. This is how you launch the Cloud Shell Code Editor.</p>
+<p><img alt="2368c1b1a9a999e2.png" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/47s4AH5Mm6JY1_QNDpLCVnmGGcit8PTxv0WYjgdktp4="></p>
+<p>You now have three interfaces available: (1) The Cloud Shell Code Editor, (2) the Cloud Shell Command Line, and (3) (By clicking on the tab) The Console. You can switch back and forth between Console and Cloud Shell by clicking on the tab.</p>
+<p><img alt="c2912a36941d30da.png" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/2zRnkqfcLMoxjHDd6YbQvVQeJJDkP7Vclrdvuin1R3k="></p>
+<p>All directory and file instructions that follow are relative to your home directory: ~/</p>
+<h3><strong>Download the file</strong></h3>
+<aside class="special"><p>The completed Echo lab is available in an archive file. You will use this as a base on which to build a more complex and flexible infrastructure.</p>
+</aside>
+<p>In Cloud Shell Command Line create a directory to contain the first echo lab.</p>
+<pre><code>mkdir ~/archdp
+cd ~/archdp
+</code><button class="button button--copy js-copy-button-0"><i class="fa fa-clipboard"></i></button></pre>
+<p>Download the lab tar file to the directory.</p>
+<pre><code>gsutil cp gs://cloud-training/archdp/archdp-echo.tar.gz .
+</code><button class="button button--copy js-copy-button-1"><i class="fa fa-clipboard"></i></button></pre>
+<h3><strong>Expand the archive</strong></h3>
+<p>Unarchive the lab.</p>
+<pre><code>tar -xzvf archdp-echo.tar.gz
+</code><button class="button button--copy js-copy-button-2"><i class="fa fa-clipboard"></i></button></pre>
+<p>In the Cloud Shell editor, click <strong>File &gt; Refresh</strong> and you will see the archdp directory you created.</p>
+<p><img alt="6d9a065eb02a486b.png" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/gVu1sVIKj0yltaqmN2Ctl8uQ44caXBtA3BBpKmTci6U="></p>
+<h2 id="step5">Adding Load Balancing for Resiliency</h2>
+<p>The expanded archive is the solution from the previous lab. You are going to add additional Deployment Manager template files to the existing template to configure load balancing for the Echo service.</p>
+<p><strong>http-lb.yaml</strong> is a new configuration file. It replaces the <strong>config.yaml</strong> file. When you deploy the service using this file, it does everything to set up a load balancer.</p>
+<p><strong>http-lb-service.jinja</strong> and <strong>http-lb-service.jinja.schema</strong> build the load balancer.</p>
+<p><strong>install-ab.sh</strong> installs the Apache Bench open source load testing software, so you can stress-test the load balancer.</p>
+<h2 id="step6">Create the configuration file</h2>
+<p>After the experiences you have had with Deployment Manager in the previous labs, this file should look very familiar and should be easy to understand.</p>
+<p>To create a new file in the Cloud Shell Code Editor, right-click on a folder, then select <strong>New &gt; File</strong> as shown in the image below:</p>
+<p><img alt="ab50803858771488.png" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/Z2284I1EvOA+mwkx18iPfAoOH4iukjwje_GYru+5pWQ="></p>
+<p>Using the Cloud Shell Code Editor, create the <strong>http-lb.yaml</strong> file in <strong>~/archdp/deployment-manager-examples/http-lb.yaml</strong></p>
+<p><strong>http-lb.yaml</strong></p>
+<pre><code>imports:
+  - path: http-lb-service.jinja
+  - path: install-echo.sh
+    name: startup-script
+resources:
+  - name: echo
+    type: http-lb-service.jinja
+    properties:
+      zone: [ZONE]
+      tags:
+        - http
+      metadata:
+        - key: echo
+          value: https://storage.googleapis.com/[BUCKET]/echo-0.0.1.tar.gz
+</code><button class="button button--copy js-copy-button-3"><i class="fa fa-clipboard"></i></button></pre>
+<p>Notice that the configuration file requires [ZONE] and [BUCKET]. You do not need to change these yet. After you have completed more steps you will have this information available, and at that time you will edit the configuration file.</p>
+<h2 id="step7">Create the schema and jinja files.</h2>
+<p>You are creating the schema file first this time, because you know that defines the interface between your YAML configuration file and the template. You really only need to look at the JINJA file if you are curious how the underlying properties work</p>
+<p>Using the Cloud Shell Code Editor, create the <strong>http-lb-service.jinja.schema</strong> file in <strong>~/archdp/deployment-manager-examples/http-lb-service.jinja.schema</strong></p>
+<p><strong>http-lb-service.jinja.schema</strong></p>
+<pre><code>info:
+  title: http service template
+  author: cloud-training@google.com
+  description: |
+    Creates a http load balanced service
+  version: 0.1
+imports:
+  - path: http-lb-service.jinja
+required:
+  - zone
+properties:
+  zone:
+    type: string
+    description: i.e. us-east1-d
+
+  network:
+    type: string
+    description: Network URL i.e. projects/project/global/networks/network
+    default: global/networks/default
+  subnet:
+    type: string
+    description: Subnet URL i.e regions/region/subnetworks/subnetwork
+  sourceImage:
+    type: string
+    description: Image uri
+    default: projects/ubuntu-os-cloud/global/images/family/ubuntu-1604-lts
+
+  machineType:
+    type: string
+    default: n1-standard-1
+
+  serviceAccount:
+    type: string
+    description: Service account with permissions to label resources i.e. Project editor.
+    default: default
+  tags:
+    type: array
+    description: Array of tags
+    items:
+      type: string
+  metadata:
+    type: array
+    description: Array of metadata key pairs
+    items:
+      type: object
+      required:
+        - key
+        - value
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+  maxReplicas:
+    type: integer
+    description: Max number of instance for backend service
+    default: 3
+    minimum: 3
+    maximum: 10
+  port:
+    type: integer
+    description: Service port
+    default: 80
+</code><button class="button button--copy js-copy-button-4"><i class="fa fa-clipboard"></i></button></pre>
+<p>Using the Cloud Shell Code Editor, create the <strong>http-lb-service.jinja</strong> file in <strong>~/archdp/deployment-manager-examples/http-lb-service.jinja</strong></p>
+<p><strong>http-lb-service.jinja</strong></p>
+<pre><code>{% set id = env["deployment"] %}
+resources:
+- name: {{ id }}-it
+  type: compute.v1.instanceTemplate
+  properties:
+    properties:
+      machineType: {{ properties['machineType'] }}
+      metadata:
+        items:
+          - key: deployment
+            value: {{ id }}
+          {% if imports['startup-script'] %}
+          - key: startup-script
+            value: |
+              {{ imports['startup-script']|indent(14) }}
+          {% endif %}
+          {% for i in properties["metadata"] %}
+          - {{ i }}
+          {% endfor %}
+      disks:
+        - deviceName: boot
+          boot: true
+          autoDelete: true
+          initializeParams:
+            diskSizeGb: 10
+            sourceImage: {{ properties['sourceImage'] }}
+      networkInterfaces:
+        - name: {{ id }}-eth0
+          network: {{ properties['network'] }}
+          {% if properties['subnet'] %}
+            subnetwork: {{ properties['subnet'] }}
+          {% endif %}
+          accessConfigs:
+            - name: eth0
+              type: ONE_TO_ONE_NAT
+      serviceAccounts:
+        - email: {{ properties['serviceAccount'] }}
+          scopes:
+            - 'https://www.googleapis.com/auth/cloud-platform'
+      {% if properties['tags'] %}
+      tags:
+        items:
+          {% for i in properties["tags"] %}
+          - {{ i }}
+          {% endfor %}
+      {% endif %}
+
+- name: {{ id }}-igm
+  type: compute.v1.instanceGroupManager
+  properties:
+    targetSize: {{ properties["maxReplicas"] }}
+    zone: {{ properties['zone'] }}
+    baseInstanceName: {{ id }}-instance
+    instanceTemplate: $(ref.{{ id }}-it.selfLink)
+
+- name: {{ id }}-as
+  type: compute.v1.autoscaler
+  properties:
+    zone: {{ properties["zone"] }}
+    target: $(ref.{{ id }}-igm.selfLink)
+    autoscalingPolicy:
+      maxNumReplicas: {{ properties["maxReplicas"] }}
+      cpuUtilization:
+        utilizationTarget: 0.8
+      coolDownPeriodSec: 90
+
+- name: {{ id }}-hc
+  type: compute.v1.httpHealthCheck
+  properties:
+    port: {{ properties["port"] }}
+    requestPath: /
+
+- name: {{ id }}-bes
+  type: compute.v1.backendService
+  properties:
+    port: {{ properties["port"] }}
+    portName: {{ env["name"] }}
+    backends:
+      - name: {{ id }}-{{ properties["service"] }}
+        group: $(ref.{{ id }}-igm.instanceGroup)
+    healthChecks:
+      - $(ref.{{ id }}-hc.selfLink)
+
+- name: {{ id }}-urlmap
+  type: compute.v1.urlMap
+  properties:
+    defaultService: $(ref.{{ id }}-bes.selfLink)
+
+- name: {{ id }}-targetproxy
+  type: compute.v1.targetHttpProxy
+  properties:
+    urlMap: $(ref.{{ id }}-urlmap.selfLink)
+
+- name: {{ id }}-l7lb
+  type: compute.v1.globalForwardingRule
+  properties:
+    IPProtocol: TCP
+    portRange: {{ properties["port"] }}
+    target: $(ref.{{ id }}-targetproxy.selfLink)
+
+outputs:
+  - name: url
+    value: http://$(ref.{{ id }}-l7lb.IPAddress)
+</code><button class="button button--copy js-copy-button-5"><i class="fa fa-clipboard"></i></button></pre>
+<p>The first part of this template looks like it is creating an instance. The properties are the same as the ones you used in the previous labs. However, a closer look reveals that the resource being built is an instance template:  <strong>compute.v1.instanceTemplate</strong>.</p>
+<p>You can follow the <strong>-name:</strong> elements and read the <strong>type:</strong> elements below them to identify all the resources that are being constructed.</p>
+<p>Here is a quick way to dump them:</p>
+<p>The configuration story is told in the <strong>type:</strong> statements.</p>
+<h4><strong>Example (don't copy)</strong></h4>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">$ cat http</span><span class="pun">-</span><span class="pln">lb</span><span class="pun">-</span><span class="pln">service</span><span class="pun">.</span><span class="pln">jinja </span><span class="pun">|</span><span class="pln"> grep type</span><span class="pun">:</span><span class="pln">
+
+  type</span><span class="pun">:</span><span class="pln"> compute</span><span class="pun">.</span><span class="pln">v1</span><span class="pun">.</span><span class="pln">instanceTemplate
+              type</span><span class="pun">:</span><span class="pln"> ONE_TO_ONE_NAT
+  type</span><span class="pun">:</span><span class="pln"> compute</span><span class="pun">.</span><span class="pln">v1</span><span class="pun">.</span><span class="pln">instanceGroupManager
+  type</span><span class="pun">:</span><span class="pln"> compute</span><span class="pun">.</span><span class="pln">v1</span><span class="pun">.</span><span class="pln">autoscaler
+  type</span><span class="pun">:</span><span class="pln"> compute</span><span class="pun">.</span><span class="pln">v1</span><span class="pun">.</span><span class="pln">httpHealthCheck
+  type</span><span class="pun">:</span><span class="pln"> compute</span><span class="pun">.</span><span class="pln">v1</span><span class="pun">.</span><span class="pln">backendService
+  type</span><span class="pun">:</span><span class="pln"> compute</span><span class="pun">.</span><span class="pln">v1</span><span class="pun">.</span><span class="pln">urlMap
+  type</span><span class="pun">:</span><span class="pln"> compute</span><span class="pun">.</span><span class="pln">v1</span><span class="pun">.</span><span class="pln">targetHttpProxy
+  type</span><span class="pun">:</span><span class="pln"> compute</span><span class="pun">.</span><span class="pln">v1</span><span class="pun">.</span><span class="pln">globalForwardingRule</span></code><button class="button button--copy js-copy-button-6"><i class="fa fa-clipboard"></i></button></pre>
+<p><strong>compute.v1.instanceGroupManager</strong> - an Instance Group Manager</p>
+<p><strong>compute.v1.autoscaler</strong> - an Autoscaler</p>
+<p><strong>compute.v1.httpHealthCheck</strong> - HTTP Health Check</p>
+<p><strong>compute.v1.backendService</strong> -  Back-end (scalable) service.</p>
+<p><strong>compute.v1.urlMap</strong> - a URL Map for directing the traffic</p>
+<p><strong>compute.v1.targetHttpProxy</strong> - HTTP Proxy</p>
+<p><strong>compute.v1.globalForwardingRule</strong> - A global forwarding rule and Global IP</p>
+<h2 id="step8">Verify the Apache Bench installation script</h2>
+<p>Look for the <strong>install-ab.sh</strong> file in ~<strong>/archdp/deployment-manager-examples/</strong></p>
+<p>You should see the file.</p>
+<p>install-ab.sh</p>
+<pre><code>#!/bin/bash -e
+
+apt-get update
+apt-get -y install apache2-utils
+</code><button class="button button--copy js-copy-button-7"><i class="fa fa-clipboard"></i></button></pre>
+<p>This script is not actually used in the deployment. It is the startup script necessary to install Apache Bench when creating another instance. The idea here is to add another resource to the template to create the load testing server automatically.  Later in the lab you will create a load testing server manually. But you can see how easy it would be to automate this process.</p>
+<h2 id="step9">Create the package</h2>
+<p>Use the Python package manager to create a distribution package that will be used by Deployment Manager to upload the application to instances.</p>
+<h3><strong>Examine the setup instructions</strong></h3>
+<p>View the contents of <code>setup.py</code> in ~/archdp/echo/</p>
+<p>The setup is going to create a package called 'Echo' that will include some dependencies. One is a microframework called 'Flask' ( <a href="http://flask.pocoo.org/">http://flask.pocoo.org/</a>) and another is a python HTTP Web Server Gateway Interface (WSGI) called gunicorn ( <a href="http://gunicorn.org/">http://gunicorn.org/</a>).</p>
+<h3><strong>Create the package</strong></h3>
+<p>Perform the following activities in Cloud Shell Command Line.</p>
+<ul>
+<li>
+<p>Create the python source distribution package.</p>
+</li>
+<li>
+<p>Use the ls command to find your current path</p>
+</li>
+<li>
+<p>You need to be in the directory with setup.py.</p>
+</li>
+</ul>
+<pre><code>cd ~/archdp/echo
+python setup.py sdist
+cd dist
+ls
+</code><button class="button button--copy js-copy-button-8"><i class="fa fa-clipboard"></i></button></pre>
+<h2 id="step10">Host the distribution package in a bucket</h2>
+<p>Deployment Manager will load the application file from a bucket.</p>
+<p>Switch tabs in the browser to Console.</p>
+<h3><strong>Create a bucket</strong></h3>
+<p>Create a uniquely named multiregional bucket in Console at an appropriate location.</p>
+<p>On the <strong>Navigation menu</strong>, click <strong>Storage</strong> &gt; <strong>Browser</strong>, and click <strong>Create Bucket</strong>.</p>
+<h3><strong>Upload the file to the bucket</strong></h3>
+<p>Use the following gsutil command to upload the file to the bucket. It will make specific tags and settings necessary for the application to work with Deployment Manager.</p>
+<ul>
+<li>It sets access control to 'public-read'.</li>
+<li>It sets header information to identify the file as a gzip archive.</li>
+<li>It sets  the cache control to private.</li>
+</ul>
+<p>In Cloud Shell Command Line enter the following using your bucket name.</p>
+<pre><code>MY_BUCKET=&lt;bucket&gt;
+
+gsutil -h 'Content-Type: application/gzip' -h 'Cache-Control:private' cp -a public-read echo-0.0.1.tar.gz gs://$MY_BUCKET
+</code><button class="button button--copy js-copy-button-9"><i class="fa fa-clipboard"></i></button></pre>
+<aside class="special"><p><strong>Note:</strong> Best Practice</p>
+<p>Setting cache control to private in the header is a development best practice. It declares that the item can be cached for a single user, in a browser for example, but that it is not to be publicly cached as in a Content Delivery Network (CDN). </p>
+<p>This would have no effect if your development environment was not using CDN. However, if the application was deployed to a production environment that was using CDN, and you tried to push out an upgrade to the application, it might not update. The servers would still fetch the cached version of the application. This is very frustrating and difficult to troubleshoot. So it is best to always specify Cache-Control:private so you never are in this circumstance.</p>
+<p>For an interesting review of development caching best practices, see this article: <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching" target="_blank">https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching</a></p>
+</aside>
+<p>You can verify access control and header information in Console or using the following gsutil command:</p>
+<p>Verify the object properties.</p>
+<p>Enter the following command into Cloud Shell Command Line.</p>
+<pre><code>gsutil ls -L gs://$MY_BUCKET/echo-0.0.1.tar.gz
+</code><button class="button button--copy js-copy-button-10"><i class="fa fa-clipboard"></i></button></pre>
+<h4><strong>Example Output (don't copy)</strong></h4>
+<p><img alt="85fd49b68605ca90.png" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/BHbXuNYAL_t6pBoarikppHTmCCBjNz3emVDAZrG6F+I="></p>
+<h2 id="step11">Configure the template</h2>
+<p>Before you can deploy the service with Deployment Manager, you will have to make some configuration changes in the http-lb.yaml file.</p>
+<h3><strong>Tailor the configuration file</strong></h3>
+<p>Using the Cloud Shell Code Editor, edit <strong>http-lb.yaml</strong> in ~/archdp/deployment-manager-examples/ and replace [ZONE] with a zone of your choosing. You can find the list of zones in Cloud Shell by entering:</p>
+<pre><code>gcloud compute zones list
+</code><button class="button button--copy js-copy-button-11"><i class="fa fa-clipboard"></i></button></pre>
+<p>Replace [BUCKET] with your bucket name using Cloud Shell Code Editor.</p>
+<p>http-lb.yaml</p>
+<pre><code>imports:
+  - path: http-lb-service.jinja
+resources:
+  - name: echo
+    type: http-lb-service.jinja
+    properties:
+      zone: [ZONE]
+      tags:
+        - http
+      metadata:
+        - key: echo
+          value: https://storage.googleapis.com/[BUCKET]/echo-0.0.1.tar.gz
+</code><button class="button button--copy js-copy-button-12"><i class="fa fa-clipboard"></i></button></pre>
+<h2 id="step12">Deploy the service</h2>
+<p>You are ready to deploy the newly updated autoscaling load-balancing  Echo service.</p>
+<p>In Cloud Shell Command Line move to the deployment-manager-examples directory</p>
+<pre><code>cd ~/archdp/deployment-manager-examples
+ls
+</code><button class="button button--copy js-copy-button-13"><i class="fa fa-clipboard"></i></button></pre>
+<p>Enter the following:</p>
+<pre><code>gcloud deployment-manager deployments create echo-lb-service --config http-lb.yaml
+</code><button class="button button--copy js-copy-button-14"><i class="fa fa-clipboard"></i></button></pre>
+<p>You should see a message that the deployment was successfully completed.</p>
+<aside class="warning"><p>As in previous labs, if the deployment does not complete properly, you will need to navigate in Console to Deployment Manager and delete the failed deployment to remove the artifacts that were created. Instructions are below.</p>
+</aside>
+<aside class="special"><p>The infrastructure is built, but the service is not yet operational. There are a few more steps you will need to perform.</p>
+</aside>
+<p>Verify that the deployment completed successfully. It should look something like this:</p>
+<h4><strong>Example</strong></h4>
+<p><img alt="90fc0976d63a44ec.png" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/VkofCctkS4EtugCXMZYjSgaL7gOoZzrSwSN3iyfDCkQ="></p>
+<p>Switch to the Console browser tab. Navigate to <strong>Navigation menu</strong> &gt; <strong>Deployment Manager</strong>.</p>
+<p>It should look something like this:</p>
+<h4><strong>Example</strong></h4>
+<p><img alt="7fa86ae3a2587bf2.png" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/0uuGaQul7Mgeor7t54WCqpJ4xxBdAHwQy9DuABl_QFA="></p>
+<p>If the deployment fails, it will generate an error message:</p>
+<h4><strong>Example</strong></h4>
+<p><img alt="da51bd26e6f5518d.png" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/kGA1aeWeEmV3MKXO+vy1sBZR9VJNi6C21Ucq_CP5UcA="></p>
+<p>Before you can attempt to launch the deployment again, you will need to navigate in Console to <strong>Navigation menu</strong> &gt; <strong>Deployment Manager</strong> and select the failed deployment and delete it. Deployment Manager keeps the artifacts until you explicitly delete it, in case you need to investigate the cause of the failure.</p>
+<p><img alt="e622726cb402c44.png" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/DXYtp5lE8t2IjAuAJW9xJwt8ow8s7BD6osNNy51emoE="></p>
+<h2 id="step13">Enable the Health Checks</h2>
+<p>You will need to do some investigation of the load balancer, instances, and firewall rules to enable health checks.</p>
+<h3><strong>View the load balancer health check</strong></h3>
+<ul>
+<li>Return to the Console tab.</li>
+<li>On the <strong>Navigation menu</strong>, click  <strong>Network services</strong> &gt; <strong>Load balancing</strong>
+</li>
+<li>Click on <strong>echo-lb-service-urlmap</strong>
+</li>
+<li>Notice under the word <strong>Protocol</strong> that this is an HTTP load balancer.</li>
+<li>In the  page find the numbers under <strong>Healthy</strong> - see the example below for the location.</li>
+</ul>
+<p>Here is an example:</p>
+<p><img alt="d7288e6ee2a5f892.png" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/Zd2hYvZpsdsjOa41TyVnU512XgZ8rcpM55d5eUpziN4="></p>
+<p>From the point of view of the load balancer, the health checks are failing and there are no healthy instances.</p>
+<p>Note, until the backend servers are fully deployed, the Healthy column may indicate a status of 0/0 instead of 0/2. This may take several minutes. Refresh the page to see the updated status.</p>
+<h3><strong>View the echo lb instance</strong></h3>
+<ul>
+<li>On the <strong>Navigation menu</strong>, click <strong>Compute engine</strong>&gt; <strong>VM instances</strong>
+</li>
+<li>Click one of the instances: <strong>echo-lb-service-instance-xxxx</strong>
+</li>
+<li>Toward the bottom of the page, find Network tags, which should have a tag of <strong>http</strong>
+</li>
+</ul>
+<p>Here is an example:</p>
+<p><img alt="3b8da40239305a99.png" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/0Cu7ezAW4fJcUJPobmcy7qstxczc7WWP2diSBSEXvTE="></p>
+<p>From the point of view of the servers, they are just fine. And the servers are ready to receive traffic if a firewall rule targeted at the tag <strong>http</strong> permits the health check from the load balancer to forward traffic to the instances.</p>
+<h3><strong>View the firewall rules</strong></h3>
+<ul>
+<li>On the <strong>Navigation menu</strong>, click  <strong>VPC Networks</strong> &gt; <strong>Firewall rules</strong>
+</li>
+</ul>
+<p>There is no firewall rule to allow health checks from the load balancer to the instances.</p>
+<p>When a health check is used with Network load balancing, the health check probes come from a different range of addresses than for HTTP(S) (see reference). When a health check is used with HTTP(S), SSL proxy, TCP proxy, or Internal load balancing, the health check probes come from addresses in the ranges 130.211.0.0/22 and 35.191.0.0/16.</p>
+<p><a href="https://cloud.google.com/compute/docs/load-balancing/health-checks">https://cloud.google.com/compute/docs/load-balancing/health-checks</a></p>
+<p>Since this is an HTTP(S) load balancer, you will need to enable TCP traffic from 130.211.0.0/22 and 35.191.0.0/16 to instances with the tag <strong>http</strong>.</p>
+<h3><strong>Allow traffic to the server</strong></h3>
+<ol>
+<li>Create a firewall rule to allow TCP traffic to the test server.</li>
+<li>On the <strong>Navigation menu</strong>, click  <strong>VPC Networks</strong> &gt; <strong>Firewall rules</strong>
+</li>
+<li>Click on <strong>Create Firewall Rule</strong> and specify the following:</li>
+</ol>
+<table>
+<tbody><tr>
+<td colspan="1" rowspan="1">
+<p><strong>Property</strong></p>
+</td>
+<td colspan="1" rowspan="1">
+<p><strong>Value</strong></p>
+<p>(type value or select option as specified)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Name</p>
+</td>
+<td colspan="1" rowspan="1">
+<p><strong>allow-healthchecks</strong></p>
+</td>
+</tr>
+<tr><td colspan="1" rowspan="1">
+<p>Description</p>
+</td></tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Network</p>
+</td>
+<td colspan="1" rowspan="1">
+<p><strong>default</strong></p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Priority</p>
+</td>
+<td colspan="1" rowspan="1">
+<p><strong>1000</strong></p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Direction of traffic</p>
+</td>
+<td colspan="1" rowspan="1">
+<p><strong>Ingress</strong></p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Action on match</p>
+</td>
+<td colspan="1" rowspan="1">
+<p><strong>allow</strong></p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Targets</p>
+</td>
+<td colspan="1" rowspan="1">
+<p><strong>Specified target tags</strong></p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Target tags</p>
+</td>
+<td colspan="1" rowspan="1">
+<p><strong>http</strong></p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Source IP Ranges</p>
+</td>
+<td colspan="1" rowspan="1">
+<p><strong>130.211.0.0/22</strong></p>
+<p><strong>35.191.0.0/16</strong></p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Protocols and ports</p>
+</td>
+<td colspan="1" rowspan="1">
+<p><strong>Specified protocols and ports</strong></p>
+<p><strong>Check tcp and enter 80.</strong></p>
+</td>
+</tr>
+</tbody></table>
+<p>Here is an example:</p>
+<p><img alt="a85b113c4fa9ac08.png" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/SDrnMBoHgEqDpGwQkUzj6N+JiccDY+kLZ9eKQeeji9Y="></p>
+<ol start="4">
+<li>
+<p>Click <strong>Create</strong>.</p>
+</li>
+</ol>
+<h3><strong>Verify the load balancer health check</strong></h3>
+<ul>
+<li>On the <strong>Navigation menu</strong>, click  <strong>Network services</strong> &gt; <strong>Load balancing</strong>
+</li>
+<li>Click on <strong>echo-lb-service-urlmap</strong>
+</li>
+<li>
+<strong>Healthy</strong> should now be 2/2. The firewall rule will take several minutes to activate and for  the health checks to pass. Press refresh to see the changes</li>
+</ul>
+<p><img alt="86ddc5d982b5ab3c.png" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/qCCJn28LTIRKfYt3gSAJtMnCvYhxwXPaxDCiiEgTcn0="></p>
+<h2 id="step14">Test the Echo LB service</h2>
+<h3><strong>Find the global load balancer forwarding rule IP address</strong></h3>
+<p>Return to the Cloud Shell tab.</p>
+<p>Find the Forwarding IP address by entering the following into Cloud Shell Command Line.</p>
+<pre><code>gcloud compute forwarding-rules list
+</code><button class="button button--copy js-copy-button-15"><i class="fa fa-clipboard"></i></button></pre>
+<p>Open a new browser tab and view the address.</p>
+<pre><code>http://&lt;your forwarding IP&gt;
+</code><button class="button button--copy js-copy-button-16"><i class="fa fa-clipboard"></i></button></pre>
+<p>Press return or refresh the browser several times. You should see the hostname changing, which demonstrates that the load balancing is working.</p>
+<p><img alt="95098316820b5aa2.png" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/vvpS5sRQHFCxXrlEqVFbZFFuXU9apoAEDb5PY80FRho="></p>
+<h2 id="step15">Modify Autoscaling for testing purposes</h2>
+<ol>
+<li>Return to the Console tab.</li>
+<li>On the <strong>Navigation menu</strong>, click  <strong>Compute Engine</strong> &gt; <strong>Instance groups.</strong>
+</li>
+<li>Click on <strong>echo-lb-service-igm.</strong>
+</li>
+<li>Click on the <strong>Details</strong> tab.</li>
+<li>Examine the autoscaling settings.</li>
+</ol>
+<p>The autoscaler is currently set to scale up from 2 VMs to a maximum of 3 VMS when the collective CPU utilization of the pool grows over 80%.  For the purposes of testing autoscaling, you will lower the trigger to 5%</p>
+<ol start="6">
+<li>Click on <strong>EDIT GROUP.</strong>
+</li>
+<li>In the section called Target CPU usage  replace 80 with 5.</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p><img alt="f330222aba4080ec.png" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/WEtJoJqH+2MJByWRRHkbgnv5hEILv5DJuesAiOcgYks="></p>
+<h2 id="step16">Test autoscaling</h2>
+<h3>Create a VM called ab-test</h3>
+<ul>
+<li>
+<strong>Navigation menu</strong> &gt; <strong>Compute Engine</strong> &gt; <strong>VM Instances</strong> click <strong>CREATE INSTANCE</strong>
+</li>
+<li>Make sure that it is in the same zone as the Instance Group VMs.</li>
+<li>Use the setting below.</li>
+<li>Leave other settings at their defaults.</li>
+</ul>
+<table>
+<tbody><tr>
+<td colspan="1" rowspan="1">
+<p><strong>Property</strong></p>
+</td>
+<td colspan="1" rowspan="1">
+<p><strong>Value</strong></p>
+<p>(type value or select option as specified)</p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Name</p>
+</td>
+<td colspan="1" rowspan="1">
+<p><strong>ab-test</strong></p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Machine type</p>
+</td>
+<td colspan="1" rowspan="1">
+<p><strong>Micro (1 shared vCPU)</strong></p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Boot disk</p>
+</td>
+<td colspan="1" rowspan="1">
+<p><strong>Default (Debian)</strong></p>
+</td>
+</tr>
+<tr>
+<td colspan="1" rowspan="1">
+<p>Zone</p>
+</td>
+<td colspan="1" rowspan="1">
+<p><strong>SAME Zone as the Instance Group</strong></p>
+</td>
+</tr>
+</tbody></table>
+<p>Leave the remaining settings as their defaults, and click <strong>Create</strong>.</p>
+<h3><strong>Install Apache Bench</strong></h3>
+<p>Using the Console, click on the SSH link to SSH into the VM. (If popups are blocked, change to enable.) Enter the following in the terminal session to the VM.</p>
+<pre><code>sudo apt-get update
+sudo apt-get -y install apache2-utils
+</code><button class="button button--copy js-copy-button-17"><i class="fa fa-clipboard"></i></button></pre>
+<p>From the VM terminal, use Apache Bench with the IP address to apply load to the service.</p>
+<pre><code>ab -n 1000 -c 100 http://&lt;your forwarding IP&gt;/
+</code><button class="button button--copy js-copy-button-18"><i class="fa fa-clipboard"></i></button></pre>
+<p>Note: You must include the trailing slash after your forwarding IP address. Otherwise you will get an error such as: "ab: invalid URL" when you run the above command.</p>
+<p>Run the above command two or three times.</p>
+<p>On the Console tab, go to <strong>Navigation menu</strong> &gt; <strong>Compute Engine</strong> &gt; <strong>Instance groups</strong> and click on the <strong>echo-lb-service-igm</strong>. Click on the <strong>Monitoring</strong> tab. Towards the bottom of the page, below the graphs, look for the utilization information.</p>
+<p>This is an example of the utilization:</p>
+<p><img alt="bc0516512b19960e.png" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/GYqxE03rHsy9Cx_fTs7LQxJ8eiHy6Ftw5uaINdW+35o="></p>
+<p>This is not nearly enough traffic to trigger autoscaling at 5% average utilization. Increase the load from 1000 to 10,000 and run the command two or three more times.</p>
+<h4><strong>Example</strong></h4>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">ab </span><span class="pun">-</span><span class="pln">n </span><span class="lit">10000</span><span class="pln"> </span><span class="pun">-</span><span class="pln">c </span><span class="lit">100</span><span class="pln"> http</span><span class="pun">://&lt;</span><span class="pln">your forwarding IP</span><span class="pun">&gt;/</span></code><button class="button button--copy js-copy-button-19"><i class="fa fa-clipboard"></i></button></pre>
+<h3><strong>Verify autoscaling.</strong></h3>
+<ul>
+<li>
+<p>On the <strong>Navigation menu</strong>, click  <strong>Compute Engine</strong> &gt; <strong>Instance groups</strong></p>
+</li>
+<li>
+<p>Click on <strong>echo-lb-service-igm</strong></p>
+</li>
+<li>
+<p>Examine the autoscaling settings. You should see that it has scaled up to 3 VMs.</p>
+</li>
+</ul>
+<h2 id="step17">De-deploy the service</h2>
+<ul>
+<li>
+<p>On the Console tab, navigate in Console to <strong>Navigation menu</strong> &gt; <strong>Deployment Manager</strong> and select the deployment you created and delete it. This will de-deploy all the objects that were created by the Deployment Manager template.</p>
+</li>
+<li>
+<p>Go to <strong>Navigation menu</strong> &gt; <strong>VPC network</strong> &gt; <strong>Firewall rules</strong></p>
+</li>
+<li>
+<p>The allow-healthchecks rule is still present. You created that manually so de-deploying the service did not remove this firewall rule.</p>
+</li>
+</ul>
+<h2 id="step18">Cleanup</h2>
+<ul>
+<li>In the <strong>Cloud Platform Console</strong>, sign out of the Google account.</li>
+<li>Close the browser tab.</li>
+<li>In Qwiklabs, click on END LAB.</li>
+</ul>
+<h2 id="step19">End your lab</h2>
+<p>When you have completed your lab, click <strong>End Lab</strong>. Qwiklabs removes the resources you’ve used and cleans the account for you.</p>
+<p>You will be given an opportunity to rate the lab experience. Select the applicable number of stars, type a comment, and then click <strong>Submit</strong>.</p>
+<p>The number of stars indicates the following:</p>
+<ul>
+<li>1 star = Very dissatisfied</li>
+<li>2 stars = Dissatisfied</li>
+<li>3 stars = Neutral</li>
+<li>4 stars = Satisfied</li>
+<li>5 stars = Very satisfied</li>
+</ul>
+<p>You can close the dialog box if you don't want to provide feedback.</p>
+<p>For feedback, suggestions, or corrections, please use the <strong>Support</strong> tab.</p>
+
+<h5>Manual Last Updated: April 01, 2019</h5>
+<h5>Lab Last Tested: April 01, 2019</h5>
+<p>Copyright 2019 Google LLC All rights reserved. Google and the Google logo are trademarks of Google LLC. All other company and product names may be trademarks of the respective companies with which they are associated.</p>
+
+
+
+</div>
+<div class="js-lab-content-outline lab-content__outline">
+<a href="https://googlecoursera.qwiklabs.com/focuses/16468#step1">Overview</a><a href="https://googlecoursera.qwiklabs.com/focuses/16468#step2">Objectives</a><a href="https://googlecoursera.qwiklabs.com/focuses/16468#step3">The story so far...</a><a href="https://googlecoursera.qwiklabs.com/focuses/16468#step4">Download and unarchive the lab code</a><a href="https://googlecoursera.qwiklabs.com/focuses/16468#step5">Adding Load Balancing for Resiliency</a><a href="https://googlecoursera.qwiklabs.com/focuses/16468#step6">Create the configuration file</a><a href="https://googlecoursera.qwiklabs.com/focuses/16468#step7">Create the schema and jinja files.</a><a href="https://googlecoursera.qwiklabs.com/focuses/16468#step8">Verify the Apache Bench installation script</a><a href="https://googlecoursera.qwiklabs.com/focuses/16468#step9">Create the package</a><a href="https://googlecoursera.qwiklabs.com/focuses/16468#step10">Host the distribution package in a bucket</a><a href="https://googlecoursera.qwiklabs.com/focuses/16468#step11">Configure the template</a><a href="https://googlecoursera.qwiklabs.com/focuses/16468#step12">Deploy the service</a><a href="https://googlecoursera.qwiklabs.com/focuses/16468#step13">Enable the Health Checks</a><a href="https://googlecoursera.qwiklabs.com/focuses/16468#step14">Test the Echo LB service</a><a href="https://googlecoursera.qwiklabs.com/focuses/16468#step15">Modify Autoscaling for testing purposes</a><a href="https://googlecoursera.qwiklabs.com/focuses/16468#step16">Test autoscaling</a><a href="https://googlecoursera.qwiklabs.com/focuses/16468#step17">De-deploy the service</a><a href="https://googlecoursera.qwiklabs.com/focuses/16468#step18">Cleanup</a><a href="https://googlecoursera.qwiklabs.com/focuses/16468#step19">End your lab</a>
+</div>
+</div>
+
+</div>
+
+
+</div>
+</div>
+<div class="lab-introduction js-lab-introduction is-hidden">
+<div class="lab-introduction__inner">
+<h1 class="headline-1">Welcome to Your First Lab!</h1>
+<ql-icon-button class="js-skip-button">close</ql-icon-button>
+<div class="lab-introduction__video">
+<iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" id="lab-introduction" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/yF7EDXKTmoQ.html"></iframe>
+</div>
+<a class="js-skip-button button button--outline">Skip this video</a>
+</div>
+</div>
+
+
+
+</div>
+</main>
+<div class="modal fade" id="lab-details-modal">
+<div class="modal-container">
+<div class="mdl-shadow--24dp modal-content">
+<div class="modal-body">
+<p class="l-mbm">
+In this lab you will develop a more advanced load balancing and autoscaling version of the Echo service. You will create many more resources that work together to provide a sophisticated scalable and resilient service.
+</p>
+<p class="small-label l-mbs">
+<strong>
+Duration:
+</strong>
+0m setup
+·
+90m access
+·
+90m completion
+</p>
+<p class="small-label l-mbs">
+<span><strong>Levels: </strong>advanced</span>
+</p>
+<p class="small-label">
+<strong>
+Permalink:
+</strong>
+<a href="https://googlecoursera.qwiklabs.com/catalog_lab/1005">https://googlecoursera.qwiklabs.com/catalog_lab/1005</a>
+</p>
+</div>
+<div class="modal-actions">
+<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" data-dismiss="modal" data-upgraded=",MaterialButton,MaterialRipple">
+Got It
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+</div>
+
+
+</div>
+</div>
+<iframe class="l-ie-iframe-fix" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/saved_resource(1).html"></iframe>
+</div>
+<div class="modal fade" id="lab-review-modal">
+<div class="modal-container">
+<div class="mdl-shadow--24dp modal-content">
+<form class="simple_form js-lab-review-form" id="new_lab_review" action="https://googlecoursera.qwiklabs.com/lab_reviews" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓"><div class="modal-body">
+<p class="label">
+How satisfied are you with this lab?*
+</p>
+<div class="rateit js-rateit" data-rateit-max="5" data-rateit-min="0" data-rateit-resetable="false" data-rateit-step="1" data-rateit-value="0"><div class="rateit-reset" style="display: none;"></div><div class="rateit-range" style="width: 80px; height: 16px;"><div class="rateit-selected" style="height: 16px; width: 0px;"></div><div class="rateit-hover" style="height:16px"></div></div></div>
+<div class="l-mtm">
+
+<div class="control-group hidden lab_review_user_id"><div class="controls"><input class="hidden" type="hidden" value="2332914" name="lab_review[user_id]" id="lab_review_user_id"></div></div>
+<div class="control-group hidden lab_review_classroom_id"><div class="controls"><input class="hidden" type="hidden" value="1982" name="lab_review[classroom_id]" id="lab_review_classroom_id"></div></div>
+<div class="control-group hidden lab_review_lab_id"><div class="controls"><input class="hidden" type="hidden" value="1005" name="lab_review[lab_id]" id="lab_review_lab_id"></div></div>
+<div class="control-group hidden lab_review_focus_id"><div class="controls"><input class="hidden" type="hidden" value="16468" name="lab_review[focus_id]" id="lab_review_focus_id"></div></div>
+<div class="control-group hidden lab_review_rating"><div class="controls"><input class="hidden js-rating-input" type="hidden" name="lab_review[rating]" id="lab_review_rating"></div></div>
+<div class="control-group text optional lab_review_comment"><label class="text optional control-label" for="lab_review_comment">Comment</label><div class="controls"><textarea class="text optional" name="lab_review[comment]" id="lab_review_comment"></textarea></div></div>
+</div>
+</div>
+<div class="modal-actions">
+<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" data-dismiss="modal" data-upgraded=",MaterialButton,MaterialRipple">
+Cancel
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<input type="submit" name="commit" value="Submit" disabled="disabled" class="btn mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="submit" data-disabled="false" data-disable-with="Submit" data-upgraded=",MaterialButton,MaterialRipple"><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></input>
+</div>
+</form>
+
+</div>
+</div>
+<iframe class="l-ie-iframe-fix" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/saved_resource(2).html"></iframe>
+</div>
+
+<script>
+  $( function() {
+    ql.initMaterialInputs();
+    initChosen();
+    initSearch();
+    initTabs();
+    ql.list.init();
+    ql.favoriting.init();
+    ql.header.myAccount.init();
+    initTooltips();
+    ql.autocomplete.init();
+    ql.modals.init();
+    ql.toggleButtons.init();
+    ql.analytics.init();
+    initLabContent( );
+  ql.labOutline.links.init();
+  ql.labOutline.layout.init();
+  initLabReviewModal();
+  ql.labAssessment.init();
+  ql.labIntroduction.init( true );
+  ql.labData.init();
+  initLabTranslations( {"are_you_sure":"All done? If you end this lab, you will lose all your work. You may not be able to restart the lab if there is a quota limit. Are you sure you want to end this lab?\n","in_progress":"*In Progress*","ending":"*Ending*","starting":"*Starting, please wait*","end_concurrent_labs":"Sorry, you can only run one lab at a time. To start this lab, please confirm that you want all of your existing labs to end.\n","copied":"Copied","no_resource":"Error retrieving resource.","no_support":"No Support","mac_press":"Press ⌘-C to copy","thanks_review":"Thanks for reviewing this lab.","windows_press":"Press Ctrl-C to copy","days":"days"} );
+  ql.labRun.init();
+  ql.initHeader();
+  ql.navigation.init();
+  ql.navPanel.init();
+  ql.navigation.init();
+  
+  });
+</script>
+<style>
+  .mdl-layout__container {
+    position: static
+  }
+</style>
+
+
+<iframe data-product="web_widget" title="No content" tabindex="-1" aria-hidden="true" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/saved_resource(3).html" style="width: 0px; height: 0px; border: 0px; position: absolute; top: -9999px;"></iframe><div id="drift-widget-container" style="position: absolute; z-index: 2147483647;"><iframe id="drift-widget" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/index.html" title="Drift Messenger" role="complementary" style="border: none; display: block; height: 0px !important; width: 0px !important; position: fixed; top: auto; left: auto; bottom: 0px; right: 0px; visibility: hidden; z-index: 2147483647; max-height: 100vh; max-width: 100vw; transition: none 0s ease 0s; background: none transparent; opacity: 1; pointer-events: auto; touch-action: auto;" class="drift-widget-hidden"></iframe></div><div><iframe title="Opens a widget where you can chat to one of our agents" id="launcher" tabindex="0" class="zEWidget-launcher zEWidget-launcher--active" style="border: none; background: transparent; z-index: 999998; transform: translateZ(0px); position: fixed; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; opacity: 1; height: 50px; max-height: 551px; min-height: 50px; margin: 10px 20px; right: 0px; bottom: 0px; width: 112px;width: 112px;" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/saved_resource(4).html"></iframe></div><div><iframe title="Find more information here" id="webWidget" tabindex="-1" class="zEWidget-webWidget " style="border: none; background: transparent; z-index: 999999; transform: translateZ(0px); position: fixed; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; opacity: 0; width: 357px; height: 100%; max-height: 565px; min-height: 150px; margin-left: 8px; margin-right: 8px; top: -9999px; visibility: hidden;" src="./Deployment Manager_ Adding load balancing _ Qwiklabs_files/saved_resource(5).html"></iframe></div></body></html>
