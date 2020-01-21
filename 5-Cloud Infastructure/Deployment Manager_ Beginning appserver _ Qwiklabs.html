@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" class="mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/caff0d62ed"></script><script src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/nr-1158.min.js.download"></script><script type="text/javascript" async="" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/js"></script><script type="text/javascript" async="" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/analytics.js.download"></script><script type="text/javascript" async="" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/d58fn3dh7i2n.js.download"></script><script type="text/javascript" async="" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/analytics.min.js.download"></script><script type="text/javascript" id="www-widgetapi-script" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/www-widgetapi.js.download" async=""></script><script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"caff0d62ed","applicationID":"29451451","transactionName":"IQ1XRUEOVV1dFxlRXAEXSlRATkpZVxI=","queueTime":0,"applicationTime":137,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"caff0d62ed",applicationID:"29451451"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta content="[]" name="active-experiments">
+<meta content="{&quot;userId&quot;:2332914}" name="help-api-product-data">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="YiobEsuZJUUcSUGoOphwr5yGeAN5WQ1DfcRC4YYwMVc7kK5DCFLiQWICgwzYvoCtdX+B2hhWxnJYYkvYEHJEFg==">
+<title>Deployment Manager: Beginning appserver | Qwiklabs</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" name="viewport">
+<meta content="In this lab for Architecting GCP: Design and Process, you will create a Deployment Manager template from scratch and provide the appserver deployments for four organizations. " name="description">
+<meta content="Qwiklabs" name="author">
+<meta content="1rRsY0INj8RvwB5EF5pwdxt2A2P9aDgAlsICaJ0d5w0" name="google-site-verification">
+<meta content="Deployment Manager: Beginning appserver | Qwiklabs" property="og:title">
+<meta content="website" property="og:type">
+<meta content="/favicon-144.png" property="og:image">
+<meta content="Qwiklabs" property="og:site_name">
+<meta content="In this lab for Architecting GCP: Design and Process, you will create a Deployment Manager template from scratch and provide the appserver deployments for four organizations. " property="og:description">
+<meta content="/qwiklabs_logo_900x887.png" property="og:logo" size="900x887">
+<meta content="/qwiklabs_logo_994x187.png" property="og:logo" size="994x187">
+<meta content="#3681E4" property="msapplication-TileColor">
+<meta content="/favicon-144.png" property="msapplication-TileImage">
+<link href="https://googlecoursera.qwiklabs.com/favicon-32.png" rel="shortcut icon">
+<link color="#3681E4" href="https://googlecoursera.qwiklabs.com/favicon-svg.svg" rel="mask-icon">
+<link href="https://googlecoursera.qwiklabs.com/favicon-180.png" rel="apple-touch-icon-precomposed">
+<link rel="stylesheet" media="screen" href="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/css">
+
+
+<!--[if lt IE 9]>
+<script src='http://html5shim.googlecode.com/svn/trunk/html5.js' type='text/javascript'></script>
+<![endif]-->
+<!--[endif]>  <![endif]-->
+<script>
+//<![CDATA[
+window.gon={};gon.current_user={"firstname":"Ozkan","lastname":"Batumoglu","fullname":"Ozkan Batumoglu","company":"Coursera","email":"batumoglu@hotmail.com","origin":"googlecoursera-run, lti-coursera","subscriptions":0,"id":"54eb7d21170356f2189321bcd774d847","qlCreatedAt":"2019-12-25 11:42:16 UTC","optIn":null};gon.segment="j4Im8pqIko0Lxq4wVVZWMPMM0EroHUvb";gon.deployment="googlecoursera-run";
+//]]>
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "https://www.qwiklabs.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.qwiklabs.com/catalog?keywords={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script id="ze-snippet" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/snippet.js.download"></script><script type="text/javascript" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/asset_composer.5d2cd6d9613b85125812.js.download" charset="utf-8" async=""></script>
+
+
+
+<link rel="stylesheet" media="all" href="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/application-a53cf05bc9e39a99a1d6fa14f486d7ecec091bb67f0aca5b1257120cbf85ec76.css">
+<script>
+  EVENT_SOURCE_BASE_URL = "https://googlecoursera-run.qwiklabs.com/nchan-sub?id=";
+</script>
+<script src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/webcomponents-loader.js.download"></script>
+<script src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/hallofmirrors-a87311d98f0c2f8a882727c54543601e005dded946094be4a719d9683b2f9762.js.download"></script><script async="" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/lazy.min.js.download"></script>
+<script src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/iframe_api"></script>
+<script src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/vendor-45d462772c30000424907184f70c7157e95fb6227698d1671c5051818a6f60d8.js.download"></script>
+<script src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/application-f4e49afad3828ebf1962f98490d8377a89247353044ebf5a7f447c3cc62c1dcd.js.download"></script>
+</head>
+<body class="focuses focuses-show lab-show l-full no-nav">
+<div class="header-container">
+<div class="header">
+<a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect header__button header__button--nav header__nav-panel-button js-nav-toggle" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">menu</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<div class="header__title">
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button header__button--nav" href="https://www.coursera.org/" data-upgraded=",MaterialButton,MaterialRipple"><ql-icon>arrow_back</ql-icon><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+
+<h1 class="headline-5">
+Deployment Manager: Beginning appserver
+</h1>
+</div>
+<div class="header__actions">
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button header__button--action header__button--search js-header-search-bar-button" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">search</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+
+<ql-help context="lab" productdata="{&quot;userId&quot;:2332914}" data-analytics-action="opened_help" data-analytics-label="lab"></ql-help>
+<a class="header-my-account-button mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect js-my-account-button" data-upgraded=",MaterialButton,MaterialRipple">
+<img class="avatar " src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/527aaaf240e6e7ef6a272c7f9743d396.png">
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<div class="header-my-account-menu js-my-account-menu">
+<div class="card elevation-2 no-padding">
+<div class="my-account-menu__top">
+<img class="avatar " src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/527aaaf240e6e7ef6a272c7f9743d396.png">
+<div class="my-account-menu__info">
+<h4 class="subtitle-headline-1">
+Ozkan Batumoglu
+</h4>
+<p class="body-2 text--gray">
+<span>batumoglu@hotmail.com</span>
+</p>
+<a class="button" href="https://googlecoursera.qwiklabs.com/my_account/profile">My Account</a>
+</div>
+</div>
+<div class="my-account-menu__bottom">
+<a class="text--green subtitle-headline-2" href="https://googlecoursera.qwiklabs.com/my_account/credits">0 Credits
+</a><a data-analytics-action="clicked_sign_out" class="button button--hairline" rel="nofollow" data-method="delete" href="https://googlecoursera.qwiklabs.com/users/sign_out">Sign Out</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="header__search-bar js-header-search-bar">
+<form id="catalog-search-mobile" onsubmit="ql.catalogSearchFilter(); return false;" action="https://googlecoursera.qwiklabs.com/searches/elasticsearch" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="YiobEsuZJUUcSUGoOphwr5yGeAN5WQ1DfcRC4YYwMVc7kK5DCFLiQWICgwzYvoCtdX+B2hhWxnJYYkvYEHJEFg==">
+<input type="text" name="keywords" id="keywords" placeholder="Search" maxlength="255">
+</form>
+
+<a class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect header__button" data-upgraded=",MaterialButton,MaterialRipple">
+<i class="material-icons">close</i>
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+</div>
+</div>
+
+<nav class="nav-bar">
+<a class="nav-bar__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/"><ql-icon class="nav-bar__item__icon">
+home
+</ql-icon>
+<span class="nav-bar__item__label">
+Home
+</span>
+</a>
+<a class="nav-bar__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/catalog"><ql-icon class="nav-bar__item__icon">
+school
+</ql-icon>
+<span class="nav-bar__item__label">
+Catalog
+</span>
+</a>
+<a class="nav-bar__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_learning"><ql-icon class="nav-bar__item__icon">
+event_note
+</ql-icon>
+<span class="nav-bar__item__label">
+My Learning
+</span>
+</a>
+</nav>
+
+<nav class="nav-panel js-nav-panel">
+<div class="nav-panel__logo">
+<div class="logo logo--blue"></div>
+</div>
+<a title="Home" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/"><ql-icon class="nav-panel__item__icon">
+home
+</ql-icon>
+<div class="nav-panel__item__label">
+Home
+</div>
+</a>
+<a title="Catalog" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/catalog"><ql-icon class="nav-panel__item__icon">
+school
+</ql-icon>
+<div class="nav-panel__item__label">
+Catalog
+</div>
+</a>
+<a title="My Learning" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_learning"><ql-icon class="nav-panel__item__icon">
+event_note
+</ql-icon>
+<div class="nav-panel__item__label">
+My Learning
+</div>
+</a>
+<div class="nav-panel__spacer"></div>
+<a title="Profile" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_account/profile"><ql-icon class="nav-panel__item__icon">
+account_circle
+</ql-icon>
+<div class="nav-panel__item__label">
+Profile
+</div>
+</a>
+<a title="Credits &amp; Subscriptions" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_account/credits"><ql-icon class="nav-panel__item__icon">
+money
+</ql-icon>
+<div class="nav-panel__item__label">
+Credits &amp; Subscriptions
+</div>
+</a>
+<a title="Security" tabindex="-1" class="nav-panel__item js-navigation-button" href="https://googlecoursera.qwiklabs.com/my_account/security"><ql-icon class="nav-panel__item__icon">
+security
+</ql-icon>
+<div class="nav-panel__item__label">
+Security
+</div>
+</a>
+<div class="nav-panel__spacer"></div>
+<a class="nav-panel__item" tabindex="-1" href="https://googlecoursera.qwiklabs.com/focuses/16466#"><ql-help>
+<div class="nav-panel__help-item">
+<ql-icon class="nav-panel__item__icon">help</ql-icon>
+<div class="nav-panel__item__label">Help</div>
+</div>
+</ql-help>
+</a><div class="nav-panel__small-links">
+<a tabindex="-1" href="https://googlecoursera.qwiklabs.com/privacy_policy">Privacy</a>
+<a tabindex="-1" href="https://googlecoursera.qwiklabs.com/terms_of_service">Terms</a>
+</div>
+</nav>
+<div class="nav-panel__overlay js-nav-toggle"></div>
+
+<main class="js-main">
+<span class="hidden" id="flash-sibling-before"></span>
+
+<div class="l-main-wrapper" id="main-wrapper">
+
+
+
+
+
+
+
+<div class="js-lab-state" data-analytics-payload="{&quot;label&quot;:&quot;Deployment Manager: Beginning appserver&quot;,&quot;lab_name&quot;:&quot;Deployment Manager: Beginning appserver&quot;,&quot;classroom_name&quot;:null,&quot;deployment&quot;:&quot;googlecoursera-run&quot;}" data-focus-id="16466" data-lab-billing-limit="0.0" data-lab-duration="5400" data-parent="classroom"></div>
+<ql-lab-control-panel class="js-lab-control-panel l-lab-control-panel" connectiondetails="[]" connectionfiles="[]" labcontrolbutton="{&quot;disabled&quot;:false,&quot;pending&quot;:false,&quot;running&quot;:false}" labtimer="{&quot;ticking&quot;:false,&quot;secondsRemaining&quot;:5400}" studentresources="[]"></ql-lab-control-panel>
+<div class="l-lab-main-body">
+<div class="js-lab-content lab-content">
+<div class="alert alert--fake js-alert">
+<p class="alert__message js-alert-message"></p>
+<a class="alert__close js-alert-close">
+<i class="fa fa-times"></i>
+</a>
+<iframe class="l-ie-iframe-fix" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/saved_resource.html"></iframe>
+</div>
+<div class="lab-content__markdown-wrapper">
+<div class="lab-preamble">
+<h1 class="lab-preamble__title">
+Deployment Manager: Beginning appserver
+</h1>
+<div class="lab-preamble__details subtitle-headline-1">
+<span>1 hour 30 minutes</span>
+<span>1 Credit</span>
+<div class="lab__rating">
+<a href="https://googlecoursera.qwiklabs.com/focuses/16466/reviews?parent=catalog"><div class="rateit" data-rateit-readonly="true" data-rateit-value="4.2468"><div class="rateit-reset" style="display: none;"></div><div class="rateit-range" style="width: 80px; height: 16px;"><div class="rateit-selected" style="height: 16px; width: 67.9488px;"></div><div class="rateit-hover" style="height:16px"></div></div></div>
+
+</a><a data-target="#lab-review-modal" data-toggle="modal">
+Rate Lab
+</a>
+</div>
+</div>
+</div>
+
+<div class="lab-content__inner-wrapper">
+<div class="js-markdown-instructions lab-content__markdown markdown-lab-instructions" id="markdown-lab-instructions">
+
+
+
+<h2 id="step1">Overview</h2>
+<p>In this lab, you create a Cloud Deployment Manager template for appserver. Activities include:</p>
+<ol>
+<li>
+<p>Create a Deployment Manager template in YAML format.</p>
+</li>
+<li>
+<p>Learn to work with YAML.</p>
+</li>
+<li>
+<p>Relate JSON to YAML, and correct syntax errors in YAML.</p>
+</li>
+<li>
+<p>Create a prototype template from the documentation by converting the reference to YAML.</p>
+</li>
+<li>
+<p>Prune the prototype template to common and required properties.</p>
+</li>
+<li>
+<p>Use gcloud commands to interrogate the GCP environment to find the exact values and URIs required to configure the template.</p>
+</li>
+<li>
+<p>Use Deployment Manager to create multiple environments for different organizations and purposes and then de-deploy them after they have served their purpose.</p>
+</li>
+</ol>
+<h2 id="step2">Objectives</h2>
+<p>In this lab, you learn how to perform the following tasks:</p>
+<ul>
+<li>
+<p>Create a YAML Deployment Manager template from scratch.</p>
+</li>
+<li>
+<p>Configure the properties correctly using information gathered from GCP.</p>
+</li>
+<li>
+<p>Prune properties to just those you need.</p>
+</li>
+<li>
+<p>Identify and resolve YAML syntax issues in a template.</p>
+</li>
+</ul>
+<h2 id="step3">Overview</h2>
+<p>In this class, you have been introduced to a photo application ("thumbnail"), and you will develop the infrastructure for it.</p>
+<p>The application development team has sent you the following email:</p>
+<aside class="special"><p>Greetings! </p>
+<p>We are ready to begin development of the photo application. Please create for us a virtual machine using a deployment manager template. After the machine is available, the application developers will connect to it and customize it for our development purposes.</p>
+<p>Thanks!</p>
+<p>App Dev Team</p>
+</aside>
+<h2 id="step4">About Deployment Manager</h2>
+<aside class="special"><p>Read the background information first. The hands-on lab activities start after these readings.</p>
+<p>Ignore Copy and Paste until you see "LAB ACTIVITIES START HERE."</p>
+</aside>
+<p>You have many options for creating infrastructure in GCP.</p>
+<ul>
+<li>Google Cloud Console</li>
+<li>The gcloud command-line tool, possibly automated in a bash script:</li>
+</ul>
+<p>---- in Cloudshell</p>
+<p>---- on a computer</p>
+<p>---- from a security account authorized VM</p>
+<ul>
+<li>A program that calls the cloud RESTful API using any of the client libraries</li>
+<li>Deployment Manager</li>
+</ul>
+<p>Console can interrogate your running environment and customize menus so that you are not faced with the problem of possibly configuring invalid options. And console can perform compound actions that coordinate multiple API calls.</p>
+<p>Script and program automation makes infrastructure that is maintainable and documented. And once you create a script that you like, you can reuse it or modify it to make you more productive.</p>
+<h2 id="step5">Deployment Manager use cases</h2>
+<p>Deployment Manager is particularly useful as an architecting and design tool.</p>
+<p>When you deploy a solution, the deployment is visible in console. When you select it and click delete, Deployment Manager <em>de-deploys</em> the solution, making it easy to shut down and clean up after an activity.</p>
+<p>The ability to quickly create identical deployments is useful when you need identical environments for development, unit testing, load testing, production, and so forth.</p>
+<p>The ability to rapidly change something, launch a variation, use it, and shut it down is useful for design experimentation and for testing system behavior.</p>
+<p>Another use of Deployment Manager is in disaster recovery, where the deployment could be redirected to create identical infrastructure in another region.</p>
+<h2 id="step6">How Deployment Manager works</h2>
+<p>Deployment Manager uses <em>declarative</em> templates rather than <em>imperative</em> commands. You don't tell Deployment Manager <em>what to do</em>, you tell it <em>what you want</em>. You write templates that declare the infrastructure you want to build. Deployment Manager reads those templates and then makes calls to the Cloud API to get the job done.</p>
+<p>That immediately places certain constraints on Deployment Manager.</p>
+<ul>
+<li>Deployment Manager is completely dependent on the API. If there are not options to accomplish what you want in the API, then Deployment Manager can't do it either.</li>
+<li>The APIs for the resources you want to use must be enabled in API Manager.</li>
+<li>That also means every property that is required by the API must also be configured in the template too, or Deployment Manager won't be able to make the API calls.</li>
+<li>Deployment Manager only supports specific resource types. And while that covers most of the products in GCP, it does not cover all of them. The list of supported types is here:</li>
+</ul>
+<p><a href="https://cloud.google.com/deployment-manager/docs/configuration/supported-resource-types">https://cloud.google.com/deployment-manager/docs/configuration/supported-resource-types</a></p>
+<h2 id="step7">YAML</h2>
+<p>YAML is a human-readable data sequencing language. It has four main syntactic features.</p>
+<p>Keywords in yaml are represented as a word followed by a colon on a line by itself.</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">accessConfigs</span><span class="pun">:</span></code><button class="button button--copy js-copy-button-0"><i class="fa fa-clipboard"></i></button></pre>
+<p>Key value pairs are represented with the key and value on either side of a colon on a line by itself.</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">key</span><span class="pun">:</span><span class="pln"> value</span></code><button class="button button--copy js-copy-button-1"><i class="fa fa-clipboard"></i></button></pre>
+<p>Nesting of elements occurs through indentation (like Python) rather than braces or brackets as in other languages, but the number of spaces is not significant.</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">accessConfigs</span><span class="pun">:</span><span class="pln">
+   name</span><span class="pun">:</span><span class="pln"> samuel
+     type</span><span class="pun">:</span><span class="pln"> clemens</span></code><button class="button button--copy js-copy-button-2"><i class="fa fa-clipboard"></i></button></pre>
+<p>Is the same as</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">accessConfigs</span><span class="pun">:</span><span class="pln">
+          name</span><span class="pun">:</span><span class="pln"> samuel
+                  type</span><span class="pun">:</span><span class="pln"> clemens</span></code><button class="button button--copy js-copy-button-3"><i class="fa fa-clipboard"></i></button></pre>
+<p>Never use tabs in YAML.</p>
+<p>Finally, a list is represented by a dash in the whitespace before the start of the list and is terminated by the end of the in-line indentation.</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">accessConfigs</span><span class="pun">:</span><span class="pln">
+       name</span><span class="pun">:</span><span class="pln"> samuel
+       type</span><span class="pun">:</span><span class="pln"> clemens</span></code><button class="button button--copy js-copy-button-4"><i class="fa fa-clipboard"></i></button></pre>
+<p>This one produces a sequence:  <strong>accessConfigs( name:samuel, type:clemens )</strong></p>
+<p>Notice that each pair is a property.</p>
+<p>that is different from</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">accessConfigs</span><span class="pun">:</span><span class="pln">
+    </span><span class="pun">-</span><span class="pln">  name</span><span class="pun">:</span><span class="pln"> samuel
+       type</span><span class="pun">:</span><span class="pln"> clemens</span></code><button class="button button--copy js-copy-button-5"><i class="fa fa-clipboard"></i></button></pre>
+<p>This one produce a list: <strong>accessConfigs( [ (name:samuel), (type:clemens) ], ... )</strong></p>
+<p>Notice that the collection of pairs is the first property.</p>
+<p>This means that when you create a YAML file, if you get a dash out of place or leave it off when it is expected, it will create a syntax error in the call to the underlying API and your deployment will fail.</p>
+<h2 id="step8">Syntax complications</h2>
+<p>The YAML language you write is used ultimately by Deployment Manager to make API calls. There are syntax complications due to the underlying API. You need to understand these complications to correctly write YAML. Simplified pseudo-code will help explain the syntax requirements.</p>
+<p>Imagine that in the API, to create a virtual machine instance you needed to call the function 'make_a_computer( )'. This is a pseudo-code illustration. This is <strong>NOT</strong> the real function that is in the Cloud API and this is <strong>NOT</strong> valid YAML. This is just an illustration to help you understand the required syntax.</p>
+<p>In our pseudocode language, to create a virtual machine, you would call</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">make_a_computer</span><span class="pun">(</span><span class="pln"> properties </span><span class="pun">)</span></code><button class="button button--copy js-copy-button-6"><i class="fa fa-clipboard"></i></button></pre>
+<p>However a virtual machine requires a boot disk, but the boot disk is not actually a component of the instance. It is a separate object.  You could create a disk without a virtual machine like this:</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">make_a_disk</span><span class="pun">(</span><span class="pln"> properties </span><span class="pun">)</span></code><button class="button button--copy js-copy-button-7"><i class="fa fa-clipboard"></i></button></pre>
+<p>So, since a virtual machine requires a boot disk, and the disk is a separate object, you must use a nested construction to create the virtual machine:</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">make_a_computer</span><span class="pun">(</span><span class="pln"> properties</span><span class="pun">,</span><span class="pln">
+                 make_a_disk</span><span class="pun">(</span><span class="pln"> disk_properties </span><span class="pun">),</span><span class="pln">
+               </span><span class="pun">)</span></code><button class="button button--copy js-copy-button-8"><i class="fa fa-clipboard"></i></button></pre>
+<p><strong>1) The API and therefore the YAML requires this kind of nested construction.</strong></p>
+<p>You cannot create a virtual machine without a disk. Each computer requires at least one disk. So if you were just to use the following construction to create a virtual machine, without the disk specification, it would result in an error:</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">make_a_computer </span><span class="pun">(</span><span class="pln"> properties </span><span class="pun">)</span><span class="pln"> </span><span class="pun">&lt;&lt;==</span><span class="pln"> ERROR</span></code><button class="button button--copy js-copy-button-9"><i class="fa fa-clipboard"></i></button></pre>
+<p><strong>2) Leaving out a required nested element generates an error.</strong></p>
+<p>The next syntax complication concerns the properties. There are a few ways that properties can be identified. Imagine that one required property is the virtual machine's 'name'.  One way to specify a property is by position.</p>
+<p>In this example, the first property is always the virtual machine's name:</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">make_a_computer</span><span class="pun">(</span><span class="pln"> my_name</span><span class="pun">,</span><span class="pln">
+                 make_a_disk</span><span class="pun">(</span><span class="pln"> disk_properties </span><span class="pun">),</span><span class="pln">
+                 more_properties
+               </span><span class="pun">)</span></code><button class="button button--copy js-copy-button-10"><i class="fa fa-clipboard"></i></button></pre>
+<p>If you leave the name out, a default name for the computer is used. All you would do is leave the comma in the properties sequence, but don't put a name in that position, and the system knows that you have not given the computer a name and that it should use the default name.</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">make_a_computer</span><span class="pun">(</span><span class="pln">  </span><span class="pun">,</span><span class="pln">
+                 make_a_disk</span><span class="pun">(</span><span class="pln"> disk_properties </span><span class="pun">),</span><span class="pln">
+                 more_properties
+               </span><span class="pun">)</span></code><button class="button button--copy js-copy-button-11"><i class="fa fa-clipboard"></i></button></pre>
+<p>Instead of positional properties, another way to specify properties is a tuple. A tuple is nothing more than a key-value pair. The keyword comes first, then the colon symbol, followed by the value.  key:value. So here is how you would specify a name property using a tuple.</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">make_a_computer</span><span class="pun">(</span><span class="pln"> name</span><span class="pun">:</span><span class="pln">my_name</span><span class="pun">,</span><span class="pln">
+                 make_a_disk</span><span class="pun">(</span><span class="pln"> disk_properties </span><span class="pun">),</span><span class="pln">
+                 more_properties
+               </span><span class="pun">)</span></code><button class="button button--copy js-copy-button-12"><i class="fa fa-clipboard"></i></button></pre>
+<p>One advantage of using a tuple instead of a positional property is that a tuple can appear anywhere in the properties list. It is no longer locked into the first position. So the following example is now a valid way of specifying the computer name. Notice the tuple is now in third position.</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">make_a_computer</span><span class="pun">(</span><span class="pln"> properties</span><span class="pun">,</span><span class="pln">
+                 make_a_disk</span><span class="pun">(</span><span class="pln"> disk_properties </span><span class="pun">),</span><span class="pln">
+                 name</span><span class="pun">:</span><span class="pln">my_name</span><span class="pun">,</span><span class="pln">
+                 more_properties
+               </span><span class="pun">)</span></code><button class="button button--copy js-copy-button-13"><i class="fa fa-clipboard"></i></button></pre>
+<p>If you wanted to use the default name, how would you represent that with tuples? You can't leave the comma as in the previous default name example, because position is no longer significant in the list of properties. The answer is, you simply leave out the property. When the system reaches the end of the properties sequence and has found no tuple for "name:?", it knows to take the default (if there is one). For properties that have no default, the system generates an error.</p>
+<p>This example triggers the use of the default name by simply not specifying a name tuple.</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">make_a_computer</span><span class="pun">(</span><span class="pln">
+                 make_a_disk</span><span class="pun">(</span><span class="pln"> disk_properties </span><span class="pun">),</span><span class="pln">
+               </span><span class="pun">)</span></code><button class="button button--copy js-copy-button-14"><i class="fa fa-clipboard"></i></button></pre>
+<p><strong>3) The API and YAML use tuple construction for properties.</strong></p>
+<p><strong>4) You specify defaults, when they exist, by simply omitting the tuple from the list of properties.</strong></p>
+<p>There is one final syntax complication. Imagine the disk has the following disk_properties:</p>
+<p>disk_type:  { magnetic or solid_state } (required, there is no default)</p>
+<p>disk_size:  { N megabytes; where N is greater than or equal to 10, no default }</p>
+<p>disk_SKU: { optional suppliers part number } (may appear multiple times)</p>
+<p>The disk_SKU is the part number to order a replacement disk. There could be as many of these properties as there are disk manufacturers. One supplier would have disk_SKU:xyz and another disk_SKU:123. It can appear in the properties sequence multiple times.</p>
+<p>How can the API developer know how many properties to ingest from the function? The number of properties is no longer fixed.</p>
+<p>To get around this problem, the developer might require <em>a single property</em> -- a list object. That list can contain an arbitrary number of tuples.</p>
+<p>Instead of this:</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">make_a_disk</span><span class="pun">(</span><span class="pln"> disk_properties </span><span class="pun">)</span></code><button class="button button--copy js-copy-button-15"><i class="fa fa-clipboard"></i></button></pre>
+<p>The API might require this:</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">make_a_disk</span><span class="pun">(</span><span class="pln"> </span><span class="pun">[</span><span class="pln"> list </span><span class="pun">]</span><span class="pln"> </span><span class="pun">)</span></code><button class="button button--copy js-copy-button-16"><i class="fa fa-clipboard"></i></button></pre>
+<p>In some languages a list is shown within square brackets:</p>
+<p>Without a list; a property sequence.</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">make_a_disk</span><span class="pun">(</span><span class="pln"> disk_size</span><span class="pun">:</span><span class="lit">10</span><span class="pun">,</span><span class="pln"> disk_type</span><span class="pun">:</span><span class="pln">magnetic </span><span class="pun">)</span></code><button class="button button--copy js-copy-button-17"><i class="fa fa-clipboard"></i></button></pre>
+<p>With a list.</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">make_a_disk</span><span class="pun">(</span><span class="pln">  </span><span class="pun">[</span><span class="pln">disk_size</span><span class="pun">:</span><span class="lit">10</span><span class="pun">,</span><span class="pln"> disk_type</span><span class="pun">:</span><span class="pln">magnetic</span><span class="pun">]</span><span class="pln">  </span><span class="pun">)</span></code><button class="button button--copy js-copy-button-18"><i class="fa fa-clipboard"></i></button></pre>
+<p>Note that even though the list format was adopted to allow for multiple disk_SKU properties, that because the property is also optional, in the above example it does not appear in the list.</p>
+<p>If the API developer has required a list instead of a property sequence, then calling the API with the individual properties rather than with the list construct is a syntax error:</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">make_a_disk</span><span class="pun">(</span><span class="pln"> disk_size</span><span class="pun">:</span><span class="lit">10</span><span class="pun">,</span><span class="pln"> disk_type</span><span class="pun">:</span><span class="pln">magnetic </span><span class="pun">)</span><span class="pln">  </span><span class="pun">&lt;&lt;==</span><span class="pln"> ERROR</span></code><button class="button button--copy js-copy-button-19"><i class="fa fa-clipboard"></i></button></pre>
+<p><strong>5) The API uses both property sequences and lists. If a list is required and you specify a property instead of a list, it is a syntax error.</strong></p>
+<h2 id="step9">Create a resource</h2>
+<aside class="special"><p>LAB ACTIVITIES START HERE.</p>
+</aside>
+<p>Open Cloudshell</p>
+<p><img alt="6d5d6f01c3d7a80.png" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/cK0lEnuiLY7l+02W0tn1_5l_GbnsoWlRU7+CAAFpw0w="></p>
+<p>Open the Cloud Shell Code Editor. You will be using it to create and edit the template file, and the other tab to interrogate the environment for values you'll need to specify in the template.</p>
+<p>The controls you need to open the editor may be off screen to the right. You will need to close the Navigation menu to see the controls.</p>
+<p><img alt="c2dd578bf4751e56.png" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/e6oEeQ_LnP0xm+CUCiRn2qMLgK2c3pD7m1FD4_rmuMc="></p>
+<p>The control looks like a pencil. This is how you launch the Cloud Shell Code Editor.</p>
+<p><img alt="2368c1b1a9a999e2.png" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/47s4AH5Mm6JY1_QNDpLCVnmGGcit8PTxv0WYjgdktp4="></p>
+<p>You now have three interfaces available: (1) The Cloud Shell Code Editor, (2) the Cloud Shell Command Line, and (3) (By clicking on the tab) The Console. You can switch back and forth between Console and Cloud Shell by clicking on the tab.</p>
+<p><img alt="c2912a36941d30da.png" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/2zRnkqfcLMoxjHDd6YbQvVQeJJDkP7Vclrdvuin1R3k="></p>
+<p>All directory and file instructions that follow are relative to your home directory: ~/</p>
+<p>Create a directory called <strong>archdp</strong>.</p>
+<pre><code>mkdir ~/archdp
+cd ~/archdp
+</code><button class="button button--copy js-copy-button-20"><i class="fa fa-clipboard"></i></button></pre>
+<p>Click <strong>File &gt; Refresh</strong> in the Code Editor to see the directory.</p>
+<p><img alt="6d9a065eb02a486b.png" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/gVu1sVIKj0yltaqmN2Ctl8uQ44caXBtA3BBpKmTci6U="></p>
+<p>You will be creating an application server. Create a file called <strong>~/archdp/appserver.yaml</strong> using Cloud Shell Code Editor. In the file you must declare the resources. To start, you will create a single instance.</p>
+<p>Enter the following into <strong>~/archdp/appserver.yaml</strong>.  Don't worry about the resource type. You will be replacing that with the correct information in the following steps.</p>
+<pre><code>resources:
+- name: appserver
+  type: [RESOURCE_TYPE]
+</code><button class="button button--copy js-copy-button-21"><i class="fa fa-clipboard"></i></button></pre>
+<p>In Cloud Shell Command Line, find the type for a Compute Engine instance.</p>
+<pre><code>gcloud deployment-manager types list
+</code><button class="button button--copy js-copy-button-22"><i class="fa fa-clipboard"></i></button></pre>
+<p>That is a long list of resources. Some of the resources are in alpha or beta. Production-ready resources are identified by "v1".</p>
+<p>Try the following to find the correct resource type for a v1 instance.</p>
+<pre><code>gcloud deployment-manager types list | grep v1.*instance
+</code><button class="button button--copy js-copy-button-23"><i class="fa fa-clipboard"></i></button></pre>
+<p>You should see something like this:</p>
+<h4><strong>Output  (don't copy)</strong></h4>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">compute</span><span class="pun">.</span><span class="pln">v1</span><span class="pun">.</span><span class="pln">instanceGroupManager
+sqladmin</span><span class="pun">.</span><span class="pln">v1beta4</span><span class="pun">.</span><span class="pln">instance
+compute</span><span class="pun">.</span><span class="pln">v1</span><span class="pun">.</span><span class="pln">instanceGroup
+compute</span><span class="pun">.</span><span class="pln">v1</span><span class="pun">.</span><span class="pln">instanceTemplate
+compute</span><span class="pun">.</span><span class="pln">v1</span><span class="pun">.</span><span class="pln">instance</span></code><button class="button button--copy js-copy-button-24"><i class="fa fa-clipboard"></i></button></pre>
+<p><code>compute.v1.instance</code> is the resource type.  Enter that in <strong>~/archdp/appserver.yaml</strong> using Cloud Shell Code Editor.</p>
+<pre><code>resources:
+- name: appserver
+  type: compute.v1.instance
+</code><button class="button button--copy js-copy-button-25"><i class="fa fa-clipboard"></i></button></pre>
+<p>You could also have looked at the documentation to find available resource types.</p>
+<p><a href="https://cloud.google.com/deployment-manager/docs/configuration/supported-resource-types">https://cloud.google.com/deployment-manager/docs/configuration/supported-resource-types</a></p>
+<h2 id="step10">Examine the resource properties</h2>
+<p>Next, you need to define some properties for the instance.</p>
+<p>Add the properties: keyword to <strong>~/archdp/appserver.yaml</strong></p>
+<pre><code>resources:
+- name: appserver
+  type: compute.v1.instance
+  properties:
+</code><button class="button button--copy js-copy-button-26"><i class="fa fa-clipboard"></i></button></pre>
+<p>But where do you find the Deployment Manager properties for a compute instance?</p>
+<p>Well... they are the same properties that are used by the API. And rather than separately documenting them for Deployment Manager, you are to use the API documentation as a guide.</p>
+<p>For your convenience, each resource type has a link to the corresponding API documentation, so you don't have to search for it.</p>
+<p>Find the properties for an instance resource type.</p>
+<p>Looking on this page....</p>
+<p><a href="https://cloud.google.com/deployment-manager/docs/configuration/supported-resource-types">https://cloud.google.com/deployment-manager/docs/configuration/supported-resource-types</a></p>
+<p>...you find the instance API documentation here:</p>
+<p><a href="https://cloud.google.com/compute/docs/reference/latest/instances">https://cloud.google.com/compute/docs/reference/latest/instances</a></p>
+<h2 id="step11">Learn about resource properties</h2>
+<ol>
+<li>Unfortunately, the documentation is not in YAML format. The properties are also not shown in JSON format. They are shown in a pseudo-code documentation format that highlights the variable types of the properties.</li>
+</ol>
+<aside class="special"><p>The following activity helps you understand the relationship between the properties as they are shown in the online documentation and how you represent them in YAML format for Deployment Manager templates.</p>
+</aside>
+<ol start="2">
+<li>Below is a copy of the compute instance properties.</li>
+<li>Copy and paste these properties into a file called instance-properties.txt in the ~/archdp directory.  You will use the file in a later step.</li>
+</ol>
+<p>Create file <strong>~/archdp/instance-properties.txt</strong></p>
+<pre><code>{
+  "kind": "compute#instance",
+  "id": unsigned long,
+  "creationTimestamp": string,
+  "name": string,
+  "description": string,
+  "tags": {
+    "items": [
+      string
+    ],
+    "fingerprint": bytes
+  },
+  "machineType": string,
+  "status": string,
+  "statusMessage": string,
+  "zone": string,
+  "canIpForward": boolean,
+  "networkInterfaces": [
+    {
+      "kind": "compute#networkInterface",
+      "network": string,
+      "subnetwork": string,
+      "networkIP": string,
+      "name": string,
+      "accessConfigs": [
+        {
+          "kind": "compute#accessConfig",
+          "type": string,
+          "name": string,
+          "natIP": string
+        }
+      ]
+    }
+  ],
+  "disks": [
+    {
+      "kind": "compute#attachedDisk",
+      "type": string,
+      "mode": string,
+      "source": string,
+      "deviceName": string,
+      "index": integer,
+      "boot": boolean,
+      "initializeParams": {
+        "diskName": string,
+        "sourceImage": string,
+        "diskSizeGb": long,
+        "diskType": string,
+        "sourceImageEncryptionKey": {
+          "rawKey": string,
+          "sha256": string
+        }
+      },
+      "autoDelete": boolean,
+      "licenses": [
+        string
+      ],
+      "interface": string,
+      "diskEncryptionKey": {
+        "rawKey": string,
+        "sha256": string
+      }
+    }
+  ],
+  "metadata": {
+    "kind": "compute#metadata",
+    "fingerprint": bytes,
+    "items": [
+      {
+        "key": string,
+        "value": string
+      }
+    ]
+  },
+  "serviceAccounts": [
+    {
+      "email": string,
+      "scopes": [
+        string
+      ]
+    }
+  ],
+  "selfLink": string,
+  "scheduling": {
+    "onHostMaintenance": string,
+    "automaticRestart": boolean,
+    "preemptible": boolean
+  },
+  "cpuPlatform": string,
+  "labels": {
+    (key): string
+  },
+  "startRestricted": boolean
+}
+</code><button class="button button--copy js-copy-button-27"><i class="fa fa-clipboard"></i></button></pre>
+<p>There are a lot of properties listed. The explanation of the properties indicates that some are read-only, some are optional, some have defaults.</p>
+<p>If you look carefully in the list of properties, you will see that some of them are contained within square brackets. As you learned in the previous section, these indicate lists, rather than property sequences. And it is an indicator to you that the API developer required a list rather than a property sequence.</p>
+<p>Take a look at this tiny excerpt.</p>
+<h4><strong>Example (don't copy)</strong></h4>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">  </span><span class="str">"serviceAccounts"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      </span><span class="str">"email"</span><span class="pun">:</span><span class="pln"> string</span><span class="pun">,</span><span class="pln">
+      </span><span class="str">"scopes"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        string
+      </span><span class="pun">]</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">]</span></code><button class="button button--copy js-copy-button-28"><i class="fa fa-clipboard"></i></button></pre>
+<p>You can see that serviceAccounts is a nested object inside of the instance.</p>
+<p>The square brackets indicate that serviceAccounts requires a list, not a property sequence.</p>
+<p>The next step is to prune out many of the properties that are not required for you to deploy a simple VM.  All you really need to specify is the type of machine, the OS image, the disk and the network.</p>
+<p>This process will be easier to understand if you can see the properties in YAML. In the next activity you will convert the documentation text into YAML.</p>
+<h2 id="step12">Prune the properties</h2>
+<p>The next steps are not required to create a template in YAML. These steps are to help you learn about the documentation and how to use it to guide you to create templates</p>
+<p>You are going to convert the documentation properties into YAML format for learning purposes. Seeing the properties in YAML will make it easier to understand how to use them in the template.</p>
+<p>The documentation reference is in a pseudo-JSON format. To turn the documentation into a valid JSON format, the variable type keywords such as boolean and string will have to be placed in quotes. After the documentation is converted to JSON, the JSON can be converted into YAML.</p>
+<p>A sed script will accomplish the goal of converting the documentation into valid JSON. Copy this script into a file called <strong>proto2json</strong> in the ~/archdp directory.</p>
+<p>Create <strong>~/archdp/proto2json</strong></p>
+<pre><code>echo $1
+sed -i 's/string/"string"/g' $1
+sed -i 's/boolean/"boolean"/g' $1
+sed -i 's/integer/"integer"/g' $1
+sed -i 's/unsigned long/"unsigned long"/g' $1
+sed -i 's/bytes/"bytes"/g' $1
+sed -i 's/(key)/"(key)"/g' $1
+sed -i 's/float/"float"/g' $1
+sed -i 's/etag/"etag"/g' $1
+sed -i 's/long,/"long",/g' $1
+</code><button class="button button--copy js-copy-button-29"><i class="fa fa-clipboard"></i></button></pre>
+<p>Using the Cloud Shell Command Line, make <strong>proto2json</strong> executable.</p>
+<pre><code>chmod +x proto2json
+</code><button class="button button--copy js-copy-button-30"><i class="fa fa-clipboard"></i></button></pre>
+<p>If the <strong>~/archdp/instance-properties.txt</strong> file is open in Cloud Shell Code Editor, close it.</p>
+<p>Run the sed script on the <strong>instance-properties.txt</strong> file. This transforms the file from documentation format into a valid JSON file.</p>
+<pre><code>./proto2json instance-properties.txt
+</code><button class="button button--copy js-copy-button-31"><i class="fa fa-clipboard"></i></button></pre>
+<ol>
+<li>In Cloud Shell Code Editor open <strong>instance-properties.txt</strong>.</li>
+<li>You can now cut-and-paste the JSON file.</li>
+<li>Open a new browser window and navigate to this website:  <a href="https://www.json2yaml.com/">https://www.json2yaml.com/</a>
+</li>
+<li>Select all of the sample JSON text and press <strong>delete</strong> to get rid of it.</li>
+<li>Copy and paste the contents from <strong>instance-properties.txt</strong> into the JSON window of the website. You should immediately see the pretty-print version in the YAML window.</li>
+</ol>
+<p>This gives you a YAML prototype, something like this:</p>
+<p><img alt="437a1956271fd2e.png" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/TNC_Cn0+p5XliQsdUQTwMDWHIB9VF99SxPKCJ_6iKsE="></p>
+<p>The indentation is correct in the YAML version. However, a quick look at the dashes shows they are out of place and do not reflect the correct syntax for lists as required by the API.</p>
+<p>Since you understand the bracket notation for lists, you can correct the location of the dashes by referring back to the original documentation reference.</p>
+<p>The pruning process is simply to read the documentation for each property, and determine whether it is required for your application. To save time, the pruning process has been done for you. The blue highlights below are properties you will set in the lab. The other properties are not needed for this deployment.</p>
+<p><img alt="9c0c24f232b73ceb.png" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/vFLk2WMHDOPf8ZGPFiNmyaUMJLUsHvXA9FtBHp2YpJA="></p>
+<p>To save time, this reduced set of properties has been prepared for you.</p>
+<p>Copy and paste (append) the following to the <strong>~/archdp/appserver.yaml</strong> file.</p>
+<pre><code>  properties:
+    zone: string
+    machineType: string
+    networkInterfaces:
+      network: string
+      accessConfigs:
+        name: string
+        type: string
+    disks:
+      type: string
+      deviceName: string
+      boot: boolean
+      autoDelete: boolean
+      initializeParams:
+        sourceImage: string
+</code><button class="button button--copy js-copy-button-32"><i class="fa fa-clipboard"></i></button></pre>
+<p>It should look like this:</p>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">resources</span><span class="pun">:</span><span class="pln">
+</span><span class="pun">-</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> appserver
+  type</span><span class="pun">:</span><span class="pln"> compute</span><span class="pun">.</span><span class="pln">v1</span><span class="pun">.</span><span class="pln">instance
+  properties</span><span class="pun">:</span><span class="pln">
+    zone</span><span class="pun">:</span><span class="pln"> string
+    machineType</span><span class="pun">:</span><span class="pln"> string
+    networkInterfaces</span><span class="pun">:</span><span class="pln">
+      network</span><span class="pun">:</span><span class="pln"> string
+      accessConfigs</span><span class="pun">:</span><span class="pln">
+        name</span><span class="pun">:</span><span class="pln"> string
+        type</span><span class="pun">:</span><span class="pln"> string
+    disks</span><span class="pun">:</span><span class="pln">
+      type</span><span class="pun">:</span><span class="pln"> string
+      deviceName</span><span class="pun">:</span><span class="pln"> string
+      boot</span><span class="pun">:</span><span class="pln"> boolean
+      autoDelete</span><span class="pun">:</span><span class="pln"> boolean
+      initializeParams</span><span class="pun">:</span><span class="pln">
+        sourceImage</span><span class="pun">:</span><span class="pln"> string</span></code><button class="button button--copy js-copy-button-33"><i class="fa fa-clipboard"></i></button></pre>
+<p>Note that the nested objects, the disks and network interfaces, can appear in any order in the properties list, so long as they are specified. You might find it easier for you to specify disks first rather than network interface. That is a matter of style. And you may see different styles used in Deployment Manager examples.</p>
+<h2 id="step13">Dash it all</h2>
+<p>You need to understand the significance of that YAML dash. If you don't get the dashes in the right places in your template, it will cause syntax errors and your deployment will fail.</p>
+<p>The dash is YAML's way of signifying a list.</p>
+<p>An example will help.</p>
+<p>Here is an excerpt from the properties documentation:</p>
+<h4><strong>Example (don't copy)</strong></h4>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">      </span><span class="str">"accessConfigs"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+        </span><span class="pun">{</span><span class="pln">
+          </span><span class="str">"kind"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"compute#accessConfig"</span><span class="pun">,</span><span class="pln">
+          </span><span class="str">"type"</span><span class="pun">:</span><span class="pln"> string</span><span class="pun">,</span><span class="pln">
+          </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> string</span><span class="pun">,</span><span class="pln">
+          </span><span class="str">"natIP"</span><span class="pun">:</span><span class="pln"> string
+        </span><span class="pun">}</span><span class="pln">
+      </span><span class="pun">]</span></code><button class="button button--copy js-copy-button-34"><i class="fa fa-clipboard"></i></button></pre>
+<p>The square brackets indicate a list.</p>
+<p>This translation into YAML looks right, but it does not account for the list.</p>
+<h4><strong>Example (don't copy)</strong></h4>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">accessConfigs</span><span class="pun">:</span><span class="pln">
+   kind</span><span class="pun">:</span><span class="pln"> compute</span><span class="com">#accessConfig</span><span class="pln">
+   type</span><span class="pun">:</span><span class="pln"> string
+   name</span><span class="pun">:</span><span class="pln"> string
+   natIP</span><span class="pun">:</span><span class="pln"> string</span></code><button class="button button--copy js-copy-button-35"><i class="fa fa-clipboard"></i></button></pre>
+<p>This one is correct because of the single dash on the second line.</p>
+<h4><strong>Example (don't copy)</strong></h4>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">accessConfigs</span><span class="pun">:</span><span class="pln">
+ </span><span class="pun">-</span><span class="pln"> kind</span><span class="pun">:</span><span class="pln"> compute</span><span class="com">#accessConfig</span><span class="pln">
+   type</span><span class="pun">:</span><span class="pln"> string
+   name</span><span class="pun">:</span><span class="pln"> string
+   natIP</span><span class="pun">:</span><span class="pln"> string</span></code><button class="button button--copy js-copy-button-36"><i class="fa fa-clipboard"></i></button></pre>
+<p>The first one produces:  <strong>accessConfigs( kind:a, type:b, name:c, natIP:d )</strong></p>
+<p>It is passing accessConfigs four separate properties in the property sequence. This is a syntax error.</p>
+<p>The second one produces: <strong>accessConfigs( [ (kind:a), (type:b), (name:c), (natIP:d) ] )</strong></p>
+<p>It is passing accessConfigs a list. And the list contains an arbitrary number of properties.</p>
+<p>Looking at the original reference, you can see where the square brackets indicate lists, and you can put the dashes back in where they belong.</p>
+<p>The following require leading dashes:</p>
+<p>network</p>
+<p>name (beneath network)</p>
+<p>type (beneath disks)</p>
+<p>The dash must be one space before the start of the keyword. The text must be lined up. If you have the indentation wrong or the dashes missing or in the wrong place, the template will produce an error when deployed.</p>
+<p>Using the example below as a guide, make sure that the dashes are correctly located in <strong>~/archdp/appserver.yaml</strong></p>
+<p>Here is the updated YAML template, ready for the properties to be assigned actual values.</p>
+<h4><strong>Example</strong></h4>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">resources</span><span class="pun">:</span><span class="pln">
+</span><span class="pun">-</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> appserver
+  type</span><span class="pun">:</span><span class="pln"> compute</span><span class="pun">.</span><span class="pln">v1</span><span class="pun">.</span><span class="pln">instance
+  properties</span><span class="pun">:</span><span class="pln">
+    zone</span><span class="pun">:</span><span class="pln"> string
+    machineType</span><span class="pun">:</span><span class="pln"> string
+    networkInterfaces</span><span class="pun">:</span><span class="pln">
+    </span><span class="pun">-</span><span class="pln"> network</span><span class="pun">:</span><span class="pln"> string
+      accessConfigs</span><span class="pun">:</span><span class="pln">
+      </span><span class="pun">-</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> string
+        type</span><span class="pun">:</span><span class="pln"> string
+    disks</span><span class="pun">:</span><span class="pln">
+    </span><span class="pun">-</span><span class="pln"> type</span><span class="pun">:</span><span class="pln"> string
+      deviceName</span><span class="pun">:</span><span class="pln"> string
+      boot</span><span class="pun">:</span><span class="pln"> boolean
+      autoDelete</span><span class="pun">:</span><span class="pln"> boolean
+      initializeParams</span><span class="pun">:</span><span class="pln">
+        sourceImage</span><span class="pun">:</span><span class="pln"> string</span></code><button class="button button--copy js-copy-button-37"><i class="fa fa-clipboard"></i></button></pre>
+<h2 id="step14">Configure the resource properties</h2>
+<p>Next, you will work from the top down, replacing the prototype variables like string and boolean with actual values.</p>
+<p>The first property is the zone. Use the following command in the Cloud Shell Command Line to identify available zones.</p>
+<pre><code>gcloud compute zones list
+</code><button class="button button--copy js-copy-button-38"><i class="fa fa-clipboard"></i></button></pre>
+<p>Select your zone.</p>
+<p>In <strong>~/archdp/appserver.yaml</strong>, replace  zone: string with zone: [YOUR_ZONE].</p>
+<p>You need to find out what kind of machine types are available in that zone. Enter the following into the Cloud Shell Command Line interface.</p>
+<pre><code>gcloud compute machine-types list | grep [YOUR_ZONE]
+</code><button class="button button--copy js-copy-button-39"><i class="fa fa-clipboard"></i></button></pre>
+<p>Looks like the <strong>f1-micro</strong> is available. Although this is a list of machine types, and the keyword in the templates is machineType:, the value required by the API is different.</p>
+<p>You need to get the specific URI required by the API to create that type of machine. Use the following command in Cloud Shell Command Line to find the URI.</p>
+<pre><code>gcloud compute machine-types describe f1-micro --zone [YOUR_ZONE]
+</code><button class="button button--copy js-copy-button-40"><i class="fa fa-clipboard"></i></button></pre>
+<h4><strong>Example Command  (don't copy)</strong></h4>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">gcloud compute machine</span><span class="pun">-</span><span class="pln">types describe f1</span><span class="pun">-</span><span class="pln">micro </span><span class="pun">--</span><span class="pln">zone us</span><span class="pun">-</span><span class="pln">west1</span><span class="pun">-</span><span class="pln">b</span></code><button class="button button--copy js-copy-button-41"><i class="fa fa-clipboard"></i></button></pre>
+<p>Your results should look something like this:</p>
+<h4><strong>Output  (don't copy)</strong></h4>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">creationTimestamp</span><span class="pun">:</span><span class="pln"> </span><span class="str">'2015-01-16T09:25:43.316-08:00'</span><span class="pln">
+description</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> vCPU </span><span class="pun">(</span><span class="pln">shared physical core</span><span class="pun">)</span><span class="pln"> and </span><span class="lit">0.6</span><span class="pln"> GB RAM
+guestCpus</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pln">
+id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'1000'</span><span class="pln">
+isSharedCpu</span><span class="pun">:</span><span class="pln"> true
+kind</span><span class="pun">:</span><span class="pln"> compute</span><span class="com">#machineType</span><span class="pln">
+maximumPersistentDisks</span><span class="pun">:</span><span class="pln"> </span><span class="lit">16</span><span class="pln">
+maximumPersistentDisksSizeGb</span><span class="pun">:</span><span class="pln"> </span><span class="str">'3072'</span><span class="pln">
+memoryMb</span><span class="pun">:</span><span class="pln"> </span><span class="lit">614</span><span class="pln">
+name</span><span class="pun">:</span><span class="pln"> f1</span><span class="pun">-</span><span class="pln">micro
+selfLink</span><span class="pun">:</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">architectingdp</span><span class="pun">/</span><span class="pln">zones</span><span class="pun">/</span><span class="pln">us</span><span class="pun">-</span><span class="pln">west1</span><span class="pun">-</span><span class="pln">b</span><span class="pun">/</span><span class="pln">machineTypes</span><span class="pun">/</span><span class="pln">f1</span><span class="pun">-</span><span class="pln">micro
+zone</span><span class="pun">:</span><span class="pln"> us</span><span class="pun">-</span><span class="pln">west1</span><span class="pun">-</span><span class="pln">b</span></code><button class="button button--copy js-copy-button-42"><i class="fa fa-clipboard"></i></button></pre>
+<p>The line that says "selfLink" is the one you will need.</p>
+<ul>
+<li>Copy the selfLink URI from the Cloud Shell Command Line to the <strong>machineType:</strong> field in ~/archdp/<strong>appserver.yaml</strong> by pasting into the Cloud Shell Code Editor.</li>
+<li>The VM is going to be launched on the <strong>default</strong> network. Another URI is required for the network property.  You will need to locate the value of the URI similar to the <strong>machineType</strong> URI.</li>
+</ul>
+<p>Enter the following in the Cloud Shell Command Line.</p>
+<pre><code>gcloud compute networks list
+</code><button class="button button--copy js-copy-button-43"><i class="fa fa-clipboard"></i></button></pre>
+<h4><strong>Output  (don't copy)</strong></h4>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">NAME     MODE  IPV4_RANGE  GATEWAY_IPV4
+default  auto</span></code><button class="button button--copy js-copy-button-44"><i class="fa fa-clipboard"></i></button></pre>
+<p>Enter the following command in Cloud Shell Command Line to describe the default network.</p>
+<pre><code>gcloud compute networks describe default
+</code><button class="button button--copy js-copy-button-45"><i class="fa fa-clipboard"></i></button></pre>
+<p>The first URI in the list is the selfLink required by the API.</p>
+<h4><strong>Output  (don't copy)</strong></h4>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">autoCreateSubnetworks</span><span class="pun">:</span><span class="pln"> true
+creationTimestamp</span><span class="pun">:</span><span class="pln"> </span><span class="str">'2017-04-20T03:12:08.405-07:00'</span><span class="pln">
+description</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Default</span><span class="pln"> network </span><span class="kwd">for</span><span class="pln"> the project
+id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'1237372757312092055'</span><span class="pln">
+kind</span><span class="pun">:</span><span class="pln"> compute</span><span class="com">#network</span><span class="pln">
+name</span><span class="pun">:</span><span class="pln"> default
+selfLink</span><span class="pun">:</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">architectingdp</span><span class="pun">/</span><span class="pln">global</span><span class="pun">/</span><span class="pln">networks</span><span class="pun">/</span><span class="pln">default
+subnetworks</span><span class="pun">:</span><span class="pln">
+</span><span class="pun">-</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">architectingdp</span><span class="pun">/</span><span class="pln">regions</span><span class="pun">/</span><span class="pln">us</span><span class="pun">-</span><span class="pln">west1</span><span class="pun">/</span><span class="pln">subnetworks</span><span class="pun">/</span><span class="pln">default
+</span><span class="pun">-</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">architectingdp</span><span class="pun">/</span><span class="pln">regions</span><span class="pun">/</span><span class="pln">europe</span><span class="pun">-</span><span class="pln">west2</span><span class="pun">/</span><span class="pln">subnetworks</span><span class="pun">/</span><span class="pln">default
+</span><span class="pun">-</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">architectingdp</span><span class="pun">/</span><span class="pln">regions</span><span class="pun">/</span><span class="pln">europe</span><span class="pun">-</span><span class="pln">west1</span><span class="pun">/</span><span class="pln">subnetworks</span><span class="pun">/</span><span class="pln">default
+</span><span class="pun">-</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">architectingdp</span><span class="pun">/</span><span class="pln">regions</span><span class="pun">/</span><span class="pln">australia</span><span class="pun">-</span><span class="pln">southeast1</span><span class="pun">/</span><span class="pln">subnetworks</span><span class="pun">/</span><span class="pln">default
+</span><span class="pun">-</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">architectingdp</span><span class="pun">/</span><span class="pln">regions</span><span class="pun">/</span><span class="pln">europe</span><span class="pun">-</span><span class="pln">west3</span><span class="pun">/</span><span class="pln">subnetworks</span><span class="pun">/</span><span class="pln">default
+</span><span class="pun">-</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">architectingdp</span><span class="pun">/</span><span class="pln">regions</span><span class="pun">/</span><span class="pln">asia</span><span class="pun">-</span><span class="pln">east1</span><span class="pun">/</span><span class="pln">subnetworks</span><span class="pun">/</span><span class="pln">default
+</span><span class="pun">-</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">architectingdp</span><span class="pun">/</span><span class="pln">regions</span><span class="pun">/</span><span class="pln">us</span><span class="pun">-</span><span class="pln">east1</span><span class="pun">/</span><span class="pln">subnetworks</span><span class="pun">/</span><span class="pln">default
+</span><span class="pun">-</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">architectingdp</span><span class="pun">/</span><span class="pln">regions</span><span class="pun">/</span><span class="pln">asia</span><span class="pun">-</span><span class="pln">northeast1</span><span class="pun">/</span><span class="pln">subnetworks</span><span class="pun">/</span><span class="pln">default
+</span><span class="pun">-</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">architectingdp</span><span class="pun">/</span><span class="pln">regions</span><span class="pun">/</span><span class="pln">us</span><span class="pun">-</span><span class="pln">east4</span><span class="pun">/</span><span class="pln">subnetworks</span><span class="pun">/</span><span class="pln">default
+</span><span class="pun">-</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">architectingdp</span><span class="pun">/</span><span class="pln">regions</span><span class="pun">/</span><span class="pln">asia</span><span class="pun">-</span><span class="pln">southeast1</span><span class="pun">/</span><span class="pln">subnetworks</span><span class="pun">/</span><span class="pln">default
+</span><span class="pun">-</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">architectingdp</span><span class="pun">/</span><span class="pln">regions</span><span class="pun">/</span><span class="pln">us</span><span class="pun">-</span><span class="pln">central1</span><span class="pun">/</span><span class="pln">subnetworks</span><span class="pun">/</span><span class="pln">default
+x_gcloud_mode</span><span class="pun">:</span><span class="pln"> auto</span></code><button class="button button--copy js-copy-button-46"><i class="fa fa-clipboard"></i></button></pre>
+<p>The line that says selfLink is the one you need.</p>
+<ol>
+<li>Copy the URI for selfLink in Cloud Shell Command Line.</li>
+<li>Paste the result in the <strong>network:</strong> field in the yaml file in Cloud Shell Code Editor.</li>
+<li>Examining the YAML file, <strong>accessConfig</strong> name and type fields must be set.</li>
+</ol>
+<p>Returning to the API reference, you can read about the <strong>accessConfig</strong> name and type fields.</p>
+<p><a href="https://cloud.google.com/compute/docs/reference/rest/v1/instances/addAccessConfig">https://cloud.google.com/compute/docs/reference/rest/v1/instances/addAccessConfig</a></p>
+<p><strong>name:</strong> "The name of this access configuration. The default and recommended name is <strong>External</strong>_<strong>NAT</strong> but you can use any arbitrary string you would like. For example, My external IP or Network Access."</p>
+<p><strong>type:</strong> "The type of configuration. The default and only option is <strong>ONE_TO_ONE_NAT</strong>."</p>
+<ul>
+<li>Set these fields.</li>
+</ul>
+<p>The template should now look similar to this:</p>
+<h4><strong>Example  (don't copy)</strong></h4>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">resources</span><span class="pun">:</span><span class="pln">
+</span><span class="pun">-</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> appserver
+  type</span><span class="pun">:</span><span class="pln"> compute</span><span class="pun">.</span><span class="pln">v1</span><span class="pun">.</span><span class="pln">instance
+  properties</span><span class="pun">:</span><span class="pln">
+    zone</span><span class="pun">:</span><span class="pln"> us</span><span class="pun">-</span><span class="pln">west1</span><span class="pun">-</span><span class="pln">b
+    machineType</span><span class="pun">:</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/[</span><span class="pln">YOUR_PROJECT</span><span class="pun">]/</span><span class="pln">zones</span><span class="pun">/</span><span class="pln">us</span><span class="pun">-</span><span class="pln">west1</span><span class="pun">-</span><span class="pln">b</span><span class="pun">/</span><span class="pln">machineTypes</span><span class="pun">/</span><span class="pln">f1</span><span class="pun">-</span><span class="pln">micro
+    networkInterfaces</span><span class="pun">:</span><span class="pln">
+    </span><span class="pun">-</span><span class="pln"> network</span><span class="pun">:</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/[</span><span class="pln">YOUR_PROJECT</span><span class="pun">]/</span><span class="pln">global</span><span class="pun">/</span><span class="pln">networks</span><span class="pun">/</span><span class="pln">default
+      accessConfigs</span><span class="pun">:</span><span class="pln">
+      </span><span class="pun">-</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">External_NAT</span><span class="pln">
+        type</span><span class="pun">:</span><span class="pln"> ONE_TO_ONE_NAT
+    disks</span><span class="pun">:</span><span class="pln">
+    </span><span class="pun">-</span><span class="pln"> type</span><span class="pun">:</span><span class="pln"> string
+      deviceName</span><span class="pun">:</span><span class="pln"> string
+      boot</span><span class="pun">:</span><span class="pln"> boolean
+      autoDelete</span><span class="pun">:</span><span class="pln"> boolean
+      initializeParams</span><span class="pun">:</span><span class="pln">
+        sourceImage</span><span class="pun">:</span><span class="pln"> string</span></code><button class="button button--copy js-copy-button-47"><i class="fa fa-clipboard"></i></button></pre>
+<ul>
+<li>The next values to be set are properties of the boot disk.</li>
+</ul>
+<p><strong>type</strong>: "Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT." This will be a persistent boot disk. So it should be set to <strong>PERSISTENT</strong>.</p>
+<p><strong>deviceName:</strong></p>
+<p>"Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance. If not specified, the server chooses a default device name to apply to this disk, in the form persistent-disks-x, where x is a number assigned by Google Compute Engine. This field is only applicable for persistent disks."</p>
+<p>It is common practice to call the boot disk in an instance <strong>boot</strong>.</p>
+<p><strong>boot</strong>: "Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem." It is a boolean value, so it should be set to <strong>true</strong>.</p>
+<p><strong>autoDelete</strong>: "Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance)." Another boolean value. Should be set to <strong>true</strong>.</p>
+<ul>
+<li>Set these four values in the disk section of the template. type: <strong>PERSISTENT</strong>, deviceName: <strong>boot</strong>, boot: <strong>true</strong>, autoDelete: <strong>true</strong>.</li>
+</ul>
+<p>The template should now look similar to this:</p>
+<h4><strong>Example  (don't copy)</strong></h4>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">resources</span><span class="pun">:</span><span class="pln">
+</span><span class="pun">-</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> appserver
+  type</span><span class="pun">:</span><span class="pln"> compute</span><span class="pun">.</span><span class="pln">v1</span><span class="pun">.</span><span class="pln">instance
+  properties</span><span class="pun">:</span><span class="pln">
+    zone</span><span class="pun">:</span><span class="pln"> us</span><span class="pun">-</span><span class="pln">west1</span><span class="pun">-</span><span class="pln">b
+    machineType</span><span class="pun">:</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">architectingdp</span><span class="pun">/</span><span class="pln">zones</span><span class="pun">/</span><span class="pln">us</span><span class="pun">-</span><span class="pln">west1</span><span class="pun">-</span><span class="pln">b</span><span class="pun">/</span><span class="pln">machineTypes</span><span class="pun">/</span><span class="pln">f1</span><span class="pun">-</span><span class="pln">micro
+  </span><span class="pun">-</span><span class="pln"> networkInterfaces</span><span class="pun">:</span><span class="pln">
+      network</span><span class="pun">:</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">architectingdp</span><span class="pun">/</span><span class="pln">global</span><span class="pun">/</span><span class="pln">networks</span><span class="pun">/</span><span class="pln">default
+      accessConfigs</span><span class="pun">:</span><span class="pln">
+      </span><span class="pun">-</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">External_NAT</span><span class="pln">
+        type</span><span class="pun">:</span><span class="pln"> ONE_TO_ONE_NAT
+    disks</span><span class="pun">:</span><span class="pln">
+    </span><span class="pun">-</span><span class="pln"> type</span><span class="pun">:</span><span class="pln"> PERSISTENT
+      deviceName</span><span class="pun">:</span><span class="pln"> boot
+      boot</span><span class="pun">:</span><span class="pln"> true
+      autoDelete</span><span class="pun">:</span><span class="pln"> true
+      initializeParams</span><span class="pun">:</span><span class="pln">
+        sourceImage</span><span class="pun">:</span><span class="pln"> string</span></code><button class="button button--copy js-copy-button-48"><i class="fa fa-clipboard"></i></button></pre>
+<ul>
+<li>There is one value remaining: the source Image that will be used to initialize the disk and boot the OS.</li>
+</ul>
+<p>Enter the following command into the Cloud Shell Command Line to discover which OS Images are available?</p>
+<pre><code>gcloud compute images list
+</code><button class="button button--copy js-copy-button-49"><i class="fa fa-clipboard"></i></button></pre>
+<p>Enter the following into Cloud Shell Command Line to find the latest Debian image:</p>
+<pre><code>gcloud compute images list | grep debian
+</code><button class="button button--copy js-copy-button-50"><i class="fa fa-clipboard"></i></button></pre>
+<p>The output looks something  like this:</p>
+<h4><strong>Output  (don't copy)</strong></h4>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">debian</span><span class="pun">-</span><span class="lit">8</span><span class="pun">-</span><span class="pln">jessie</span><span class="pun">-</span><span class="pln">v20170918           debian</span><span class="pun">-</span><span class="pln">cloud       debian</span><span class="pun">-</span><span class="lit">8</span><span class="pln">     READY
+debian</span><span class="pun">-</span><span class="lit">9</span><span class="pun">-</span><span class="pln">stretch</span><span class="pun">-</span><span class="pln">v20170918           debian</span><span class="pun">-</span><span class="pln">cloud       debian</span><span class="pun">-</span><span class="lit">9</span><span class="pln">     READY</span></code><button class="button button--copy js-copy-button-51"><i class="fa fa-clipboard"></i></button></pre>
+<p>But you need the URI of the source image. To find it you need to use the following command in the Cloud Shell Command Line.</p>
+<p>What is the latest URI for the image?</p>
+<pre><code>gcloud compute images list --uri | grep debian
+</code><button class="button button--copy js-copy-button-52"><i class="fa fa-clipboard"></i></button></pre>
+<h4><strong>Output (don't copy)</strong></h4>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">debian</span><span class="pun">-</span><span class="pln">cloud</span><span class="pun">/</span><span class="pln">global</span><span class="pun">/</span><span class="pln">images</span><span class="pun">/</span><span class="pln">debian</span><span class="pun">-</span><span class="lit">8</span><span class="pun">-</span><span class="pln">jessie</span><span class="pun">-</span><span class="pln">v20170816
+https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">debian</span><span class="pun">-</span><span class="pln">cloud</span><span class="pun">/</span><span class="pln">global</span><span class="pun">/</span><span class="pln">images</span><span class="pun">/</span><span class="pln">debian</span><span class="pun">-</span><span class="lit">9</span><span class="pun">-</span><span class="pln">stretch</span><span class="pun">-</span><span class="pln">v20170816</span></code><button class="button button--copy js-copy-button-53"><i class="fa fa-clipboard"></i></button></pre>
+<p>You will use the latest version of Debian, which in the example is Debian 9.</p>
+<ul>
+<li>Copy the debian-9 source image URI from the Cloud Shell Command Line and paste it into the ~/archdp/<strong>appserver.yaml</strong> file in Cloud Shell Code Editor.</li>
+</ul>
+<p>The ~/archdp/<strong>appserver.yaml</strong> file should look similar to this:</p>
+<h4><strong>Example (don't copy)</strong></h4>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">resources</span><span class="pun">:</span><span class="pln">
+</span><span class="pun">-</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> appserver
+  type</span><span class="pun">:</span><span class="pln"> compute</span><span class="pun">.</span><span class="pln">v1</span><span class="pun">.</span><span class="pln">instance
+  properties</span><span class="pun">:</span><span class="pln">
+    zone</span><span class="pun">:</span><span class="pln"> us</span><span class="pun">-</span><span class="pln">west1</span><span class="pun">-</span><span class="pln">b
+    machineType</span><span class="pun">:</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">architectingdp</span><span class="pun">/</span><span class="pln">zones</span><span class="pun">/</span><span class="pln">us</span><span class="pun">-</span><span class="pln">west1</span><span class="pun">-</span><span class="pln">b</span><span class="pun">/</span><span class="pln">machineTypes</span><span class="pun">/</span><span class="pln">f1</span><span class="pun">-</span><span class="pln">micro
+    networkInterfaces</span><span class="pun">:</span><span class="pln">
+    </span><span class="pun">-</span><span class="pln"> network</span><span class="pun">:</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">architectingdp</span><span class="pun">/</span><span class="pln">global</span><span class="pun">/</span><span class="pln">networks</span><span class="pun">/</span><span class="pln">default
+      accessConfigs</span><span class="pun">:</span><span class="pln">
+      </span><span class="pun">-</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">External_NAT</span><span class="pln">
+        type</span><span class="pun">:</span><span class="pln"> ONE_TO_ONE_NAT
+    disks</span><span class="pun">:</span><span class="pln">
+    </span><span class="pun">-</span><span class="pln"> type</span><span class="pun">:</span><span class="pln"> PERSISTENT
+      deviceName</span><span class="pun">:</span><span class="pln"> boot
+      boot</span><span class="pun">:</span><span class="pln"> true
+      autoDelete</span><span class="pun">:</span><span class="pln"> true
+      initializeParams</span><span class="pun">:</span><span class="pln">
+        sourceImage</span><span class="pun">:</span><span class="pln"> https</span><span class="pun">://</span><span class="pln">www</span><span class="pun">.</span><span class="pln">googleapis</span><span class="pun">.</span><span class="pln">com</span><span class="pun">/</span><span class="pln">compute</span><span class="pun">/</span><span class="pln">v1</span><span class="pun">/</span><span class="pln">projects</span><span class="pun">/</span><span class="pln">debian</span><span class="pun">-</span><span class="pln">cloud</span><span class="pun">/</span><span class="pln">global</span><span class="pun">/</span><span class="pln">images</span><span class="pun">/</span><span class="pln">debian</span><span class="pun">-</span><span class="lit">9</span><span class="pun">-</span><span class="pln">stretch</span><span class="pun">-</span><span class="pln">v20170816</span></code><button class="button button--copy js-copy-button-54"><i class="fa fa-clipboard"></i></button></pre>
+<h2 id="step15">Deploy appserver!</h2>
+<p>Congratulations! You have made it through creating and configuring your first Deployment Manager template. Time to launch appserver.</p>
+<p>Enter the following command in the Cloud Shell Command Line to deploy your template.</p>
+<pre><code>gcloud deployment-manager deployments create appserver --config appserver.yaml
+</code><button class="button button--copy js-copy-button-55"><i class="fa fa-clipboard"></i></button></pre>
+<p>If it is successful, you will see confirmation in Cloudshell.</p>
+<p>Common causes for failure to deploy include the following:</p>
+<ul>
+<li>Verify that you have followed the Cloud Shell Command Line procedures to identify the correct URI for your account. It will include your Project IDs in the URIs. If you have copied the examples in this lab your deployment will fail.</li>
+<li>Verify that the properties: keyword is in line with the name: and type: keyword. One space out of alignment will cause the deployment to fail.</li>
+<li>Verify that the list properties have been identified by a leading dash. For example " - type". If there is no space before the keyword, like this: " -type", the deployment will fail.</li>
+<li>If your template is correctly formed but has an invalid property, Deployment Manager may start to build the infrastructure until it runs into the bad property. It will then receive an error from the underlying API and it will be forced to halt before the launch is completed. The artifacts already created will continue to exist until you manually delete the deployment using Console.</li>
+</ul>
+<p>If you have artifacts from a previously failed launch, and you try to launch again without cleaning-up, you will see an error saying that the deployment 'ResponsError: code=409, already exists and cannot be created'.</p>
+<h2 id="step16">Cleaning up from a failed launch</h2>
+<p>If the deployment had an error, then you will need to delete the deployment. This will cause Deployment Manager to undo and delete all the artifacts it created before running into the API error.</p>
+<p>Click on the browser tab for Console.</p>
+<p>Go to <strong>Navigation menu</strong> &gt; <strong>Deployment Manager</strong> in Console. Select the deployment and click <strong>delete</strong>.</p>
+<h2 id="step17">Using the power of Deployment Manager</h2>
+<p>Click on the browser tab for Console.</p>
+<p>If your deployment has succeeded you can view the deployment by going to <strong>Navigation menu</strong> &gt; <strong>Deployment Manager</strong> in Console.</p>
+<p>You are now ready to leverage the power of Deployment Manager. In the next step you will be making identical deployments of appserver for different groups. You will create a deployment for the development group, the load-testing group, the security group, and the production group.</p>
+<p>Return to the Cloud Shell tab in the browser.</p>
+<p>Create appserver environments for four organizations: development, load testing, security, and production, using the example below as a guide.</p>
+<h4><strong>Example</strong></h4>
+<pre><code class="language-bash prettyprint prettyprinted" style=""><span class="pln">gcloud deployment</span><span class="pun">-</span><span class="pln">manager deployments create development </span><span class="pun">--</span><span class="pln">config appserver</span><span class="pun">.</span><span class="pln">yaml
+gcloud deployment</span><span class="pun">-</span><span class="pln">manager deployments create load</span><span class="pun">-</span><span class="pln">testing </span><span class="pun">--</span><span class="pln">config appserver</span><span class="pun">.</span><span class="pln">yaml
+gcloud deployment</span><span class="pun">-</span><span class="pln">manager deployments create security </span><span class="pun">--</span><span class="pln">config appserver</span><span class="pun">.</span><span class="pln">yaml
+gcloud deployment</span><span class="pun">-</span><span class="pln">manager deployments create production </span><span class="pun">--</span><span class="pln">config appserver</span><span class="pun">.</span><span class="pln">yaml</span></code><button class="button button--copy js-copy-button-56"><i class="fa fa-clipboard"></i></button></pre>
+<p>After they are all deployed, in the Console, go to <strong>Navigation menu</strong> &gt; <strong>Compute Engine.</strong></p>
+<p>Note that even though you executed the deployment process five (5) times, you only have one (1) VM instance in the list of Compute Engine instances. This is because in this exercise we hardcoded the instance name in your appserver.yaml file, therefore each deployment referenced the same VM instance.</p>
+<p>We now need to clean up the deployments. To illustrate the fact that each deployment references the same VM instance, you will remove all the deployments except one. When you delete any of these deployment, the appserver vm instance will be deleted, even if one deployment remains that had referenced the vm instance. To see this in action, in the Console go to <strong>Navigation menu</strong> &gt; <strong>Deployment Manager</strong> and delete all of the deployments except for <strong>production</strong>.</p>
+<p>After the deployments have been deleted, in the Console, go to <strong>Navigation menu</strong> &gt; <strong>Compute Engine.</strong></p>
+<p>Note that no vm instances remain, even though we left the <strong>production</strong> deployment remaining. That is because each deployment was responsible for cleaning up what it created. Each deployment was responsible for creating the appserver vm instance, and therefore also responsible for deleting it when the deployment was deleted.</p>
+<p>Be careful when hardcoding values into the deployment manager configuration files. In an upcoming exercise you will learn how to customize the instance names to break this dependency between deployments, and enable each deployment to create a unique vm instance.</p>
+<p>You have now seen the automation power of Deployment Manager. Imagine if this had been a complicated deployment with dozens of virtual machines and infrastructure components. How long would it have taken you to construct four copies of such a service in Console?  How long would it have taken you if you had used gcloud commands to create the infrastructure?</p>
+<p>The gcloud commands in a script might have been almost as fast as Deployment Manager.</p>
+<p>However, how long would it have taken you to delete each of the four environments using gcloud commands? One benefit of Deployment Manager over working directly with the API or with scripted gcloud commands is that it is able to automatically tear down the infrastructure it has built.</p>
+<h2 id="step18">Cleanup</h2>
+<ol>
+<li>In the <strong>Cloud Platform Console</strong>, sign out of the Google account.</li>
+<li>Close the browser tab.</li>
+</ol>
+<h2 id="step19">End your lab</h2>
+<p>When you have completed your lab, click <strong>End Lab</strong>. Qwiklabs removes the resources you’ve used and cleans the account for you.</p>
+<p>You will be given an opportunity to rate the lab experience. Select the applicable number of stars, type a comment, and then click <strong>Submit</strong>.</p>
+<p>The number of stars indicates the following:</p>
+<ul>
+<li>1 star = Very dissatisfied</li>
+<li>2 stars = Dissatisfied</li>
+<li>3 stars = Neutral</li>
+<li>4 stars = Satisfied</li>
+<li>5 stars = Very satisfied</li>
+</ul>
+<p>You can close the dialog box if you don't want to provide feedback.</p>
+<p>For feedback, suggestions, or corrections, please use the <strong>Support</strong> tab.</p>
+
+<h6>Manual Last Updated: November 01, 2018</h6>
+<h6>Lab Last Tested: March 29, 2019</h6>
+<p>Copyright 2019 Google LLC All rights reserved. Google and the Google logo are trademarks of Google LLC. All other company and product names may be trademarks of the respective companies with which they are associated.</p>
+
+
+
+</div>
+<div class="js-lab-content-outline lab-content__outline is-stuck">
+<a href="https://googlecoursera.qwiklabs.com/focuses/16466#step1" class="">Overview</a><a href="https://googlecoursera.qwiklabs.com/focuses/16466#step2" class="">Objectives</a><a href="https://googlecoursera.qwiklabs.com/focuses/16466#step3" class="">Overview</a><a href="https://googlecoursera.qwiklabs.com/focuses/16466#step4" class="is-active">About Deployment Manager</a><a href="https://googlecoursera.qwiklabs.com/focuses/16466#step5" class="">Deployment Manager use cases</a><a href="https://googlecoursera.qwiklabs.com/focuses/16466#step6" class="">How Deployment Manager works</a><a href="https://googlecoursera.qwiklabs.com/focuses/16466#step7" class="">YAML</a><a href="https://googlecoursera.qwiklabs.com/focuses/16466#step8" class="">Syntax complications</a><a href="https://googlecoursera.qwiklabs.com/focuses/16466#step9">Create a resource</a><a href="https://googlecoursera.qwiklabs.com/focuses/16466#step10">Examine the resource properties</a><a href="https://googlecoursera.qwiklabs.com/focuses/16466#step11">Learn about resource properties</a><a href="https://googlecoursera.qwiklabs.com/focuses/16466#step12">Prune the properties</a><a href="https://googlecoursera.qwiklabs.com/focuses/16466#step13">Dash it all</a><a href="https://googlecoursera.qwiklabs.com/focuses/16466#step14">Configure the resource properties</a><a href="https://googlecoursera.qwiklabs.com/focuses/16466#step15">Deploy appserver!</a><a href="https://googlecoursera.qwiklabs.com/focuses/16466#step16">Cleaning up from a failed launch</a><a href="https://googlecoursera.qwiklabs.com/focuses/16466#step17">Using the power of Deployment Manager</a><a href="https://googlecoursera.qwiklabs.com/focuses/16466#step18">Cleanup</a><a href="https://googlecoursera.qwiklabs.com/focuses/16466#step19">End your lab</a>
+</div>
+</div>
+
+</div>
+
+
+</div>
+</div>
+<div class="lab-introduction js-lab-introduction is-hidden">
+<div class="lab-introduction__inner">
+<h1 class="headline-1">Welcome to Your First Lab!</h1>
+<ql-icon-button class="js-skip-button">close</ql-icon-button>
+<div class="lab-introduction__video">
+<iframe allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0" id="lab-introduction" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/yF7EDXKTmoQ.html"></iframe>
+</div>
+<a class="js-skip-button button button--outline">Skip this video</a>
+</div>
+</div>
+
+
+
+</div>
+</main>
+<div class="modal fade" id="lab-details-modal">
+<div class="modal-container">
+<div class="mdl-shadow--24dp modal-content">
+<div class="modal-body">
+<p class="l-mbm">
+In this lab for Architecting GCP: Design and Process, you will create a Deployment Manager template from scratch and provide the appserver deployments for four organizations. 
+</p>
+<p class="small-label l-mbs">
+<strong>
+Duration:
+</strong>
+0m setup
+·
+90m access
+·
+90m completion
+</p>
+<p class="small-label l-mbs">
+<span><strong>Levels: </strong>advanced</span>
+</p>
+<p class="small-label">
+<strong>
+Permalink:
+</strong>
+<a href="https://googlecoursera.qwiklabs.com/catalog_lab/1003">https://googlecoursera.qwiklabs.com/catalog_lab/1003</a>
+</p>
+</div>
+<div class="modal-actions">
+<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" data-dismiss="modal" data-upgraded=",MaterialButton,MaterialRipple">
+Got It
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+</div>
+
+
+</div>
+</div>
+<iframe class="l-ie-iframe-fix" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/saved_resource(1).html"></iframe>
+</div>
+<div class="modal fade" id="lab-review-modal">
+<div class="modal-container">
+<div class="mdl-shadow--24dp modal-content">
+<form class="simple_form js-lab-review-form" id="new_lab_review" action="https://googlecoursera.qwiklabs.com/lab_reviews" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓"><div class="modal-body">
+<p class="label">
+How satisfied are you with this lab?*
+</p>
+<div class="rateit js-rateit" data-rateit-max="5" data-rateit-min="0" data-rateit-resetable="false" data-rateit-step="1" data-rateit-value="0"><div class="rateit-reset" style="display: none;"></div><div class="rateit-range" style="width: 80px; height: 16px;"><div class="rateit-selected" style="height: 16px; width: 0px;"></div><div class="rateit-hover" style="height:16px"></div></div></div>
+<div class="l-mtm">
+
+<div class="control-group hidden lab_review_user_id"><div class="controls"><input class="hidden" type="hidden" value="2332914" name="lab_review[user_id]" id="lab_review_user_id"></div></div>
+<div class="control-group hidden lab_review_classroom_id"><div class="controls"><input class="hidden" type="hidden" value="1980" name="lab_review[classroom_id]" id="lab_review_classroom_id"></div></div>
+<div class="control-group hidden lab_review_lab_id"><div class="controls"><input class="hidden" type="hidden" value="1003" name="lab_review[lab_id]" id="lab_review_lab_id"></div></div>
+<div class="control-group hidden lab_review_focus_id"><div class="controls"><input class="hidden" type="hidden" value="16466" name="lab_review[focus_id]" id="lab_review_focus_id"></div></div>
+<div class="control-group hidden lab_review_rating"><div class="controls"><input class="hidden js-rating-input" type="hidden" name="lab_review[rating]" id="lab_review_rating"></div></div>
+<div class="control-group text optional lab_review_comment"><label class="text optional control-label" for="lab_review_comment">Comment</label><div class="controls"><textarea class="text optional" name="lab_review[comment]" id="lab_review_comment"></textarea></div></div>
+</div>
+</div>
+<div class="modal-actions">
+<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect" data-dismiss="modal" data-upgraded=",MaterialButton,MaterialRipple">
+Cancel
+<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+<input type="submit" name="commit" value="Submit" disabled="disabled" class="btn mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" id="submit" data-disabled="false" data-disable-with="Submit" data-upgraded=",MaterialButton,MaterialRipple"><span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></input>
+</div>
+</form>
+
+</div>
+</div>
+<iframe class="l-ie-iframe-fix" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/saved_resource(2).html"></iframe>
+</div>
+
+<script>
+  $( function() {
+    ql.initMaterialInputs();
+    initChosen();
+    initSearch();
+    initTabs();
+    ql.list.init();
+    ql.favoriting.init();
+    ql.header.myAccount.init();
+    initTooltips();
+    ql.autocomplete.init();
+    ql.modals.init();
+    ql.toggleButtons.init();
+    ql.analytics.init();
+    initLabContent( );
+  ql.labOutline.links.init();
+  ql.labOutline.layout.init();
+  initLabReviewModal();
+  ql.labAssessment.init();
+  ql.labIntroduction.init( true );
+  ql.labData.init();
+  initLabTranslations( {"are_you_sure":"All done? If you end this lab, you will lose all your work. You may not be able to restart the lab if there is a quota limit. Are you sure you want to end this lab?\n","in_progress":"*In Progress*","ending":"*Ending*","starting":"*Starting, please wait*","end_concurrent_labs":"Sorry, you can only run one lab at a time. To start this lab, please confirm that you want all of your existing labs to end.\n","copied":"Copied","no_resource":"Error retrieving resource.","no_support":"No Support","mac_press":"Press ⌘-C to copy","thanks_review":"Thanks for reviewing this lab.","windows_press":"Press Ctrl-C to copy","days":"days"} );
+  ql.labRun.init();
+  ql.initHeader();
+  ql.navigation.init();
+  ql.navPanel.init();
+  ql.navigation.init();
+  
+  });
+</script>
+<style>
+  .mdl-layout__container {
+    position: static
+  }
+</style>
+
+
+<div id="drift-widget-container" style="position: absolute; z-index: 2147483647;"><iframe id="drift-widget" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/index.html" title="Drift Messenger" role="complementary" class="drift-widget-hidden" style="border: none; display: block; height: 0px !important; width: 0px !important; position: fixed; top: auto; left: auto; bottom: 0px; right: 0px; visibility: hidden; z-index: 2147483647; max-height: 100vh; max-width: 100vw; transition: none 0s ease 0s; background: none transparent; opacity: 1; pointer-events: auto; touch-action: auto;"></iframe></div><iframe data-product="web_widget" title="No content" tabindex="-1" aria-hidden="true" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/saved_resource(3).html" style="width: 0px; height: 0px; border: 0px; position: absolute; top: -9999px;"></iframe><div><iframe title="Opens a widget where you can chat to one of our agents" id="launcher" tabindex="0" class="zEWidget-launcher zEWidget-launcher--active" style="border: none; background: transparent; z-index: 999998; transform: translateZ(0px); position: fixed; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; opacity: 1; height: 50px; max-height: 551px; min-height: 50px; margin: 10px 20px; right: 0px; bottom: 0px; width: 112px;width: 112px;" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/saved_resource(4).html"></iframe></div><div><iframe title="Find more information here" id="webWidget" tabindex="-1" class="zEWidget-webWidget " style="border: none; background: transparent; z-index: 999999; transform: translateZ(0px); position: fixed; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1); transition-property: opacity, top, bottom; opacity: 0; width: 357px; height: 100%; max-height: 565px; min-height: 150px; margin-left: 8px; margin-right: 8px; top: -9999px; visibility: hidden;" src="./Deployment Manager_ Beginning appserver _ Qwiklabs_files/saved_resource(5).html"></iframe></div></body></html>
